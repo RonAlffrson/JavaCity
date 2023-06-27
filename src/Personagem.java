@@ -1,2 +1,5 @@
-public abstract class Personagem {
+public interface Personagem {
+    void contarHistoria();
+    void poderEspecial();
+    void adicionarItem();
 }
