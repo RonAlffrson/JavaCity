@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="classe abstrata personagem">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="Nome da classe 'Personagem' trocado para 'PersonagemGenerico' para não conflitar com a interface 'Personagem'">
+      <change afterPath="$PROJECT_DIR$/src/AcoesPersonagem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Personagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PersonagemGenerico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Personagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Personagem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PersonagemGenerico.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +85,21 @@
       <option name="project" value="LOCAL" />
       <updated>1687520824742</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Classe 'Item' e interface 'Personagem' criados.">
+      <created>1687894561764</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1687894561764</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Nome da classe 'Personagem' trocado para 'PersonagemGenerico' para não conflitar com a interface 'Personagem'">
+      <created>1687894660098</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1687894660098</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -113,6 +128,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <MESSAGE value="classe abstrata personagem" />
-    <option name="LAST_COMMIT_MESSAGE" value="classe abstrata personagem" />
+    <MESSAGE value="Classe 'Item' e interface 'Personagem' criados." />
+    <MESSAGE value="Nome da classe 'Personagem' trocado para 'PersonagemGenerico' para não conflitar com a interface 'Personagem'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Nome da classe 'Personagem' trocado para 'PersonagemGenerico' para não conflitar com a interface 'Personagem'" />
   </component>
 </project>
