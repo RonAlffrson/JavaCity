@@ -5,4 +5,6 @@ public interface Personagem {
     void poderEspecial();
     void adicionarItem();
     void ataquePadrao();
+    void aumentarMana();
+    void alterarVida(Integer quantidadeVida);
 }

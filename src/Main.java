@@ -1,5 +1,10 @@
+import personagens.Dofer;
+import personagens.Heroi;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        Dofer dofer = new Dofer();
+        dofer.contarHistoria();
     }
 }

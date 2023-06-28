@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="Classe 'Obstaculo' criada">
+    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="Classes filhas da classe 'Heroi', 'Rodan' e 'Dofer' criadas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Heroi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/Heroi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/itens/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Obstaculos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/Obstaculos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Personagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/Personagem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/Dofer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/Dofer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/Heroi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/Heroi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/Personagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/Personagem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/Rodan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/Rodan.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +65,20 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\renan\IdeaProjects\JavaCity\src" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="JavaCity" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -137,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687989744061</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Classes filhas da classe 'Heroi', 'Rodan' e 'Dofer' criadas">
+      <created>1687991011115</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1687991011115</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -172,6 +194,7 @@
     <MESSAGE value="Classe abstrata 'Personagem' mudada para 'Heroi'" />
     <MESSAGE value="Interface 'AcoesPersonagem' mudada para 'Personagem'" />
     <MESSAGE value="Classe 'Obstaculo' criada" />
-    <option name="LAST_COMMIT_MESSAGE" value="Classe 'Obstaculo' criada" />
+    <MESSAGE value="Classes filhas da classe 'Heroi', 'Rodan' e 'Dofer' criadas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Classes filhas da classe 'Heroi', 'Rodan' e 'Dofer' criadas" />
   </component>
 </project>
