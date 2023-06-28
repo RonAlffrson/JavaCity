@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="Interface 'AcoesPersonagem' mudada para 'Personagem'">
-      <change beforePath="$PROJECT_DIR$/src/AcoesPersonagem.java" beforeDir="false" />
+    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="Classe 'Obstaculo' criada">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Heroi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/Heroi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/itens/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Obstaculos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/Obstaculos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Personagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/Personagem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -119,7 +123,21 @@
       <option name="project" value="LOCAL" />
       <updated>1687989676928</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Interface 'AcoesPersonagem' mudada para 'Personagem'">
+      <created>1687989700442</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1687989700442</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Classe 'Obstaculo' criada">
+      <created>1687989744061</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1687989744061</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -153,6 +171,7 @@
     <MESSAGE value="Arquivo de roteiro do jogo adicionado para fácil manutenção" />
     <MESSAGE value="Classe abstrata 'Personagem' mudada para 'Heroi'" />
     <MESSAGE value="Interface 'AcoesPersonagem' mudada para 'Personagem'" />
-    <option name="LAST_COMMIT_MESSAGE" value="Interface 'AcoesPersonagem' mudada para 'Personagem'" />
+    <MESSAGE value="Classe 'Obstaculo' criada" />
+    <option name="LAST_COMMIT_MESSAGE" value="Classe 'Obstaculo' criada" />
   </component>
 </project>

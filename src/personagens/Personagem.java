@@ -1,3 +1,5 @@
+package personagens;
+
 public interface Personagem {
     void contarHistoria();
     void poderEspecial();
