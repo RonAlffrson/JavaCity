@@ -2,11 +2,11 @@ package personagens;
 
 public interface Personagem {
     void contarHistoria();
-    void poderEspecial();
-    //void adicionarItem();
+    void poderEspecial1();
+    void poderEspecial2();
     void ataquePadrao();
     void aumentarMana();
-    //void alterarVida(Integer quantidadeVida);
     void aumentarVida(Integer quantidadeVida);
     void diminiurVida(Integer quantidadeVida);
+    void aumentarVidaRodada();
 }
