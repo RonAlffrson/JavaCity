@@ -1,5 +1,6 @@
 package personagens.herois;
 
+import itens.Item;
 import personagens.viloes.Vilao;
 
 public interface Personagem {
@@ -14,4 +15,5 @@ public interface Personagem {
     void diminiurVida(Integer quantidadeVida);
     void aumentarVidaRodada();
     void aumentarManaRodada();
+    void adicionarItem(Item item);
 }

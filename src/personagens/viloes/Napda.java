@@ -1,4 +1,4 @@
 package personagens.viloes;
 
-public class Napda {
+public class Napda  {
 }

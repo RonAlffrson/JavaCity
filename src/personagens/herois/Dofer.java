@@ -2,12 +2,13 @@ package personagens.herois;
 
 import personagens.viloes.Vilao;
 
-public final class Dofer extends Heroi implements Personagem {
+public final class Dofer extends Heroi {
     public Dofer(){
         this.nome = "Dofer";
         this.classe = "Cavaleiro";
         this.vida = 100;
         this.forcaAtaque = 10;
+
     }
     @Override
     public void contarHistoria() {
