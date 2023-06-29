@@ -7,8 +7,11 @@ public interface Personagem {
     void poderEspecial1(Vilao vilao);
     void poderEspecial2();
     void ataquePadrao(Vilao vilao);
-    void aumentarMana();
+    void aumentarMana(Integer quantidadeMana);
+    void diminuirMana(Integer quantidadeMana);
+
     void aumentarVida(Integer quantidadeVida);
     void diminiurVida(Integer quantidadeVida);
     void aumentarVidaRodada();
+    void aumentarManaRodada();
 }

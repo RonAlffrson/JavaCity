@@ -1,13 +1,12 @@
 package personagens.herois;
 
-import personagens.herois.Heroi;
-import personagens.herois.Personagem;
 import personagens.viloes.Vilao;
 
 public final class Rodan extends Heroi implements Personagem {
 
     public Rodan (){
         this.nome = "Rodan";
+        this.classe = "Mago";
         this.vida = 70;
         this.forcaAtaque = 5;
     }
@@ -21,27 +20,38 @@ public final class Rodan extends Heroi implements Personagem {
     public void poderEspecial1(Vilao vilao) {
         String nome = "Tempestade de Flechas";
         int dano = 15;
-
-
-//todo - poder especial 1 vai ter como parametro um vilão/obstáculo e vair diminuir a vida dele
-
-
+        diminuirMana(30);
+        vilao.diminiurVida(dano);
     }
+
     public void poderEspecial2() {
         String nome = "Regeneração Completa";
+        diminuirMana(50);
         aumentarVida(30);
     }
 
     @Override
     public void ataquePadrao(Vilao vilao){
-//todo - ataque padrão vai ter como parametro um vilão/obstáculo e vair diminuir a vida dele
+        String nome = "Bola de Energia";
+        vilao.diminiurVida(forcaAtaque);
     }
+
     @Override
-    public void aumentarMana(){
-        if (mana + 5 <= MAX_MANA) {
-            mana += 5;
+    public void aumentarMana(Integer quantidadeMana){
+        if (mana + quantidadeMana <= MAX_MANA) {
+            mana += quantidadeMana;
         }
-        else if (mana + 5 > MAX_MANA){
+        else if (mana + quantidadeMana > MAX_MANA){
+            mana = MAX_MANA;
+        }
+    }
+
+    @Override
+    public void diminuirMana(Integer quantidadeMana) {
+        if (mana - quantidadeMana >= MIN_MANA) {
+            mana -= quantidadeMana;
+        }
+        else if (mana - quantidadeMana < MIN_MANA){
             mana = MAX_MANA;
         }
     }
@@ -70,6 +80,11 @@ public final class Rodan extends Heroi implements Personagem {
     @Override
     public void aumentarVidaRodada(){
         aumentarVida(3);
+    }
+
+    @Override
+    public void aumentarManaRodada(){
+        aumentarMana(5);
     }
 
 }

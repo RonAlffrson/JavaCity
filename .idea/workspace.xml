@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="Implementados métodos 'poderEspecial' 1 e 2 de Rodan">
+    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="Mudança na interface 'Obstaculo'">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/Dofer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Dofer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/Heroi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Heroi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/Obstaculos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Obstaculos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/Personagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Personagem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/Rodan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Rodan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/Vilao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Vilao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/viloes/Dataretan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Dataretan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/viloes/Flegoman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Flegoman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/viloes/Napda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Napda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Dofer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Dofer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Heroi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Heroi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Personagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Personagem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Rodan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Rodan.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +207,28 @@
       <option name="project" value="LOCAL" />
       <updated>1688054941179</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Criadas classes específicas dos vilões">
+      <created>1688055574986</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1688055574986</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Mudança na implementação dos poderes especiais e na interface 'Obstaculo'">
+      <created>1688055630664</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1688055630664</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Mudança na interface 'Obstaculo'">
+      <created>1688055672968</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1688055672968</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -257,6 +272,9 @@
     <MESSAGE value="Criado métodos 'ataquePadrao' e 'diminiurVida'" />
     <MESSAGE value="Criados métodos 'ataquePadrao' e 'diminiurVida'" />
     <MESSAGE value="Implementados métodos 'poderEspecial' 1 e 2 de Rodan" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementados métodos 'poderEspecial' 1 e 2 de Rodan" />
+    <MESSAGE value="Criadas classes específicas dos vilões" />
+    <MESSAGE value="Mudança na implementação dos poderes especiais e na interface 'Obstaculo'" />
+    <MESSAGE value="Mudança na interface 'Obstaculo'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mudança na interface 'Obstaculo'" />
   </component>
 </project>
