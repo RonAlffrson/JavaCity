@@ -1,4 +1,8 @@
-package personagens;
+package personagens.herois;
+
+import personagens.herois.Heroi;
+import personagens.herois.Personagem;
+import personagens.viloes.Vilao;
 
 public final class Rodan extends Heroi implements Personagem {
 
@@ -14,9 +18,11 @@ public final class Rodan extends Heroi implements Personagem {
     }
 
     @Override
-    public void poderEspecial1() {
+    public void poderEspecial1(Vilao vilao) {
         String nome = "Tempestade de Flechas";
         int dano = 15;
+
+
 //todo - poder especial 1 vai ter como parametro um vilão/obstáculo e vair diminuir a vida dele
 
 
@@ -27,7 +33,7 @@ public final class Rodan extends Heroi implements Personagem {
     }
 
     @Override
-    public void ataquePadrao(){
+    public void ataquePadrao(Vilao vilao){
 //todo - ataque padrão vai ter como parametro um vilão/obstáculo e vair diminuir a vida dele
     }
     @Override

@@ -1,4 +1,6 @@
-package personagens;
+package personagens.herois;
+
+import personagens.viloes.Vilao;
 
 public final class Dofer extends Heroi implements Personagem {
     private final Integer MAX_VIDA = 100;
@@ -40,7 +42,7 @@ public final class Dofer extends Heroi implements Personagem {
     }
 
     @Override
-    public void poderEspecial1() {
+    public void poderEspecial1(Vilao vilao) {
         String nome = "Espada Flamejante";
     }
 
@@ -51,7 +53,7 @@ public final class Dofer extends Heroi implements Personagem {
 
 
     @Override
-    public void ataquePadrao() {
+    public void ataquePadrao(Vilao vilao) {
 
     }
     @Override

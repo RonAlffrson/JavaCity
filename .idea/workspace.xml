@@ -4,12 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="Tirado método adicionar item da Interface 'Personagem' - não acho que adicionar item deva ser algo que  seja obrigatóriamente implementado em cada herói, até porque o método só adiciona um item no inventário (coisa que já está implementada na classe mãe)">
+    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="Implementados métodos 'poderEspecial' 1 e 2 de Rodan">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/Dofer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/Dofer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/Obstaculos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/Obstaculos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/Personagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/Personagem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/Rodan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/Rodan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/Dofer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Dofer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/Heroi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Heroi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/Obstaculos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Obstaculos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/Personagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Personagem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/Rodan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Rodan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/Vilao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Vilao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/viloes/Dataretan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Dataretan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/viloes/Flegoman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Flegoman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/viloes/Napda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Napda.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +185,35 @@
       <option name="project" value="LOCAL" />
       <updated>1688053230661</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Criada classe 'Vilao'">
+      <created>1688054733353</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1688054733353</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Criado método 'aumentarVidaRodada' que usa o método 'aumentarVida' para aumentar a vida em 3% a cada rodada">
+      <created>1688054810993</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1688054810993</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Criados métodos 'ataquePadrao' e 'diminiurVida'">
+      <created>1688054864111</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1688054864111</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Implementados métodos 'poderEspecial' 1 e 2 de Rodan">
+      <created>1688054941179</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1688054941179</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -218,6 +252,11 @@
     <MESSAGE value="coloquei o texto do dofer no contar hstoria&#10;criei um construtor para cada heroi&#10;adicionei os metodos alterarVida e aumentarMana&#10;adicionei os atributos MAX_VIDA e MAX_MANA" />
     <MESSAGE value="Trocado método 'alterarVida' pelos métodos (já implementados) 'diminuirVida' e 'aumentarVida' &#10;Também criado atributo 'MIN_VIDA' com valor '0' na classe 'Heroi'" />
     <MESSAGE value="Tirado método adicionar item da Interface 'Personagem' - não acho que adicionar item deva ser algo que  seja obrigatóriamente implementado em cada herói, até porque o método só adiciona um item no inventário (coisa que já está implementada na classe mãe)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tirado método adicionar item da Interface 'Personagem' - não acho que adicionar item deva ser algo que  seja obrigatóriamente implementado em cada herói, até porque o método só adiciona um item no inventário (coisa que já está implementada na classe mãe)" />
+    <MESSAGE value="Criada classe 'Vilao'" />
+    <MESSAGE value="Criado método 'aumentarVidaRodada' que usa o método 'aumentarVida' para aumentar a vida em 3% a cada rodada" />
+    <MESSAGE value="Criado métodos 'ataquePadrao' e 'diminiurVida'" />
+    <MESSAGE value="Criados métodos 'ataquePadrao' e 'diminiurVida'" />
+    <MESSAGE value="Implementados métodos 'poderEspecial' 1 e 2 de Rodan" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementados métodos 'poderEspecial' 1 e 2 de Rodan" />
   </component>
 </project>

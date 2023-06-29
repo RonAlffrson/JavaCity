@@ -1,4 +1,4 @@
-package personagens;
+package personagens.herois;
 import itens.*;
 import java.util.ArrayList;
 
