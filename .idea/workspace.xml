@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="Criação de classe 'Luta'">
+    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="História de Rodan adicionada">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Dofer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Dofer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Personagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Personagem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/personagens/herois/Rodan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Rodan.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -248,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688073497877</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="História de Rodan adicionada">
+      <created>1688079975116</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1688079975116</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -299,6 +304,7 @@
     <MESSAGE value="Todas as implementações feitas nos heróis" />
     <MESSAGE value="Mudança na implementação da classe 'Dofer'" />
     <MESSAGE value="Criação de classe 'Luta'" />
-    <option name="LAST_COMMIT_MESSAGE" value="Criação de classe 'Luta'" />
+    <MESSAGE value="História de Rodan adicionada" />
+    <option name="LAST_COMMIT_MESSAGE" value="História de Rodan adicionada" />
   </component>
 </project>
