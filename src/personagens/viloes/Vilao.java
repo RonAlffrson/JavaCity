@@ -6,7 +6,7 @@ public abstract class Vilao implements Obstaculo {
     protected final Integer MIN_VIDA = 0;
 
     @Override
-    public void diminiurVida(Integer quantidadeVida) {
+    public void diminiurVida(int quantidadeVida) {
         if (vida - quantidadeVida >= MIN_VIDA) {
             vida -= quantidadeVida;
         }
