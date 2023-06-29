@@ -14,13 +14,21 @@ public final class Rodan extends Heroi implements Personagem {
     }
 
     @Override
-    public void poderEspecial() {
+    public void poderEspecial1() {
+        String nome = "Tempestade de Flechas";
+        int dano = 15;
+//todo - poder especial 1 vai ter como parametro um vilão/obstáculo e vair diminuir a vida dele
 
+
+    }
+    public void poderEspecial2() {
+        String nome = "Regeneração Completa";
+        aumentarVida(30);
     }
 
     @Override
     public void ataquePadrao(){
-
+//todo - ataque padrão vai ter como parametro um vilão/obstáculo e vair diminuir a vida dele
     }
     @Override
     public void aumentarMana(){
@@ -51,6 +59,11 @@ public final class Rodan extends Heroi implements Personagem {
         else if (vida - quantidadeVida < MIN_VIDA){
             vida = MIN_VIDA;
         }
+    }
+
+    @Override
+    public void aumentarVidaRodada(){
+        aumentarVida(3);
     }
 
 }

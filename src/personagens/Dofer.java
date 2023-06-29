@@ -5,7 +5,7 @@ public final class Dofer extends Heroi implements Personagem {
     public Dofer(){
         this.nome = "Dofer";
         this.vida = 100;
-        this.forcaAtaque = 3;
+        this.forcaAtaque = 10;
     }
     @Override
     public void contarHistoria() {
@@ -40,7 +40,12 @@ public final class Dofer extends Heroi implements Personagem {
     }
 
     @Override
-    public void poderEspecial() {
+    public void poderEspecial1() {
+        String nome = "Espada Flamejante";
+    }
+
+    @Override
+    public void poderEspecial2() {
 
     }
 
@@ -80,6 +85,10 @@ public final class Dofer extends Heroi implements Personagem {
         }
     }
 
+    @Override
+    public void aumentarVidaRodada() {
+
+    }
 
 
 }
