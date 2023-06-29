@@ -44,10 +44,6 @@ public final class Dofer extends Heroi implements Personagem {
 
     }
 
-    @Override
-    public void adicionarItem() {
-
-    }
 
     @Override
     public void ataquePadrao() {
@@ -65,13 +61,25 @@ public final class Dofer extends Heroi implements Personagem {
 
     @Override
     public void aumentarVida(Integer quantidadeVida) {
-
+        int MAX_VIDA = 70;
+        if (vida + quantidadeVida <= MAX_VIDA) {
+            vida += quantidadeVida;
+        }
+        else if (vida + quantidadeVida > MAX_VIDA){
+            vida = MAX_VIDA;
+        }
     }
 
     @Override
     public void diminiurVida(Integer quantidadeVida) {
-
+        if (vida - quantidadeVida >= MIN_VIDA) {
+            vida -= quantidadeVida;
+        }
+        else if (vida - quantidadeVida < MIN_VIDA){
+            vida = MIN_VIDA;
+        }
     }
+
 
 
 }

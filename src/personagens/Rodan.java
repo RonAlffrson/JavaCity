@@ -1,7 +1,6 @@
 package personagens;
 
 public final class Rodan extends Heroi implements Personagem {
-    private final Integer MAX_VIDA = 70;
 
     public Rodan (){
         this.nome = "Rodan";
@@ -16,11 +15,6 @@ public final class Rodan extends Heroi implements Personagem {
 
     @Override
     public void poderEspecial() {
-
-    }
-
-    @Override
-    public void adicionarItem(){
 
     }
 
@@ -40,6 +34,7 @@ public final class Rodan extends Heroi implements Personagem {
 
     @Override
     public void aumentarVida(Integer quantidadeVida) {
+        int MAX_VIDA = 70;
         if (vida + quantidadeVida <= MAX_VIDA) {
             vida += quantidadeVida;
         }

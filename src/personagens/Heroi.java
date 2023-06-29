@@ -9,10 +9,8 @@ public abstract class Heroi {
     protected final Integer MAX_MANA = 100;
     protected final Integer MIN_VIDA = 0;
 
-   /* public void adicionarItem(Item item){
+   public void adicionarItem(Item item){
         inventario.add(item);
-    }*/
-    /*public void alterarVida(){
+    }
 
-    }*/
 }
