@@ -19,15 +19,25 @@ public final class Rodan extends Heroi {
     @Override
     public void poderEspecial1(Vilao vilao) {
         String nome = "Tempestade de Flechas";
-        int dano = 15;
-        diminuirMana(30);
-        vilao.diminiurVida(dano);
+        if (mana >= 30){
+            int dano = 15;
+            diminuirMana(30);
+            vilao.diminiurVida(dano);
+        }
+        else{
+            System.out.println("Mana insuficiente");
+        }
     }
 
     public void poderEspecial2() {
         String nome = "Regeneração Completa";
-        diminuirMana(50);
-        aumentarVida(30);
+        if (mana >= 50){
+            diminuirMana(50);
+            aumentarVida(30);
+        }
+        else{
+            System.out.println("Mana insuficiente");
+        }
     }
 
     @Override

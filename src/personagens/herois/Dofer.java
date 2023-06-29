@@ -44,21 +44,31 @@ public final class Dofer extends Heroi {
     @Override
     public void poderEspecial1(Vilao vilao) {
         String nome = "Espada Flamejante";
-        int dano = 30;
-        diminuirMana(65);
-        vilao.diminiurVida(dano);
+        if (mana >= 65){
+            int dano = 30;
+            diminuirMana(65);
+            vilao.diminiurVida(dano);
+        }
+        else{
+            System.out.println("Mana insuficiente");
+        }
     }
 //todo - resolver oq fazer no poder especial 2 do dofer
     public void poderEspecial2() {
         String nome = "Armadura Impenetrável";
-        this.forcaAtaque = 5;
-        diminuirMana(80);
-        aumentarVida(30);
+        if (mana >= 80){
+            this.forcaAtaque = 5;
+            diminuirMana(80);
+            aumentarVida(30);
+        }
+        else{
+            System.out.println("Mana insuficiente");
+        }
     }
 
     @Override
     public void ataquePadrao(Vilao vilao){
-        String nome = "Bola de Energia";
+        String nome = "Ataque de Espada";
         vilao.diminiurVida(forcaAtaque);
     }
 

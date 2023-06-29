@@ -2,7 +2,7 @@ package personagens.herois;
 import itens.*;
 import java.util.ArrayList;
 
-public abstract class Heroi implements  Personagem {
+public abstract class Heroi implements Personagem {
     protected String nome, classe;
     protected Integer vida, mana = 0, forcaAtaque;
     protected ArrayList<Item> inventario = new ArrayList<>();
