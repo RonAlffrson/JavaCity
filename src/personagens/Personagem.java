@@ -6,5 +6,7 @@ public interface Personagem {
     void adicionarItem();
     void ataquePadrao();
     void aumentarMana();
-    void alterarVida(Integer quantidadeVida);
+    //void alterarVida(Integer quantidadeVida);
+    void aumentarVida(Integer quantidadeVida);
+    void diminiurVida(Integer quantidadeVida);
 }
