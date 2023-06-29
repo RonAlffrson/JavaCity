@@ -8,7 +8,6 @@ public final class Dofer extends Heroi {
         this.classe = "Cavaleiro";
         this.vida = 100;
         this.forcaAtaque = 10;
-
     }
     @Override
     public void contarHistoria() {
@@ -73,7 +72,7 @@ public final class Dofer extends Heroi {
     }
 
     @Override
-    public void aumentarMana(Integer quantidadeMana){
+    public void aumentarMana(int quantidadeMana){
         if (mana + quantidadeMana <= MAX_MANA) {
             mana += quantidadeMana;
         }
@@ -83,7 +82,7 @@ public final class Dofer extends Heroi {
     }
 
     @Override
-    public void diminuirMana(Integer quantidadeMana) {
+    public void diminuirMana(int quantidadeMana) {
         if (mana - quantidadeMana >= MIN_MANA) {
             mana -= quantidadeMana;
         }
@@ -93,7 +92,7 @@ public final class Dofer extends Heroi {
     }
 
     @Override
-    public void aumentarVida(Integer quantidadeVida) {
+    public void aumentarVida(int quantidadeVida) {
         int MAX_VIDA = 100;
         if (vida + quantidadeVida <= MAX_VIDA) {
             vida += quantidadeVida;
@@ -104,7 +103,7 @@ public final class Dofer extends Heroi {
     }
 
     @Override
-    public void diminiurVida(Integer quantidadeVida) {
+    public void diminiurVida(int quantidadeVida) {
         if (vida - quantidadeVida >= MIN_VIDA) {
             vida -= quantidadeVida;
         }

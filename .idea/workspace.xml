@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="Todas as implementações feitas nos heróis">
+    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="Criação de classe 'Luta'">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/personagens/herois/Dofer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Dofer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Heroi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Heroi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Personagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Personagem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/personagens/herois/Rodan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Rodan.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -234,7 +234,21 @@
       <option name="project" value="LOCAL" />
       <updated>1688058699846</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Mudança na implementação da classe 'Dofer'">
+      <created>1688073474701</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1688073474701</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Criação de classe 'Luta'">
+      <created>1688073497877</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1688073497877</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -283,6 +297,8 @@
     <MESSAGE value="Mudança na interface 'Obstaculo'" />
     <MESSAGE value="ITodas as implementações feitas nos heróis" />
     <MESSAGE value="Todas as implementações feitas nos heróis" />
-    <option name="LAST_COMMIT_MESSAGE" value="Todas as implementações feitas nos heróis" />
+    <MESSAGE value="Mudança na implementação da classe 'Dofer'" />
+    <MESSAGE value="Criação de classe 'Luta'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Criação de classe 'Luta'" />
   </component>
 </project>
