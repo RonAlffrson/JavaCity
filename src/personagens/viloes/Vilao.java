@@ -1,6 +1,6 @@
 package personagens.viloes;
 
-public abstract class Vilao implements Obstaculos{
+public abstract class Vilao implements Obstaculo {
     protected String nome;
     protected Integer vida = 100, mana = 0, forcaAtaque;
     protected final Integer MIN_VIDA = 0;
