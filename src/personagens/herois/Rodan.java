@@ -2,7 +2,7 @@ package personagens.herois;
 
 import personagens.viloes.Vilao;
 
-public final class Rodan extends Heroi implements Personagem {
+public final class Rodan extends Heroi {
 
     public Rodan (){
         this.nome = "Rodan";
