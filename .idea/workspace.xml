@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="Histórias atualizadas">
+    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="Atualizações">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/viloes/Obstaculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Obstaculo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/viloes/Vilao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Vilao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/itens/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/itens/Item.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688081292726</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Atualizações">
+      <created>1688082628021</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1688082628021</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -288,7 +294,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="classe abstrata personagem" />
     <MESSAGE value="Classe 'Item' e interface 'Personagem' criados." />
     <MESSAGE value="Nome da classe 'Personagem' trocado para 'PersonagemGenerico' para não conflitar com a interface 'Personagem'" />
     <MESSAGE value="Arquivo de roteiro do jogo adicionado para fácil manutenção" />
@@ -313,6 +318,7 @@
     <MESSAGE value="Criação de classe 'Luta'" />
     <MESSAGE value="História de Rodan adicionada" />
     <MESSAGE value="Histórias atualizadas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Histórias atualizadas" />
+    <MESSAGE value="Atualizações" />
+    <option name="LAST_COMMIT_MESSAGE" value="Atualizações" />
   </component>
 </project>
