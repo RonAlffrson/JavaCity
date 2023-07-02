@@ -39,7 +39,7 @@ public final class Rodan extends Heroi {
                 que a salvação de sua amada finalmente estava próxima.                                                                                                            \s
                 """);
     }
-
+//todo descrição dos ataques
     @Override
     public void poderEspecial1(Vilao vilao) {
         String nome = "Tempestade de Flechas";
@@ -55,9 +55,10 @@ public final class Rodan extends Heroi {
 
     public void poderEspecial2() {
         String nome = "Regeneração Completa";
+        String descricao;
         if (mana >= 50){
             diminuirMana(50);
-            aumentarVida(30);
+            aumentarVida(40);
         }
         else{
             System.out.println("Mana insuficiente");

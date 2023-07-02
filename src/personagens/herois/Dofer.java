@@ -33,6 +33,7 @@ public final class Dofer extends Heroi {
                 um mago negro que realizava experimentos que emanavam longínquas e estranhas luzes verdes, o herói sentiu sua espinha arrepiar,
                 ele sabia o que tinha que fazer.""");
     }
+    //todo descricao dos ataques
     @Override
     public void poderEspecial1(Vilao vilao) {
         String nome = "Espada Flamejante";
@@ -47,10 +48,11 @@ public final class Dofer extends Heroi {
     }
 //todo - resolver oq fazer no poder especial 2 do dofer
     public void poderEspecial2() {
-        String nome = "Armadura Impenetrável";
+        String nome = "Transmutação de mana";
+        String descricao;
         if (mana >= 80){
             diminuirMana(80);
-            aumentarVida(30);
+            aumentarVida(25);
             //this.forcaAtaque = 5;
         }
         else{
