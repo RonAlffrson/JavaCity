@@ -49,9 +49,9 @@ public final class Dofer extends Heroi {
     public void poderEspecial2() {
         String nome = "Armadura Impenetrável";
         if (mana >= 80){
-            this.forcaAtaque = 5;
             diminuirMana(80);
             aumentarVida(30);
+            //this.forcaAtaque = 5;
         }
         else{
             System.out.println("Mana insuficiente");
@@ -63,57 +63,5 @@ public final class Dofer extends Heroi {
         String nome = "Ataque de Espada";
         vilao.diminiurVida(forcaAtaque);
     }
-
-    @Override
-    public void aumentarMana(int quantidadeMana){
-        if (mana + quantidadeMana <= MAX_MANA) {
-            mana += quantidadeMana;
-        }
-        else if (mana + quantidadeMana > MAX_MANA){
-            mana = MAX_MANA;
-        }
-    }
-
-    @Override
-    public void diminuirMana(int quantidadeMana) {
-        if (mana - quantidadeMana >= MIN_MANA) {
-            mana -= quantidadeMana;
-        }
-        else if (mana - quantidadeMana < MIN_MANA){
-            mana = MAX_MANA;
-        }
-    }
-
-    @Override
-    public void aumentarVida(int quantidadeVida) {
-        int MAX_VIDA = 100;
-        if (vida + quantidadeVida <= MAX_VIDA) {
-            vida += quantidadeVida;
-        }
-        else if (vida + quantidadeVida > MAX_VIDA){
-            vida = MAX_VIDA;
-        }
-    }
-
-    @Override
-    public void diminiurVida(int quantidadeVida) {
-        if (vida - quantidadeVida >= MIN_VIDA) {
-            vida -= quantidadeVida;
-        }
-        else if (vida - quantidadeVida < MIN_VIDA){
-            vida = MIN_VIDA;
-        }
-    }
-
-    @Override
-    public void aumentarVidaRodada(){
-        aumentarVida(3);
-    }
-
-    @Override
-    public void aumentarManaRodada(){
-        aumentarMana(5);
-    }
-
 
 }
