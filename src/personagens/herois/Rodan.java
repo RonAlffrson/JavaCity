@@ -3,7 +3,6 @@ package personagens.herois;
 import personagens.viloes.Vilao;
 
 public final class Rodan extends Heroi {
-
     public Rodan (){
         nome = "Rodan";
         classe = "Mago";
