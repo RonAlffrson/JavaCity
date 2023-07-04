@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="vilões atualizados e retirado os 'this.&lt;nome do atributo&gt;' no construtor dos personanagens">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Rodan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Rodan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/viloes/Obstaculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Obstaculo.java" afterDir="false" />
-    </list>
+    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="objeto 'heroi' -&gt; 'jogador' na Main" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -305,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688501685784</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="objeto 'heroi' -&gt; 'jogador' na Main">
+      <created>1688511561630</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1688511561630</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -332,7 +333,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Classe 'Obstaculo' criada" />
     <MESSAGE value="Classes filhas da classe 'Heroi', 'Rodan' e 'Dofer' criadas" />
     <MESSAGE value="coloquei o texto do dofer no contar hstoria&#10;criei um construtor para cada heroi&#10;adicionei os metodos alterarVida e aumentarMana&#10;adicionei os atributos MAX_VIDA e MAX_MANA" />
     <MESSAGE value="Trocado método 'alterarVida' pelos métodos (já implementados) 'diminuirVida' e 'aumentarVida' &#10;Também criado atributo 'MIN_VIDA' com valor '0' na classe 'Heroi'" />
@@ -357,6 +357,7 @@
     <MESSAGE value="Mudança em ataque especial de 'Dofer'&#10;Adicionada descrição dos poderes especiais" />
     <MESSAGE value="Descrição adicionada nos poderes especiais" />
     <MESSAGE value="vilões atualizados e retirado os 'this.&lt;nome do atributo&gt;' no construtor dos personanagens" />
-    <option name="LAST_COMMIT_MESSAGE" value="vilões atualizados e retirado os 'this.&lt;nome do atributo&gt;' no construtor dos personanagens" />
+    <MESSAGE value="objeto 'heroi' -&gt; 'jogador' na Main" />
+    <option name="LAST_COMMIT_MESSAGE" value="objeto 'heroi' -&gt; 'jogador' na Main" />
   </component>
 </project>
