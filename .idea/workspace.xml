@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="Atualizações em itens">
+    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="Mudança em ataque especial de 'Dofer'&#10;Adicionada descrição dos poderes especiais">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/itens/Carteira.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/itens/Carteira.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/itens/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/itens/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/itens/PocaoMana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/itens/PocaoMana.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/itens/PocaoVida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/itens/PocaoVida.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/personagens/herois/Dofer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Dofer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Heroi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Heroi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/personagens/herois/Rodan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Rodan.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,14 +50,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/renan/IdeaProjects/JavaCity&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/renan/IdeaProjects/JavaCity",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\renan\IdeaProjects\JavaCity\src" />
@@ -280,7 +275,21 @@
       <option name="project" value="LOCAL" />
       <updated>1688095017854</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Atualizações em classe 'Carteira'&#10;alguns métodos dos hérois foram postos na classe mãe 'Heroi'&#10;Atualizações em itens">
+      <created>1688265066769</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1688265066769</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Mudança em ataque especial de 'Dofer'&#10;Adicionada descrição dos poderes especiais">
+      <created>1688265276712</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1688265276712</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -307,8 +316,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Nome da classe 'Personagem' trocado para 'PersonagemGenerico' para não conflitar com a interface 'Personagem'" />
-    <MESSAGE value="Arquivo de roteiro do jogo adicionado para fácil manutenção" />
     <MESSAGE value="Classe abstrata 'Personagem' mudada para 'Heroi'" />
     <MESSAGE value="Interface 'AcoesPersonagem' mudada para 'Personagem'" />
     <MESSAGE value="Classe 'Obstaculo' criada" />
@@ -332,6 +339,8 @@
     <MESSAGE value="Histórias atualizadas" />
     <MESSAGE value="Atualizações" />
     <MESSAGE value="Atualizações em itens" />
-    <option name="LAST_COMMIT_MESSAGE" value="Atualizações em itens" />
+    <MESSAGE value="Atualizações em classe 'Carteira'&#10;alguns métodos dos hérois foram postos na classe mãe 'Heroi'&#10;Atualizações em itens" />
+    <MESSAGE value="Mudança em ataque especial de 'Dofer'&#10;Adicionada descrição dos poderes especiais" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mudança em ataque especial de 'Dofer'&#10;Adicionada descrição dos poderes especiais" />
   </component>
 </project>
