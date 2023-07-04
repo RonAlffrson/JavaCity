@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="objeto 'heroi' -&gt; 'jogador' na Main" />
+    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/JavaCity" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -306,7 +308,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688511561630</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="update">
+      <created>1688511918710</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1688511918710</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -333,7 +342,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Classes filhas da classe 'Heroi', 'Rodan' e 'Dofer' criadas" />
     <MESSAGE value="coloquei o texto do dofer no contar hstoria&#10;criei um construtor para cada heroi&#10;adicionei os metodos alterarVida e aumentarMana&#10;adicionei os atributos MAX_VIDA e MAX_MANA" />
     <MESSAGE value="Trocado método 'alterarVida' pelos métodos (já implementados) 'diminuirVida' e 'aumentarVida' &#10;Também criado atributo 'MIN_VIDA' com valor '0' na classe 'Heroi'" />
     <MESSAGE value="Tirado método adicionar item da Interface 'Personagem' - não acho que adicionar item deva ser algo que  seja obrigatóriamente implementado em cada herói, até porque o método só adiciona um item no inventário (coisa que já está implementada na classe mãe)" />
@@ -358,6 +366,7 @@
     <MESSAGE value="Descrição adicionada nos poderes especiais" />
     <MESSAGE value="vilões atualizados e retirado os 'this.&lt;nome do atributo&gt;' no construtor dos personanagens" />
     <MESSAGE value="objeto 'heroi' -&gt; 'jogador' na Main" />
-    <option name="LAST_COMMIT_MESSAGE" value="objeto 'heroi' -&gt; 'jogador' na Main" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>
