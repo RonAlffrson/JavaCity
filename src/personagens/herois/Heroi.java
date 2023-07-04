@@ -9,6 +9,11 @@ public abstract class Heroi implements Personagem {
     protected ArrayList<Item> inventario = new ArrayList<>();
     protected final Integer MAX_MANA = 100, MIN_MANA = 0, MIN_VIDA = 0;
     protected Carteira carteira = new Carteira();
+    public static void verificarOpcaoHeroi(int opcaoHeroi) throws IllegalArgumentException{
+        if(opcaoHeroi != 1 && opcaoHeroi != 2){
+            throw new IllegalArgumentException("Erro: Diite 1 ou 2 para escolher o heroi");
+        }
+    }
 
     @Override
     public void aumentarMana(int quantidadeMana){

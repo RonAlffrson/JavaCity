@@ -52,7 +52,7 @@ public final class Rodan extends Heroi {
             System.out.println("Mana insuficiente");
         }
     }
-
+    @Override
     public void poderEspecial2() {
         String nome = "Regeneração Completa";
         String descricao;

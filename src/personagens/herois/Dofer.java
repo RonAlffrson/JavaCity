@@ -37,6 +37,7 @@ public final class Dofer extends Heroi {
     @Override
     public void poderEspecial1(Vilao vilao) {
         String nome = "Espada Flamejante";
+        String descricao;
         if (mana >= 65){
             int dano = 30;
             diminuirMana(65);

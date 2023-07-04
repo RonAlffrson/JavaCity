@@ -8,4 +8,5 @@ public class PocaoMana extends Item{
     }
 
 
+
 }
