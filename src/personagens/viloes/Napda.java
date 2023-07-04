@@ -1,4 +1,15 @@
 package personagens.viloes;
 
-public class Napda  {
+import personagens.herois.Heroi;
+
+public final class Napda extends Vilao{
+    public Napda(){
+        nome = "Napda";
+        forcaAtaque = 9;
+    }
+
+    @Override
+    public void ataquePadrao(Heroi heroi) {
+
+    }
 }

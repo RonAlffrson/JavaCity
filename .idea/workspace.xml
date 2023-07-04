@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="Mudança em ataque especial de 'Dofer'&#10;Adicionada descrição dos poderes especiais">
+    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="Descrição adicionada nos poderes especiais">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/personagens/herois/Dofer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Dofer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/personagens/herois/Rodan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Rodan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/viloes/Dataretan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Dataretan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/viloes/Flegoman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Flegoman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/viloes/Napda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Napda.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -289,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688265276712</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Descrição adicionada nos poderes especiais">
+      <created>1688499600656</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1688499600656</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -316,7 +326,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Classe abstrata 'Personagem' mudada para 'Heroi'" />
     <MESSAGE value="Interface 'AcoesPersonagem' mudada para 'Personagem'" />
     <MESSAGE value="Classe 'Obstaculo' criada" />
     <MESSAGE value="Classes filhas da classe 'Heroi', 'Rodan' e 'Dofer' criadas" />
@@ -341,6 +350,7 @@
     <MESSAGE value="Atualizações em itens" />
     <MESSAGE value="Atualizações em classe 'Carteira'&#10;alguns métodos dos hérois foram postos na classe mãe 'Heroi'&#10;Atualizações em itens" />
     <MESSAGE value="Mudança em ataque especial de 'Dofer'&#10;Adicionada descrição dos poderes especiais" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mudança em ataque especial de 'Dofer'&#10;Adicionada descrição dos poderes especiais" />
+    <MESSAGE value="Descrição adicionada nos poderes especiais" />
+    <option name="LAST_COMMIT_MESSAGE" value="Descrição adicionada nos poderes especiais" />
   </component>
 </project>

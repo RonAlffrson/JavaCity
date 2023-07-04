@@ -5,10 +5,10 @@ import personagens.viloes.Vilao;
 public final class Rodan extends Heroi {
 
     public Rodan (){
-        this.nome = "Rodan";
-        this.classe = "Mago";
-        this.vida = 70;
-        this.forcaAtaque = 5;
+        nome = "Rodan";
+        classe = "Mago";
+        vida = 70;
+        forcaAtaque = 5;
     }
 
     @Override
