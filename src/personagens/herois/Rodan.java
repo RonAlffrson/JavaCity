@@ -1,5 +1,6 @@
 package personagens.herois;
 
+import personagens.PoderEspecial;
 import personagens.viloes.Vilao;
 
 public final class Rodan extends Heroi {
@@ -9,6 +10,8 @@ public final class Rodan extends Heroi {
         this.classe = "Mago";
         this.vida = 70;
         this.forcaAtaque = 5;
+        this.poderEspecial1 = new PoderEspecial("Tempestade de flechas", 15,30);
+        this.poderEspecial2 = new PoderEspecial("Regeneração completa", 40,50);
     }
 
     @Override
@@ -42,12 +45,9 @@ public final class Rodan extends Heroi {
 //todo descrição dos ataques
     @Override
     public void poderEspecial1(Vilao vilao) {
-        String nome = "Tempestade de Flechas";
-        String descricao  = "Tempestade de Flechas inflinge 15 de dano no inimigo";
-        if (mana >= 30){
-            int dano = 15;
-            diminuirMana(30);
-            vilao.diminiurVida(dano);
+        if (mana >= poderEspecial1.getAtributo()){
+            diminuirMana(poderEspecial1.getAtributo());
+            vilao.diminiurVida(poderEspecial1.getAtributo());
         }
         else{
             System.out.println("Mana insuficiente");
@@ -56,9 +56,9 @@ public final class Rodan extends Heroi {
     @Override
     public void poderEspecial2() {
         String nome = "Regeneração Completa";
-        String descricao = "Regeneração Completa regenera 40 de vida ";
+        String descricao = "Regeneração Completa regenera 40 de vida e gasta 50 de mana ";
         if (mana >= 50){
-            diminuirMana(50);
+            diminuirMana(poderEspecial2.getAtributo());
             aumentarVida(40);
         }
         else{
