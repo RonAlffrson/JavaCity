@@ -3,7 +3,7 @@ package personagens.herois;
 import itens.Item;
 import personagens.viloes.Vilao;
 
-public interface Personagem {
+public interface AcoesPersonagem {
     void contarHistoria();
     void poderEspecial1(Vilao vilao);
     void poderEspecial2();
