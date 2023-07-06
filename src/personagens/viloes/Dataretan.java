@@ -11,6 +11,7 @@ public final class Dataretan extends Vilao {
 //todo - ataques padroes dos vilões
     @Override
     public void ataquePadrao(Heroi heroi) {
-
+        String nome = "Confusão mental";
+        heroi.diminiurVida(forcaAtaque);
     }
 }
