@@ -1,3 +1,4 @@
+import personagens.MultiplicadorDeAtaque;
 import personagens.herois.Dofer;
 import personagens.herois.Heroi;
 import personagens.herois.Rodan;
