@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="Mudança em ataque especial de 'Dofer'&#10;Adicionada descrição dos poderes especiais">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Dofer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Dofer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Rodan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Rodan.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="37d30cd3-2df4-4f4e-805a-1745d5691001" />
+        <option name="url" value="https://github.com/RonAlffrson/JavaCity.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Ra0Pi6zpX4JQvVjREHjQbKr0CZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/renan/IdeaProjects/JavaCity",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\renan\IdeaProjects\JavaCity\src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="JavaCity" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="" />
+      <created>1687472864518</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1687472864518</updated>
+    </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <created>1687473222070</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1687473222070</updated>
+    </task>
+    <task id="LOCAL-00002" summary="classe abstrata personagem">
+      <created>1687520824742</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1687520824742</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Classe 'Item' e interface 'Personagem' criados.">
+      <created>1687894561764</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1687894561764</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Nome da classe 'Personagem' trocado para 'PersonagemGenerico' para não conflitar com a interface 'Personagem'">
+      <created>1687894660098</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1687894660098</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Arquivo de roteiro do jogo adicionado para fácil manutenção">
+      <created>1687970089508</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1687970089508</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Classe abstrata 'Personagem' mudada para 'Heroi'">
+      <created>1687989180760</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1687989180760</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Interface 'AcoesPersonagem' mudada para 'Personagem'">
+      <created>1687989676928</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1687989676928</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Interface 'AcoesPersonagem' mudada para 'Personagem'">
+      <created>1687989700442</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1687989700442</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Classe 'Obstaculo' criada">
+      <created>1687989744061</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1687989744061</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Classes filhas da classe 'Heroi', 'Rodan' e 'Dofer' criadas">
+      <created>1687991011115</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1687991011115</updated>
+    </task>
+    <task id="LOCAL-00011" summary="coloquei o texto do dofer no contar hstoria&#10;criei um construtor para cada heroi&#10;adicionei os metodos alterarVida e aumentarMana&#10;adicionei os atributos MAX_VIDA e MAX_MANA">
+      <created>1687995982439</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1687995982439</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Trocado método 'alterarVida' pelos métodos (já implementados) 'diminuirVida' e 'aumentarVida' &#10;Também criado atributo 'MIN_VIDA' com valor '0' na classe 'Heroi'">
+      <created>1688052608506</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1688052608506</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Tirado método adicionar item da Interface 'Personagem' - não acho que adicionar item deva ser algo que  seja obrigatóriamente implementado em cada herói, até porque o método só adiciona um item no inventário (coisa que já está implementada na classe mãe)">
+      <created>1688053230661</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1688053230661</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Criada classe 'Vilao'">
+      <created>1688054733353</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1688054733353</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Criado método 'aumentarVidaRodada' que usa o método 'aumentarVida' para aumentar a vida em 3% a cada rodada">
+      <created>1688054810993</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1688054810993</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Criados métodos 'ataquePadrao' e 'diminiurVida'">
+      <created>1688054864111</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1688054864111</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Implementados métodos 'poderEspecial' 1 e 2 de Rodan">
+      <created>1688054941179</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1688054941179</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Criadas classes específicas dos vilões">
+      <created>1688055574986</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1688055574986</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Mudança na implementação dos poderes especiais e na interface 'Obstaculo'">
+      <created>1688055630664</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1688055630664</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Mudança na interface 'Obstaculo'">
+      <created>1688055672968</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1688055672968</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Todas as implementações feitas nos heróis">
+      <created>1688058699846</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1688058699846</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Mudança na implementação da classe 'Dofer'">
+      <created>1688073474701</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1688073474701</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Criação de classe 'Luta'">
+      <created>1688073497877</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1688073497877</updated>
+    </task>
+    <task id="LOCAL-00024" summary="História de Rodan adicionada">
+      <created>1688079975116</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1688079975116</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Histórias atualizadas">
+      <created>1688081292726</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1688081292726</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Atualizações">
+      <created>1688082628021</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1688082628021</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Atualizações em itens">
+      <created>1688095017854</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1688095017854</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Atualizações em classe 'Carteira'&#10;alguns métodos dos hérois foram postos na classe mãe 'Heroi'&#10;Atualizações em itens">
+      <created>1688265066769</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1688265066769</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Mudança em ataque especial de 'Dofer'&#10;Adicionada descrição dos poderes especiais">
+      <created>1688265276712</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1688265276712</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Classe abstrata 'Personagem' mudada para 'Heroi'" />
+    <MESSAGE value="Interface 'AcoesPersonagem' mudada para 'Personagem'" />
+    <MESSAGE value="Classe 'Obstaculo' criada" />
+    <MESSAGE value="Classes filhas da classe 'Heroi', 'Rodan' e 'Dofer' criadas" />
+    <MESSAGE value="coloquei o texto do dofer no contar hstoria&#10;criei um construtor para cada heroi&#10;adicionei os metodos alterarVida e aumentarMana&#10;adicionei os atributos MAX_VIDA e MAX_MANA" />
+    <MESSAGE value="Trocado método 'alterarVida' pelos métodos (já implementados) 'diminuirVida' e 'aumentarVida' &#10;Também criado atributo 'MIN_VIDA' com valor '0' na classe 'Heroi'" />
+    <MESSAGE value="Tirado método adicionar item da Interface 'Personagem' - não acho que adicionar item deva ser algo que  seja obrigatóriamente implementado em cada herói, até porque o método só adiciona um item no inventário (coisa que já está implementada na classe mãe)" />
+    <MESSAGE value="Criada classe 'Vilao'" />
+    <MESSAGE value="Criado método 'aumentarVidaRodada' que usa o método 'aumentarVida' para aumentar a vida em 3% a cada rodada" />
+    <MESSAGE value="Criado métodos 'ataquePadrao' e 'diminiurVida'" />
+    <MESSAGE value="Criados métodos 'ataquePadrao' e 'diminiurVida'" />
+    <MESSAGE value="Implementados métodos 'poderEspecial' 1 e 2 de Rodan" />
+    <MESSAGE value="Criadas classes específicas dos vilões" />
+    <MESSAGE value="Mudança na implementação dos poderes especiais e na interface 'Obstaculo'" />
+    <MESSAGE value="Mudança na interface 'Obstaculo'" />
+    <MESSAGE value="ITodas as implementações feitas nos heróis" />
+    <MESSAGE value="Todas as implementações feitas nos heróis" />
+    <MESSAGE value="Mudança na implementação da classe 'Dofer'" />
+    <MESSAGE value="Criação de classe 'Luta'" />
+    <MESSAGE value="História de Rodan adicionada" />
+    <MESSAGE value="Histórias atualizadas" />
+    <MESSAGE value="Atualizações" />
+    <MESSAGE value="Atualizações em itens" />
+    <MESSAGE value="Atualizações em classe 'Carteira'&#10;alguns métodos dos hérois foram postos na classe mãe 'Heroi'&#10;Atualizações em itens" />
+    <MESSAGE value="Mudança em ataque especial de 'Dofer'&#10;Adicionada descrição dos poderes especiais" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mudança em ataque especial de 'Dofer'&#10;Adicionada descrição dos poderes especiais" />
+  </component>
+</project>
