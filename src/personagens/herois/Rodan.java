@@ -4,14 +4,20 @@ import personagens.PoderEspecial;
 import personagens.viloes.Vilao;
 
 public final class Rodan extends Heroi {
-
     public Rodan (){
+      main
         this.nome = "Rodan";
         this.classe = "Mago";
         this.vida = 70;
         this.forcaAtaque = 5;
         this.poderEspecial1 = new PoderEspecial("Tempestade de flechas", 15,30);
         this.poderEspecial2 = new PoderEspecial("Regeneração completa", 40,50);
+
+        nome = "Rodan";
+        classe = "Mago";
+        vida = 70;
+        forcaAtaque = 5;
+ master
     }
 
     @Override

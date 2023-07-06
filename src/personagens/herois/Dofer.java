@@ -5,10 +5,10 @@ import personagens.viloes.Vilao;
 
 public final class Dofer extends Heroi {
     public Dofer(){
-        this.nome = "Dofer";
-        this.classe = "Cavaleiro";
-        this.vida = 100;
-        this.forcaAtaque = 10;
+        nome = "Dofer";
+        classe = "Cavaleiro";
+        vida = 100;
+        forcaAtaque = 10;
     }
     @Override
     public void contarHistoria() {
@@ -34,7 +34,6 @@ public final class Dofer extends Heroi {
                 um mago negro que realizava experimentos que emanavam longínquas e estranhas luzes verdes, o herói sentiu sua espinha arrepiar,
                 ele sabia o que tinha que fazer.""");
     }
-    //todo descricao dos ataques
     @Override
     public void poderEspecial1(Vilao vilao) {
         if (mana >= 65){
@@ -46,7 +45,6 @@ public final class Dofer extends Heroi {
             System.out.println("Mana insuficiente");
         }
     }
-//todo - resolver oq fazer no poder especial 2 do dofer
     public void poderEspecial2() {
         String nome = "Transmutação de mana";
         String descricao = "Transmutação de mana regenera 25 de vida";
@@ -54,8 +52,10 @@ public final class Dofer extends Heroi {
         if (mana >= 80){
             diminuirMana(80);
             aumentarVida(25);
+ main
             //this.forcaAtaque = 5;
             System.out.println(descricao);
+ master
         }
         else{
             System.out.println("Mana insuficiente");

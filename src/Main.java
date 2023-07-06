@@ -8,15 +8,16 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        Heroi heroi;
-        System.out.println("Bem vindo a  JavaCity");
+        Heroi jogador;
+        System.out.println("Bem-vindo a JavaCity");
         System.out.println("=--=-=-=-=-=-=-=-=-=-=-=-=-=-=");
         int opcaoHeroi = 0;
         do {
             try {
-                    System.out.println("Escolhe seu heroi:\n" +
-                            "(1) Dofer - Cavaleiro\n" +
-                            "(2) Ronan - Mago");
+                    System.out.println("""
+                            Escolha seu heroi:
+                            (1) Dofer - Cavaleiro
+                            (2) Ronan - Mago""");
                     opcaoHeroi = input.nextInt();
                     Heroi.verificarOpcaoHeroi(opcaoHeroi); // esse metodo lanca uma exceçãp
             }
@@ -37,12 +38,14 @@ public class Main {
 
         } while (opcaoHeroi == 0); // testando valores validos pro heroi
         if(opcaoHeroi == 1){
-            heroi = new Dofer();
+            jogador = new Dofer();
         }
         else{
-            heroi = new Rodan();
+            jogador = new Rodan();
         }
-        heroi.contarHistoria();
+
+
+        jogador.contarHistoria();
 
 
 

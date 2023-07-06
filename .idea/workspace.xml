@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="Mudança em ataque especial de 'Dofer'&#10;Adicionada descrição dos poderes especiais">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Dofer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Dofer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Rodan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Rodan.java" afterDir="false" />
+    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/JavaCity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,14 +48,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/renan/IdeaProjects/JavaCity",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/renan/IdeaProjects/JavaCity&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\renan\IdeaProjects\JavaCity\src" />
@@ -289,7 +287,35 @@
       <option name="project" value="LOCAL" />
       <updated>1688265276712</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Descrição adicionada nos poderes especiais">
+      <created>1688499600656</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1688499600656</updated>
+    </task>
+    <task id="LOCAL-00031" summary="vilões atualizados e retirado os 'this.&lt;nome do atributo&gt;' no construtor dos personanagens">
+      <created>1688501685784</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1688501685784</updated>
+    </task>
+    <task id="LOCAL-00032" summary="objeto 'heroi' -&gt; 'jogador' na Main">
+      <created>1688511561630</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1688511561630</updated>
+    </task>
+    <task id="LOCAL-00033" summary="update">
+      <created>1688511918710</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1688511918710</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -316,10 +342,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Classe abstrata 'Personagem' mudada para 'Heroi'" />
-    <MESSAGE value="Interface 'AcoesPersonagem' mudada para 'Personagem'" />
-    <MESSAGE value="Classe 'Obstaculo' criada" />
-    <MESSAGE value="Classes filhas da classe 'Heroi', 'Rodan' e 'Dofer' criadas" />
     <MESSAGE value="coloquei o texto do dofer no contar hstoria&#10;criei um construtor para cada heroi&#10;adicionei os metodos alterarVida e aumentarMana&#10;adicionei os atributos MAX_VIDA e MAX_MANA" />
     <MESSAGE value="Trocado método 'alterarVida' pelos métodos (já implementados) 'diminuirVida' e 'aumentarVida' &#10;Também criado atributo 'MIN_VIDA' com valor '0' na classe 'Heroi'" />
     <MESSAGE value="Tirado método adicionar item da Interface 'Personagem' - não acho que adicionar item deva ser algo que  seja obrigatóriamente implementado em cada herói, até porque o método só adiciona um item no inventário (coisa que já está implementada na classe mãe)" />
@@ -341,6 +363,10 @@
     <MESSAGE value="Atualizações em itens" />
     <MESSAGE value="Atualizações em classe 'Carteira'&#10;alguns métodos dos hérois foram postos na classe mãe 'Heroi'&#10;Atualizações em itens" />
     <MESSAGE value="Mudança em ataque especial de 'Dofer'&#10;Adicionada descrição dos poderes especiais" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mudança em ataque especial de 'Dofer'&#10;Adicionada descrição dos poderes especiais" />
+    <MESSAGE value="Descrição adicionada nos poderes especiais" />
+    <MESSAGE value="vilões atualizados e retirado os 'this.&lt;nome do atributo&gt;' no construtor dos personanagens" />
+    <MESSAGE value="objeto 'heroi' -&gt; 'jogador' na Main" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>
