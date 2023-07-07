@@ -1,5 +1,6 @@
 package personagens.herois;
 
+import personagens.PoderEspecial;
 import personagens.viloes.Vilao;
 
 public final class Dofer extends Heroi {
@@ -35,8 +36,6 @@ public final class Dofer extends Heroi {
     }
     @Override
     public void poderEspecial1(Vilao vilao) {
-        String nome = "Espada Flamejante";
-        String descricao = "Espada flamejante inflinge 30 de dano no inimigo";
         if (mana >= 65){
             int dano = 30;
             diminuirMana(65);
@@ -49,9 +48,14 @@ public final class Dofer extends Heroi {
     public void poderEspecial2() {
         String nome = "Transmutação de mana";
         String descricao = "Transmutação de mana regenera 25 de vida";
+        System.out.println();
         if (mana >= 80){
             diminuirMana(80);
             aumentarVida(25);
+ main
+            //this.forcaAtaque = 5;
+            System.out.println(descricao);
+ master
         }
         else{
             System.out.println("Mana insuficiente");
