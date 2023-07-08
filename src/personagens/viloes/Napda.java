@@ -10,6 +10,7 @@ public final class Napda extends Vilao{
 
     @Override
     public void ataquePadrao(Heroi heroi) {
-
+        String nome = "Garra de mana sombria";
+        heroi.diminiurVida(forcaAtaque);
     }
 }

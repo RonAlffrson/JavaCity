@@ -9,7 +9,8 @@ public final class Flegoman extends Vilao{
     }
 
     @Override
-    public void ataquePadrao(Heroi heroi) {
-
+    public void ataquePadrao(Heroi heroi){
+        String nome = "Flecha flamejante";
+        heroi.diminiurVida(forcaAtaque);
     }
 }
