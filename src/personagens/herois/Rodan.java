@@ -1,23 +1,14 @@
 package personagens.herois;
 
+import itens.Item;
 import personagens.PoderEspecial;
 import personagens.viloes.Vilao;
 
-public final class Rodan extends Heroi {
-    public Rodan (){
-      main
-        this.nome = "Rodan";
-        this.classe = "Mago";
-        this.vida = 70;
-        this.forcaAtaque = 5;
-        this.poderEspecial1 = new PoderEspecial("Tempestade de flechas", 15,30);
-        this.poderEspecial2 = new PoderEspecial("Regeneração completa", 40,50);
+import java.util.ArrayList;
 
-        nome = "Rodan";
-        classe = "Mago";
-        vida = 70;
-        forcaAtaque = 5;
- master
+public final class Rodan extends Heroi {
+    public Rodan() {
+        super("Rodan", 70, 0, 5, new PoderEspecial("Tempestade de flechas", 15, 30), new ArrayList<>(), new PoderEspecial("Regeneração completa", 40, 50));
     }
 
     @Override
@@ -49,16 +40,7 @@ public final class Rodan extends Heroi {
                 """);
     }
 //todo descrição dos ataques
-    @Override
-    public void poderEspecial1(Vilao vilao) {
-        if (mana >= poderEspecial1.getAtributo()){
-            diminuirMana(poderEspecial1.getAtributo());
-            vilao.diminiurVida(poderEspecial1.getAtributo());
-        }
-        else{
-            System.out.println("Mana insuficiente");
-        }
-    }
+
     @Override
     public void poderEspecial2() {
         String nome = "Regeneração Completa";
