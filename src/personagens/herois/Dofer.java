@@ -1,6 +1,7 @@
 package personagens.herois;
 
 import itens.Item;
+import personagens.AtaquePadrao;
 import personagens.PoderEspecial;
 import personagens.viloes.Vilao;
 
@@ -9,7 +10,7 @@ import java.util.ArrayList;
 public final class Dofer extends Heroi {
 
     public Dofer() {
-        super("Dofer", 100, 0, 10, new PoderEspecial("Espada Flamejante",30,65), new ArrayList<Item>(), new PoderEspecial("Transmutaçãp de mana", 25, 80));
+        super("Dofer", 100, 0, new AtaquePadrao("Ns um nome bom", 10), new PoderEspecial("Espada Flamejante",30,65), new ArrayList<Item>(), new PoderEspecial("Transmutaçãp de mana", 25, 80));
     }
 
     @Override
@@ -35,38 +36,6 @@ public final class Dofer extends Heroi {
                 o cavaleiro, ao retornar para Java City ouviu boatos de que ao Sul da cidade, nos subterrâneos da Floresta Sombria de Sonfejer habitava
                 um mago negro que realizava experimentos que emanavam longínquas e estranhas luzes verdes, o herói sentiu sua espinha arrepiar,
                 ele sabia o que tinha que fazer.""");
-    }
-    @Override
-    public void poderEspecial1(Vilao vilao) {
-        if (mana >= 65){
-            int dano = 30;
-            diminuirMana(65);
-            vilao.diminiurVida(dano);
-        }
-        else{
-            System.out.println("Mana insuficiente");
-        }
-    }
-    public void poderEspecial2() {
-        String nome = "Transmutação de mana";
-        String descricao = "Transmutação de mana regenera 25 de vida";
-        System.out.println();
-        if (mana >= 80){
-            diminuirMana(80);
-            aumentarVida(25);
-
-            //this.forcaAtaque = 5;
-            System.out.println(descricao);
-        }
-        else{
-            System.out.println("Mana insuficiente");
-        }
-    }
-
-    @Override
-    public void ataquePadrao(Vilao vilao){
-        String nome = "Ataque de Espada";
-        vilao.diminiurVida(forcaAtaque);
     }
 
 }

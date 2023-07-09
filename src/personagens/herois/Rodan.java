@@ -1,6 +1,8 @@
 package personagens.herois;
 
 import itens.Item;
+import personagens.AtaquePadrao;
+import personagens.MultiplicadorDeAtaque;
 import personagens.PoderEspecial;
 import personagens.viloes.Vilao;
 
@@ -8,7 +10,7 @@ import java.util.ArrayList;
 
 public final class Rodan extends Heroi {
     public Rodan() {
-        super("Rodan", 70, 0, 5, new PoderEspecial("Tempestade de flechas", 15, 30), new ArrayList<>(), new PoderEspecial("Regeneração completa", 40, 50));
+        super("Rodan", 70, 0,new AtaquePadrao("Bola de energia",5), new PoderEspecial("Tempestade de flechas", 15, 30), new ArrayList<>(), new PoderEspecial("Regeneração completa", 40, 50));
     }
 
     @Override
@@ -41,23 +43,8 @@ public final class Rodan extends Heroi {
     }
 //todo descrição dos ataques
 
-    @Override
-    public void poderEspecial2() {
-        String nome = "Regeneração Completa";
-        String descricao = "Regeneração Completa regenera 40 de vida e gasta 50 de mana ";
-        if (mana >= 50){
-            diminuirMana(poderEspecial2.getAtributo());
-            aumentarVida(40);
-        }
-        else{
-            System.out.println("Mana insuficiente");
-        }
-    }
 
-    @Override
-    public void ataquePadrao(Vilao vilao){
-        String nome = "Bola de Energia";
-        vilao.diminiurVida(forcaAtaque);
-    }
+
+
 
 }
