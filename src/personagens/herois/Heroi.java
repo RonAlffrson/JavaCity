@@ -2,6 +2,8 @@ package personagens.herois;
 import itens.*;
 import java.util.ArrayList;
 import itens.Carteira;
+import personagens.AtaquePadrao;
+import personagens.MultiplicadorDeAtaque;
 import personagens.Personagem;
 import personagens.PoderEspecial;
 import personagens.viloes.Vilao;
@@ -14,8 +16,8 @@ public abstract class Heroi extends Personagem implements AcoesPersonagem {
     protected final Integer MAX_MANA = 100, MIN_MANA = 0, MIN_VIDA = 0;
     protected PoderEspecial poderEspecial2;
 
-    public Heroi(String nome, Integer vida, Integer mana, Integer forcaAtaque, PoderEspecial poderEspecial1, ArrayList<Item> inventario, PoderEspecial poderEspecial2) {
-        super(nome, vida, mana, forcaAtaque, poderEspecial1);
+    public Heroi(String nome, Integer vida, Integer mana, AtaquePadrao ataquePadrao, PoderEspecial poderEspecial1, ArrayList<Item> inventario, PoderEspecial poderEspecial2) {
+        super(nome, vida, mana, ataquePadrao, poderEspecial1);
         this.inventario = inventario;
         this.poderEspecial2 = poderEspecial2;
     }
@@ -85,11 +87,25 @@ public abstract class Heroi extends Personagem implements AcoesPersonagem {
     public void poderEspecial1(Vilao vilao) {
         if (mana >= poderEspecial1.getAtributo()){
             diminuirMana(poderEspecial1.getAtributo());
-            vilao.diminiurVida(poderEspecial1.getAtributo());
+            vilao.diminiurVida(poderEspecial1.getAtributo() * MultiplicadorDeAtaque.multiplicadorDeAtaque());
         }
         else{
             System.out.println("Mana insuficiente");
         }
+    }
+    @Override
+    public void poderEspecial2(){
+        if (mana >= poderEspecial2.getCusto()){
+            diminuirMana(poderEspecial2.getAtributo());
+            aumentarVida(poderEspecial2.getAtributo());
+        }
+        else{
+            System.out.println("Mana insuficiente");
+        }
+    }
+    @Override
+    public void ataquePadrao(Vilao vilao){
+        vilao.diminiurVida(ataquePadrao.getForcaAtaque() * MultiplicadorDeAtaque.multiplicadorDeAtaque());
     }
 
 }
