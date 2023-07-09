@@ -1,15 +1,17 @@
 package personagens.herois;
 
+import itens.Item;
 import personagens.PoderEspecial;
 import personagens.viloes.Vilao;
 
+import java.util.ArrayList;
+
 public final class Dofer extends Heroi {
-    public Dofer(){
-        nome = "Dofer";
-        classe = "Cavaleiro";
-        vida = 100;
-        forcaAtaque = 10;
+
+    public Dofer() {
+        super("Dofer", 100, 0, 10, new PoderEspecial("Espada Flamejante",30,65), new ArrayList<Item>(), new PoderEspecial("Transmutaçãp de mana", 25, 80));
     }
+
     @Override
     public void contarHistoria() {
         System.out.print("""
@@ -52,10 +54,9 @@ public final class Dofer extends Heroi {
         if (mana >= 80){
             diminuirMana(80);
             aumentarVida(25);
- main
+
             //this.forcaAtaque = 5;
             System.out.println(descricao);
- master
         }
         else{
             System.out.println("Mana insuficiente");
