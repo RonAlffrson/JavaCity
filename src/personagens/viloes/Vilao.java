@@ -9,4 +9,13 @@ public abstract class Vilao extends Personagem implements AcoesViloes {
         super(nome, vida, mana, ataquePadrao, poderEspecial1);
     }
 
+    @Override
+    public void tomadadeDecisao(Personagem personagem) {
+        if(mana < poderEspecial1.getCusto()){
+            ataquePadrao(personagem);
+        }
+        else{
+            poderEspecial1(personagem);
+        }
+    }
 }
