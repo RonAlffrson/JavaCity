@@ -2,18 +2,26 @@ package personagens.herois;
 import itens.*;
 import java.util.ArrayList;
 import itens.Carteira;
+import personagens.AtaquePadrao;
+import personagens.MultiplicadorDeAtaque;
+import personagens.Personagem;
 import personagens.PoderEspecial;
+import personagens.viloes.Vilao;
 // fazer uma classe mae da classe heroi e vilão com os elementos comuns entre elas
 // fazer dois metodos genericos na classe heroi que serão usados  na classe filha para fazer os poder especiais
 
-public abstract class Heroi implements AcoesPersonagem {
-    protected String nome, classe;
-    protected Integer vida, mana = 0, forcaAtaque;
+public abstract class Heroi extends Personagem implements AcoesPersonagem {
+
     protected ArrayList<Item> inventario = new ArrayList<>();
     protected final Integer MAX_MANA = 100, MIN_MANA = 0, MIN_VIDA = 0;
-    protected Carteira carteira = new Carteira();
-    protected PoderEspecial poderEspecial1;
     protected PoderEspecial poderEspecial2;
+
+    public Heroi(String nome, Integer vida, Integer mana, AtaquePadrao ataquePadrao, PoderEspecial poderEspecial1, ArrayList<Item> inventario, PoderEspecial poderEspecial2) {
+        super(nome, vida, mana, ataquePadrao, poderEspecial1);
+        this.inventario = inventario;
+        this.poderEspecial2 = poderEspecial2;
+    }
+
     public static void verificarOpcaoHeroi(int opcaoHeroi) throws IllegalArgumentException{
         if(opcaoHeroi != 1 && opcaoHeroi != 2){
             throw new IllegalArgumentException("Erro: Digite 1 ou 2 para escolher o heroi");
@@ -74,6 +82,30 @@ public abstract class Heroi implements AcoesPersonagem {
     @Override
     public void adicionarItem(Item item){
         inventario.add(item);
+    }
+    @Override
+    public void poderEspecial1(Vilao vilao) {
+        if (mana >= poderEspecial1.getAtributo()){
+            diminuirMana(poderEspecial1.getAtributo());
+            vilao.diminiurVida(poderEspecial1.getAtributo() * MultiplicadorDeAtaque.multiplicadorDeAtaque());
+        }
+        else{
+            System.out.println("Mana insuficiente");
+        }
+    }
+    @Override
+    public void poderEspecial2(){
+        if (mana >= poderEspecial2.getCusto()){
+            diminuirMana(poderEspecial2.getAtributo());
+            aumentarVida(poderEspecial2.getAtributo());
+        }
+        else{
+            System.out.println("Mana insuficiente");
+        }
+    }
+    @Override
+    public void ataquePadrao(Vilao vilao){
+        vilao.diminiurVida(ataquePadrao.getForcaAtaque() * MultiplicadorDeAtaque.multiplicadorDeAtaque());
     }
 
 }
