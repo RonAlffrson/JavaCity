@@ -2,15 +2,17 @@ package personagens.herois;
 
 import itens.Item;
 import personagens.AtaquePadrao;
+import personagens.MultiplicadorDeAtaque;
 import personagens.PoderEspecial;
 import personagens.viloes.Vilao;
 
 import java.util.ArrayList;
 
 public final class Dofer extends Heroi {
+    private final Integer MAX_VIDA = 100;
 
     public Dofer() {
-        super("Dofer", 100, 0, new AtaquePadrao("Ns um nome bom", 10), new PoderEspecial("Espada Flamejante",30,65), new ArrayList<Item>(), new PoderEspecial("Transmutaçãp de mana", 25, 80));
+        super("Dofer", 100, 0, new AtaquePadrao("Ns um nome bom", 10), new PoderEspecial("Espada Flamejante",30,65), new PoderEspecial("Transmutaçãp de mana", 25, 80));
     }
 
     @Override
@@ -36,6 +38,16 @@ public final class Dofer extends Heroi {
                 o cavaleiro, ao retornar para Java City ouviu boatos de que ao Sul da cidade, nos subterrâneos da Floresta Sombria de Sonfejer habitava
                 um mago negro que realizava experimentos que emanavam longínquas e estranhas luzes verdes, o herói sentiu sua espinha arrepiar,
                 ele sabia o que tinha que fazer.""");
+    }
+
+    @Override
+    public void aumentarVida(int quantidadeVida) {
+        if (vida + quantidadeVida <= MAX_VIDA) {
+            vida += quantidadeVida;
+        }
+        else if (vida + quantidadeVida > MAX_VIDA){
+            vida = MAX_VIDA;
+        }
     }
 
 }

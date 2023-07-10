@@ -4,18 +4,18 @@ import personagens.AtaquePadrao;
 import personagens.Personagem;
 import personagens.PoderEspecial;
 
-public abstract class Vilao extends Personagem implements Obstaculo {
+public abstract class Vilao extends Personagem implements AcoesViloes {
     public Vilao(String nome, Integer vida, Integer mana, AtaquePadrao ataquePadrao, PoderEspecial poderEspecial1) {
         super(nome, vida, mana, ataquePadrao, poderEspecial1);
     }
 
     @Override
-    public void diminiurVida(int quantidadeVida) {
-        if (vida - quantidadeVida >= MIN_VIDA) {
-            vida -= quantidadeVida;
+    public void tomadadeDecisao(Personagem personagem) {
+        if(mana < poderEspecial1.getCusto()){
+            ataquePadrao(personagem);
         }
-        else if (vida - quantidadeVida < MIN_VIDA){
-            vida = MIN_VIDA;
+        else{
+            poderEspecial1(personagem);
         }
     }
 }

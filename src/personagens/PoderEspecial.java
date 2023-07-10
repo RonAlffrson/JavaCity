@@ -29,6 +29,10 @@ public final class PoderEspecial {
         this.nome = nome;
     }
 
+    public Integer getCusto() {
+        return custo;
+    }
+
     public void setAtributo(Integer atributo) {
         this.atributo = atributo;
     }

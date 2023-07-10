@@ -9,8 +9,9 @@ import personagens.viloes.Vilao;
 import java.util.ArrayList;
 
 public final class Rodan extends Heroi {
+    private Integer MAX_VIDA = 70;
     public Rodan() {
-        super("Rodan", 70, 0,new AtaquePadrao("Bola de energia",5), new PoderEspecial("Tempestade de flechas", 15, 30), new ArrayList<>(), new PoderEspecial("Regeneração completa", 40, 50));
+        super("Rodan", 70, 0,new AtaquePadrao("Bola de energia",5), new PoderEspecial("Tempestade de flechas", 15, 30),  new PoderEspecial("Regeneração completa", 40, 50));
     }
 
     @Override
@@ -42,9 +43,17 @@ public final class Rodan extends Heroi {
                 """);
     }
 //todo descrição dos ataques
-
-
-
-
-
+    @Override
+    public void aumentarVida(int quantidadeVida) {
+        if (vida + quantidadeVida <= MAX_VIDA) {
+            vida += quantidadeVida;
+        } else if (vida + quantidadeVida > MAX_VIDA) {
+            vida = MAX_VIDA;
+        }
+    }
 }
+
+
+
+
+
