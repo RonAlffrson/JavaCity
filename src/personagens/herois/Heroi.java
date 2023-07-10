@@ -10,7 +10,7 @@ import personagens.viloes.Vilao;
 // fazer uma classe mae da classe heroi e vilão com os elementos comuns entre elas
 // fazer dois metodos genericos na classe heroi que serão usados  na classe filha para fazer os poder especiais
 
-public abstract class Heroi extends Personagem implements AcoesPersonagem {
+public abstract class Heroi extends Personagem implements AcoesHerois {
 
     protected ArrayList<Item> inventario = new ArrayList<>();
     protected final Integer MAX_MANA = 100, MIN_MANA = 0, MIN_VIDA = 0;
@@ -50,17 +50,6 @@ public abstract class Heroi extends Personagem implements AcoesPersonagem {
     }
 
     @Override
-    public void aumentarVida(int quantidadeVida) {
-        int MAX_VIDA = 70;
-        if (vida + quantidadeVida <= MAX_VIDA) {
-            vida += quantidadeVida;
-        }
-        else if (vida + quantidadeVida > MAX_VIDA){
-            vida = MAX_VIDA;
-        }
-    }
-
-    @Override
     public void diminiurVida(int quantidadeVida) {
         if (vida - quantidadeVida >= MIN_VIDA) {
             vida -= quantidadeVida;
@@ -75,25 +64,18 @@ public abstract class Heroi extends Personagem implements AcoesPersonagem {
         aumentarVida(3);
     }
 
-    @Override
-    public void aumentarManaRodada(){
-        aumentarMana(5);
-    }
+
 
     @Override
-    public void adicionarItem(Item item){
-        inventario.add(item);
-    }
-    @Override
-    public void poderEspecial1(Vilao vilao) {
-        if (mana >= poderEspecial1.getAtributo()){
-            diminuirMana(poderEspecial1.getAtributo());
-            vilao.diminiurVida(poderEspecial1.getAtributo() * MultiplicadorDeAtaque.multiplicadorDeAtaque());
+    public void adicionarQuantidadeItem(int opcao) { // 1 porcao de mana, 2 porcao de vida
+        if(opcao == 1){
+            this.inventario.get(0).adicionarItem(); // recebe uma pocao de mana
         }
-        else{
-            System.out.println("Mana insuficiente");
+        else if(opcao == 2){
+            this.inventario.get(1).adicionarItem(); // recebe uma pocao de vida
         }
     }
+
     @Override
     public void poderEspecial2(){
         if (mana >= poderEspecial2.getCusto()){
@@ -104,9 +86,6 @@ public abstract class Heroi extends Personagem implements AcoesPersonagem {
             System.out.println("Mana insuficiente");
         }
     }
-    @Override
-    public void ataquePadrao(Vilao vilao){
-        vilao.diminiurVida(ataquePadrao.getForcaAtaque() * MultiplicadorDeAtaque.multiplicadorDeAtaque());
-    }
+
 
 }
