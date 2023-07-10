@@ -1,7 +1,7 @@
 package personagens.herois;
 import itens.*;
 import java.util.ArrayList;
-import itens.Carteira;
+
 import personagens.AtaquePadrao;
 import personagens.MultiplicadorDeAtaque;
 import personagens.Personagem;
@@ -16,9 +16,10 @@ public abstract class Heroi extends Personagem implements AcoesPersonagem {
     protected final Integer MAX_MANA = 100, MIN_MANA = 0, MIN_VIDA = 0;
     protected PoderEspecial poderEspecial2;
 
-    public Heroi(String nome, Integer vida, Integer mana, AtaquePadrao ataquePadrao, PoderEspecial poderEspecial1, ArrayList<Item> inventario, PoderEspecial poderEspecial2) {
+    public Heroi(String nome, Integer vida, Integer mana, AtaquePadrao ataquePadrao, PoderEspecial poderEspecial1, PoderEspecial poderEspecial2) {
         super(nome, vida, mana, ataquePadrao, poderEspecial1);
-        this.inventario = inventario;
+        this.inventario.add(new PocaoMana());
+        this.inventario.add(new PocaoVida());
         this.poderEspecial2 = poderEspecial2;
     }
 

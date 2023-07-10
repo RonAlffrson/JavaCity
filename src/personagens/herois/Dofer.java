@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public final class Dofer extends Heroi {
 
     public Dofer() {
-        super("Dofer", 100, 0, new AtaquePadrao("Ns um nome bom", 10), new PoderEspecial("Espada Flamejante",30,65), new ArrayList<Item>(), new PoderEspecial("Transmutaçãp de mana", 25, 80));
+        super("Dofer", 100, 0, new AtaquePadrao("Ns um nome bom", 10), new PoderEspecial("Espada Flamejante",30,65), new PoderEspecial("Transmutaçãp de mana", 25, 80));
     }
 
     @Override

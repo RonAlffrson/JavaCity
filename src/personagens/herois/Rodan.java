@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public final class Rodan extends Heroi {
     public Rodan() {
-        super("Rodan", 70, 0,new AtaquePadrao("Bola de energia",5), new PoderEspecial("Tempestade de flechas", 15, 30), new ArrayList<>(), new PoderEspecial("Regeneração completa", 40, 50));
+        super("Rodan", 70, 0,new AtaquePadrao("Bola de energia",5), new PoderEspecial("Tempestade de flechas", 15, 30),  new PoderEspecial("Regeneração completa", 40, 50));
     }
 
     @Override

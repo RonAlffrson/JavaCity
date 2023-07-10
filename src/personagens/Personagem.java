@@ -1,10 +1,5 @@
 package personagens;
 
-import itens.Carteira;
-import itens.Item;
-
-import java.util.ArrayList;
-
 public abstract class Personagem {
     protected String nome;
     protected Integer vida, mana = 0;
