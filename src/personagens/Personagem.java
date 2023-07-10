@@ -59,4 +59,8 @@ public abstract class Personagem implements AcoesPersonagem {
         }
     }
 
+    @Override
+    public void aumentarManaRodada() {
+        aumentarMana(5);
+    }
 }
