@@ -63,4 +63,65 @@ public abstract class Personagem implements AcoesPersonagem {
     public void aumentarManaRodada() {
         aumentarMana(5);
     }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        if (!nome.isEmpty())
+            this.nome = nome;
+        else
+            throw new RuntimeException("Nome deve ser uma String não vazia");
+    }
+
+    public Integer getVida() {
+        return vida;
+    }
+
+    public void setVida(Integer vida) {
+        if (vida >= 0)
+            this.vida = vida;
+        else
+            throw new IllegalArgumentException("Vida deve ser um número inteiro positivo");
+    }
+
+    public Integer getMana() {
+        return mana;
+    }
+
+    public void setMana(Integer mana) {
+        if(mana >= 0)
+            this.mana = mana;
+        else
+            throw new IllegalArgumentException("Mana deve ser um número inteiro");
+    }
+
+    public Integer getMAX_MANA() {
+        return MAX_MANA;
+    }
+
+    public Integer getMIN_MANA() {
+        return MIN_MANA;
+    }
+
+    public Integer getMIN_VIDA() {
+        return MIN_VIDA;
+    }
+
+    public PoderEspecial getPoderEspecial1() {
+        return poderEspecial1;
+    }
+
+    public void setPoderEspecial1(PoderEspecial poderEspecial1) {
+        this.poderEspecial1 = poderEspecial1;
+    }
+
+    public AtaquePadrao getAtaquePadrao() {
+        return ataquePadrao;
+    }
+
+    public void setAtaquePadrao(AtaquePadrao ataquePadrao) {
+        this.ataquePadrao = ataquePadrao;
+    }
 }

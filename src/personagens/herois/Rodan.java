@@ -11,7 +11,10 @@ import java.util.ArrayList;
 public final class Rodan extends Heroi {
     private Integer MAX_VIDA = 70;
     public Rodan() {
-        super("Rodan", 70, 0,new AtaquePadrao("Bola de energia",5), new PoderEspecial("Tempestade de flechas", 15, 30),  new PoderEspecial("Regeneração completa", 40, 50));
+        super("Rodan", 70, 0,
+                new AtaquePadrao("Bola de energia",5),
+                new PoderEspecial("Tempestade de flechas", 15, 30, 1),
+                new PoderEspecial("Regeneração completa", 40, 50, 2));
     }
 
     @Override

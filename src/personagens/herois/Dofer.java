@@ -12,7 +12,9 @@ public final class Dofer extends Heroi {
     private final Integer MAX_VIDA = 100;
 
     public Dofer() {
-        super("Dofer", 100, 0, new AtaquePadrao("Ns um nome bom", 10), new PoderEspecial("Espada Flamejante",30,65), new PoderEspecial("Transmutaçãp de mana", 25, 80));
+        super("Dofer", 100, 0, new AtaquePadrao("Ns um nome bom", 10),
+                new PoderEspecial("Espada Flamejante",30,65, 1),
+                new PoderEspecial("Transmutaçãp de mana", 25, 80, 2));
     }
 
     @Override

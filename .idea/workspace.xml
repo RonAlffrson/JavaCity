@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="ataques padroes dos viloes adicionados">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="Tratamento de exceção nos setters e getters de AtaquePadrao">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/viloes/Dataretan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Dataretan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/viloes/Flegoman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Flegoman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/viloes/Napda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Napda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/Personagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/Personagem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Dofer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Dofer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +54,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/renan/IdeaProjects/tp2",
+    "last_opened_file_path": "C:/Users/renan/IdeaProjects/JavaCity",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
 }]]></component>
@@ -326,7 +324,28 @@
       <option name="project" value="LOCAL" />
       <updated>1688512292646</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="ataques padroes dos viloes adicionados">
+      <created>1688682879864</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1688682879864</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Setters e Getters de PoderEspecial criados e criado atributo categoria para printar a descrição de acordo com se é um poder de ataque ou de vida">
+      <created>1689097389934</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1689097389934</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Tratamento de exceção nos setters e getters de AtaquePadrao">
+      <created>1689097842758</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1689097842758</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -340,7 +359,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/master" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
@@ -353,8 +372,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Trocado método 'alterarVida' pelos métodos (já implementados) 'diminuirVida' e 'aumentarVida' &#10;Também criado atributo 'MIN_VIDA' com valor '0' na classe 'Heroi'" />
-    <MESSAGE value="Tirado método adicionar item da Interface 'Personagem' - não acho que adicionar item deva ser algo que  seja obrigatóriamente implementado em cada herói, até porque o método só adiciona um item no inventário (coisa que já está implementada na classe mãe)" />
     <MESSAGE value="Criada classe 'Vilao'" />
     <MESSAGE value="Criado método 'aumentarVidaRodada' que usa o método 'aumentarVida' para aumentar a vida em 3% a cada rodada" />
     <MESSAGE value="Criado métodos 'ataquePadrao' e 'diminiurVida'" />
@@ -378,6 +395,8 @@
     <MESSAGE value="objeto 'heroi' -&gt; 'jogador' na Main" />
     <MESSAGE value="update" />
     <MESSAGE value="ataques padroes dos viloes adicionados" />
-    <option name="LAST_COMMIT_MESSAGE" value="ataques padroes dos viloes adicionados" />
+    <MESSAGE value="Setters e Getters de PoderEspecial criados e criado atributo categoria para printar a descrição de acordo com se é um poder de ataque ou de vida" />
+    <MESSAGE value="Tratamento de exceção nos setters e getters de AtaquePadrao" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tratamento de exceção nos setters e getters de AtaquePadrao" />
   </component>
 </project>
