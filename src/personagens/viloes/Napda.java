@@ -6,7 +6,9 @@ import personagens.herois.Heroi;
 
 public final class Napda extends Vilao {
 
-    public Napda() {// definir o poder especial do napda
-        super("Napda", 100, 0, new AtaquePadrao("Garra de mana Sombria", 10), new PoderEspecial("nao tem nome", 30, 50));
+    public Napda() {
+        super("Napda", 100, 0,
+                new AtaquePadrao("Feitiço rouba-corações", 10),
+                new PoderEspecial("Garra de mana sombria", 30, 50, 1));
     }
 }

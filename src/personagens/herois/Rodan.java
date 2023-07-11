@@ -45,7 +45,6 @@ public final class Rodan extends Heroi {
                 que a salvação de sua amada finalmente estava próxima.                                                                                                            \s
                 """);
     }
-//todo descrição dos ataques
     @Override
     public void aumentarVida(int quantidadeVida) {
         if (vida + quantidadeVida <= MAX_VIDA) {
