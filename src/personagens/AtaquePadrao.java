@@ -5,8 +5,8 @@ public class AtaquePadrao {
     private Integer forcaAtaque;
 
     public AtaquePadrao(String nome, Integer forcaAtaque) {
-        this.nome = nome;
-        this.forcaAtaque= forcaAtaque;
+        setNome(nome);
+        setForcaAtaque(forcaAtaque);
     }
 
     public String getNome() {
@@ -14,7 +14,10 @@ public class AtaquePadrao {
     }
 
     public void setNome(String nome) {
-        this.nome = nome;
+        if (!(nome.isEmpty()))
+            this.nome = nome;
+        else
+            throw new IllegalArgumentException("Nome deve ser uma String não vazia");
     }
 
     public Integer getForcaAtaque() {
@@ -22,6 +25,9 @@ public class AtaquePadrao {
     }
 
     public void setForcaAtaque(Integer forcaAtaque) {
-        this.forcaAtaque = forcaAtaque;
+        if (forcaAtaque > 0)
+            this.forcaAtaque = forcaAtaque;
+        else
+            throw new IllegalArgumentException("Força de Ataque deve ser maior um inteiro que zero");
     }
 }
