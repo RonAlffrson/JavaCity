@@ -5,4 +5,5 @@ import personagens.herois.Heroi;
 
 public interface AcoesViloes {
     void tomadadeDecisao(Personagem personagem);
+    void sortearPocao(Heroi heroi);
 }

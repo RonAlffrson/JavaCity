@@ -67,12 +67,12 @@ public abstract class Heroi extends Personagem implements AcoesHerois {
 
 
     @Override
-    public void adicionarQuantidadeItem(int opcao) { // 1 porcao de mana, 2 porcao de vida
-        if(opcao == 1){
+    public void adicionarQuantidadeItem(int opcao) { // 0 porcao de mana, 1 porcao de vida
+        if(opcao == 0){
             this.inventario.get(0).adicionarItem(); // recebe uma pocao de mana
         }
-        else if(opcao == 2){
-            this.inventario.get(1).adicionarItem(); // recebe uma pocao de vida
+        else if(opcao == 1){
+            this.inventario.get(0).adicionarItem(); // recebe uma pocao de vida
         }
     }
 

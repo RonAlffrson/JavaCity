@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="adicionada categoria dos poderes especiais nos heróis">
-      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Rodan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Rodan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/viloes/Dataretan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Dataretan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/viloes/Flegoman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Flegoman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/viloes/Napda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Napda.java" afterDir="false" />
+    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="Poderes especiais de vilões adicionados">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Heroi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Heroi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/viloes/AcoesViloes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/AcoesViloes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/viloes/Vilao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Vilao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,14 +51,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/renan/IdeaProjects/JavaCity",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/renan/IdeaProjects/JavaCity&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\renan\IdeaProjects\JavaCity\src" />
@@ -360,7 +360,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689098432026</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Poderes especiais de vilões adicionados">
+      <created>1689099068978</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1689099068978</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -387,7 +394,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Criado métodos 'ataquePadrao' e 'diminiurVida'" />
     <MESSAGE value="Criados métodos 'ataquePadrao' e 'diminiurVida'" />
     <MESSAGE value="Implementados métodos 'poderEspecial' 1 e 2 de Rodan" />
     <MESSAGE value="Criadas classes específicas dos vilões" />
@@ -412,6 +418,7 @@
     <MESSAGE value="Tratamento de exceção nos setters e getters de AtaquePadrao" />
     <MESSAGE value="Tratamento de exceção nos setters e getters de PoderEspecial" />
     <MESSAGE value="adicionada categoria dos poderes especiais nos heróis" />
-    <option name="LAST_COMMIT_MESSAGE" value="adicionada categoria dos poderes especiais nos heróis" />
+    <MESSAGE value="Poderes especiais de vilões adicionados" />
+    <option name="LAST_COMMIT_MESSAGE" value="Poderes especiais de vilões adicionados" />
   </component>
 </project>
