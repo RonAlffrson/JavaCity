@@ -13,6 +13,29 @@ public abstract class Heroi extends Personagem implements AcoesHerois {
     protected PoderEspecial poderEspecial2;
     protected Integer max_vida;
 
+    public ArrayList<Item> getInventario() {
+        return inventario;
+    }
+
+    @Override
+    public Integer getMAX_MANA() {
+        return MAX_MANA;
+    }
+
+    @Override
+    public Integer getMIN_MANA() {
+        return MIN_MANA;
+    }
+
+    @Override
+    public Integer getMIN_VIDA() {
+        return MIN_VIDA;
+    }
+
+    public PoderEspecial getPoderEspecial2() {
+        return poderEspecial2;
+    }
+
     public Heroi(String nome, Integer vida, Integer mana, AtaquePadrao ataquePadrao, PoderEspecial poderEspecial1, PoderEspecial poderEspecial2, Integer max_vida) {
         super(nome, vida, mana, ataquePadrao, poderEspecial1);
         setMax_vida(max_vida);

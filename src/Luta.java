@@ -82,10 +82,19 @@ public class Luta {
             } // fim do while validador
             if(opcaoJogaodor == 1){
                 System.out.println("Opções de Ataque:");
+                System.out.println("(1)" + heroi.getAtaquePadrao().descricao());
+                System.out.print("(2)");
+                heroi.getPoderEspecial1().printarDescricaoPoder();
+                System.out.print("(3)");
+                heroi.getPoderEspecial2().printarDescricaoPoder();
+                System.out.println("(4) Voltar");
+            }
+            else if(opcaoJogaodor == 2){
+                System.out.println("Item que você deseja usar:");
             }
 
 
-        }
+        } // to pensando em criar o metodo opcoes jogaodr que retornar esse metodo
     }
 
 
