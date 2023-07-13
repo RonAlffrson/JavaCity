@@ -12,7 +12,7 @@ import personagens.viloes.Vilao;
 
 public abstract class Heroi extends Personagem implements AcoesHerois {
 
-    protected ArrayList<Item> inventario = new ArrayList<>();
+    public ArrayList<Item> inventario = new ArrayList<>();
     protected final Integer MAX_MANA = 100, MIN_MANA = 0, MIN_VIDA = 0;
     protected PoderEspecial poderEspecial2;
 
@@ -67,7 +67,7 @@ public abstract class Heroi extends Personagem implements AcoesHerois {
 
 
     @Override
-    public void adicionarQuantidadeItem(int opcao) { // 0 porcao de mana, 1 porcao de vida
+    public void adicionarItem(int opcao) { // 0 pocao de mana, 1 pocao de vida
         if(opcao == 0){
             this.inventario.get(0).adicionarItem(); // recebe uma pocao de mana
         }

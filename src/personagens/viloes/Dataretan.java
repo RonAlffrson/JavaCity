@@ -10,8 +10,5 @@ public final class Dataretan extends Vilao {
         super("Dataretan", 100, 0,
                 new AtaquePadrao("Confusão mental", 6),
                 new PoderEspecial("Travamento de neurônios",20,50, 1));
-    }// falta definir o poder especial do dataretan
-
-    //todo - ataques padroes dos vilões
-
+    }
 }
