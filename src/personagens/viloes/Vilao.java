@@ -28,7 +28,7 @@ public abstract class Vilao extends Personagem implements AcoesViloes {
         int opcao = random.nextInt(2);
         //Retorna um número entre 0-1
         if (getVida() == 0){
-            heroi.adicionarQuantidadeItem(opcao);
+            heroi.adicionarItem(opcao);
         }
     }
 }

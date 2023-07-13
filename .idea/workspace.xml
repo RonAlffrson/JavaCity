@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="Implementei o método sortearPocao na interface 'AcoesViloes' e sobrescrevi o método na classe Vilao">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_07_2023_19_52_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_07_2023_19_52__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Luta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Luta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/herois/AcoesHerois.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/AcoesHerois.java" afterDir="false" />
+    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="adicionarQuantidadeItem é adicionarItem">
+      <change beforePath="$PROJECT_DIR$/src/personagens/herois/ErroOpcaoHeroiException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/ErroOpcaoHeroiException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/personagens/herois/Heroi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Heroi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/viloes/Dataretan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Dataretan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/viloes/Vilao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Vilao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -377,7 +373,28 @@
       <option name="project" value="LOCAL" />
       <updated>1689100682542</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="modificador de 'inventario' public">
+      <created>1689263830220</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1689263830220</updated>
+    </task>
+    <task id="LOCAL-00043" summary="atributos da classe Luta public">
+      <created>1689263857509</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1689263857509</updated>
+    </task>
+    <task id="LOCAL-00044" summary="adicionarQuantidadeItem é adicionarItem">
+      <created>1689263889301</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1689263889301</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -404,9 +421,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implementados métodos 'poderEspecial' 1 e 2 de Rodan" />
-    <MESSAGE value="Criadas classes específicas dos vilões" />
-    <MESSAGE value="Mudança na implementação dos poderes especiais e na interface 'Obstaculo'" />
     <MESSAGE value="Mudança na interface 'Obstaculo'" />
     <MESSAGE value="ITodas as implementações feitas nos heróis" />
     <MESSAGE value="Todas as implementações feitas nos heróis" />
@@ -429,6 +443,9 @@
     <MESSAGE value="adicionada categoria dos poderes especiais nos heróis" />
     <MESSAGE value="Poderes especiais de vilões adicionados" />
     <MESSAGE value="Implementei o método sortearPocao na interface 'AcoesViloes' e sobrescrevi o método na classe Vilao" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementei o método sortearPocao na interface 'AcoesViloes' e sobrescrevi o método na classe Vilao" />
+    <MESSAGE value="modificador de 'inventario' public" />
+    <MESSAGE value="atributos da classe Luta public" />
+    <MESSAGE value="adicionarQuantidadeItem é adicionarItem" />
+    <option name="LAST_COMMIT_MESSAGE" value="adicionarQuantidadeItem é adicionarItem" />
   </component>
 </project>
