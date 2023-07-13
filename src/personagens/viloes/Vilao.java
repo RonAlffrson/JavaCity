@@ -13,7 +13,7 @@ public abstract class Vilao extends Personagem implements AcoesViloes {
     }
 
     @Override
-    public void tomadadeDecisao(Personagem personagem) {
+    public void decidirAtaque(Personagem personagem) {
         if (mana < poderEspecial1.getCusto()){
             ataquePadrao(personagem);
         }
