@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="adicionarQuantidadeItem é adicionarItem">
-      <change beforePath="$PROJECT_DIR$/src/personagens/herois/ErroOpcaoHeroiException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/ErroOpcaoHeroiException.java" afterDir="false" />
+    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="método 'decidirAtaque'">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/personagens/herois/Heroi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Heroi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/viloes/Vilao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Vilao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -394,7 +393,28 @@
       <option name="project" value="LOCAL" />
       <updated>1689263889301</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Erro customizado 'ErroOpcaoHeroiException' criado">
+      <created>1689264241562</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1689264241562</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Erro customizado 'ErroOpcaoHeroiException' criado">
+      <created>1689264252523</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1689264252523</updated>
+    </task>
+    <task id="LOCAL-00047" summary="método 'decidirAtaque'">
+      <created>1689264451725</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1689264451725</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -421,8 +441,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Mudança na interface 'Obstaculo'" />
-    <MESSAGE value="ITodas as implementações feitas nos heróis" />
     <MESSAGE value="Todas as implementações feitas nos heróis" />
     <MESSAGE value="Mudança na implementação da classe 'Dofer'" />
     <MESSAGE value="Criação de classe 'Luta'" />
@@ -446,6 +464,8 @@
     <MESSAGE value="modificador de 'inventario' public" />
     <MESSAGE value="atributos da classe Luta public" />
     <MESSAGE value="adicionarQuantidadeItem é adicionarItem" />
-    <option name="LAST_COMMIT_MESSAGE" value="adicionarQuantidadeItem é adicionarItem" />
+    <MESSAGE value="Erro customizado 'ErroOpcaoHeroiException' criado" />
+    <MESSAGE value="método 'decidirAtaque'" />
+    <option name="LAST_COMMIT_MESSAGE" value="método 'decidirAtaque'" />
   </component>
 </project>

@@ -1,14 +1,13 @@
 package personagens.herois;
 import itens.*;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 import personagens.AtaquePadrao;
 import personagens.MultiplicadorDeAtaque;
 import personagens.Personagem;
 import personagens.PoderEspecial;
 import personagens.viloes.Vilao;
-// fazer uma classe mae da classe heroi e vilão com os elementos comuns entre elas
-// fazer dois metodos genericos na classe heroi que serão usados  na classe filha para fazer os poder especiais
 
 public abstract class Heroi extends Personagem implements AcoesHerois {
 
@@ -68,10 +67,11 @@ public abstract class Heroi extends Personagem implements AcoesHerois {
     @Override
     public void adicionarItem(int opcao) { // 0 pocao de mana, 1 pocao de vida
         if(opcao == 0){
+            System.out.println();
             this.inventario.get(0).adicionarItem(); // recebe uma pocao de mana
         }
         else if(opcao == 1){
-            this.inventario.get(0).adicionarItem(); // recebe uma pocao de vida
+            this.inventario.get(1).adicionarItem(); // recebe uma pocao de vida
         }
     }
 
