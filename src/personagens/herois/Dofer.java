@@ -40,6 +40,6 @@ public final class Dofer extends Heroi {
                 músculo em seu corpo para partir em busca do assassino de seu irmão. Após cinco anos de uma jornada incansável por respostas,
                 o cavaleiro, ao retornar para Java City ouviu boatos de que ao Sul da cidade, nos subterrâneos da Floresta Sombria de Sonfejer habitava
                 um mago negro que realizava experimentos que emanavam longínquas e estranhas luzes verdes, o herói sentiu sua espinha arrepiar,
-                ele sabia o que tinha que fazer.""");
+                ele sabia o que tinha que fazer.\n\n""");
     }
 }
