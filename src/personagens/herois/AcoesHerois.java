@@ -9,5 +9,5 @@ public interface AcoesHerois {
     void aumentarMana(int quantidadeMana);
     void aumentarVida(int quantidadeVida);
     void aumentarVidaRodada();
-    void adicionarQuantidadeItem(int opcao);
+    void adicionarItem(int opcao);
 }
