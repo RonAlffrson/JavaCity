@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="criei o metodo opcao ataque, tratei as exceçoes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Luta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Luta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Dofer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Dofer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Rodan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Rodan.java" afterDir="false" />
+
     <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="lógica de aumentarVida mudada">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/personagens/viloes/Vilao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Vilao.java" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,14 +57,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/renan/IdeaProjects/JavaCity&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/home/fernando/Java/Java_city_final/JavaCity",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\renan\IdeaProjects\JavaCity\src" />
@@ -422,6 +429,9 @@
       <option name="project" value="LOCAL" />
       <updated>1689265892066</updated>
     </task>
+
+    <option name="localTasksCounter" value="54" />
+
     <task id="LOCAL-00050" summary="lógica de aumentarVida mudada">
       <created>1689266919988</created>
       <option name="number" value="00050" />
@@ -430,6 +440,7 @@
       <updated>1689266919989</updated>
     </task>
     <option name="localTasksCounter" value="51" />
+
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -456,6 +467,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+
+
     <MESSAGE value="História de Rodan adicionada" />
     <MESSAGE value="Histórias atualizadas" />
     <MESSAGE value="Atualizações" />
@@ -480,6 +493,13 @@
     <MESSAGE value="método 'decidirAtaque'" />
     <MESSAGE value="adicionarItem alterado" />
     <MESSAGE value="construtor alterado" />
+
+    <MESSAGE value="Escrevendo os metodos que serão aplicados na main" />
+    <MESSAGE value="Fazendo os caminhos que o usuario pode escolher, pensar como fazer na opçao do usuario voltar" />
+    <MESSAGE value="Fazendo os metodos necessarios para conseguir voltar nas opcões escolhidas" />
+    <MESSAGE value="criei o metodo opcao ataque, tratei as exceçoes" />
+    <option name="LAST_COMMIT_MESSAGE" value="criei o metodo opcao ataque, tratei as exceçoes" />
+
     <MESSAGE value="lógica de aumentarVida mudada" />
     <option name="LAST_COMMIT_MESSAGE" value="lógica de aumentarVida mudada" />
   </component>

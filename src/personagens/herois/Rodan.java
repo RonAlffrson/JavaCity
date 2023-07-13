@@ -43,7 +43,7 @@ public final class Rodan extends Heroi {
                 encontrar, o primeiro aprendiz de seu antigo mestre, agora, um mago negro.\s
                 Por nove meses Rodan procurou por Napda, havia pouco tempo. Ele volta para Java City para tentar reunir informações e ver o estado de Júliper e,
                 para sua surpresa, ouve boatos de que, na Floresta Sombria de Sonfejer, foram vistas estranhas luzes verdes no fundo da mata, ele sabia
-                que a salvação de sua amada finalmente estava próxima.                                                                                                            \s
+                que a salvação de sua amada finalmente estava próxima.\n\n                                                                                                            \s
                 """);
     }
 }
