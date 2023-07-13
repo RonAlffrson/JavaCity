@@ -4,7 +4,7 @@ import java.util.*;
 
 
 public class Luta {
-    public Heroi heroi;
+    public  Heroi heroi;
     public Vilao vilao;
     public int contadorRodadas = 0;
 
@@ -52,25 +52,25 @@ public class Luta {
             }
 
         } while (!validador);
-        input.close();
         return opcaoHeroi;
     }
-    public static void batalhar(Heroi heroi, Vilao vilao){
+    public  void batalhar(){
         System.out.println("Batalha:\n " + heroi.getNome() +" VS " + vilao.getNome());
         boolean validador = false;
         int opcaoJogaodor = 0;
         while(heroi.getVida() != 0 && vilao.getVida() != 0) {
-            System.out.println(heroi.getNome() + "Tem " + heroi.getVida() + " / " + heroi.getMax_vida() + " de vida");
+            System.out.println(heroi.getNome() + "\nVida: " + heroi.getVida() + " / " + heroi.getMax_vida() +
+                    "\nMana:" + heroi.getMana() + " / " + heroi.getMAX_MANA() + "\n");
 
-            System.out.println(vilao.getNome() + "Tem " + vilao.getVida());
+            System.out.println(vilao.getNome() + "\nVida: " + vilao.getVida() + "\n");
 
            opcaoJogaodor = opcaoJogador();
 
-            if(opcaoJogaodor == 1){
-                // fazer o metodo opcaoAtaque
-
-
+            if(opcaoJogaodor == 1) {
+                int opcaoAtaque = opcaoAtaque();
             }
+
+
             else if(opcaoJogaodor == 2){
                 System.out.println("Item que você deseja usar:");
             }
@@ -104,10 +104,10 @@ public class Luta {
                 validador = false;
             }
         } // fim do while validador
-        input.close();
+
         return  opcaoJogaodor;
     }
-    public void opcaoAtaque(){
+    public int opcaoAtaque(){
         Scanner input = new Scanner(System.in);
         int opcaoAtaque = 0;
         boolean validador = false;
@@ -141,19 +141,17 @@ public class Luta {
                 System.out.println("Erro desconhecido: digite um valor valido");
             }
         }
-        input.close();
-        if(opcaoAtaque == 1){ // ataque padrao
+        if(opcaoAtaque == 4){ // voltar
+            int opcaoJogaodor = opcaoJogador();
+            if(opcaoJogaodor == 1){
+                opcaoAtaque = opcaoAtaque();
+            }
+            else if (opcaoJogaodor == 2) {
+                return -1; // esse seria o caso que o jogador escolheria  Iventario
+            }
 
         }
-        else if (opcaoAtaque == 2){ // poder especial1
-
-        }
-        else if (opcaoAtaque == 3){ // poder especial2
-
-        }
-        else if(opcaoAtaque == 4){ // voltar
-
-        }
+        return opcaoAtaque;
 
     }
 
