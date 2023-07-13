@@ -14,7 +14,8 @@ public final class Rodan extends Heroi {
         super("Rodan", 70, 0,
                 new AtaquePadrao("Bola de energia",5),
                 new PoderEspecial("Tempestade de flechas", 15, 30, 1),
-                new PoderEspecial("Regeneração completa", 40, 50, 2));
+                new PoderEspecial("Regeneração completa", 40, 50, 2),
+                70);
     }
 
     @Override
@@ -44,14 +45,6 @@ public final class Rodan extends Heroi {
                 para sua surpresa, ouve boatos de que, na Floresta Sombria de Sonfejer, foram vistas estranhas luzes verdes no fundo da mata, ele sabia
                 que a salvação de sua amada finalmente estava próxima.                                                                                                            \s
                 """);
-    }
-    @Override
-    public void aumentarVida(int quantidadeVida) {
-        if (vida + quantidadeVida <= MAX_VIDA) {
-            vida += quantidadeVida;
-        } else if (vida + quantidadeVida > MAX_VIDA) {
-            vida = MAX_VIDA;
-        }
     }
 }
 

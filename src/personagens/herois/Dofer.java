@@ -9,12 +9,13 @@ import personagens.viloes.Vilao;
 import java.util.ArrayList;
 
 public final class Dofer extends Heroi {
-    private final Integer MAX_VIDA = 100;
 
     public Dofer() {
-        super("Dofer", 100, 0, new AtaquePadrao("Ns um nome bom", 10),
+        super("Dofer", 100, 0, new AtaquePadrao("Ataque de Espada", 10),
                 new PoderEspecial("Espada Flamejante",30,65, 1),
-                new PoderEspecial("Transmutaçãp de mana", 25, 80, 2));
+                new PoderEspecial("Transmutação de mana", 25, 80, 2),
+                100);
+
     }
 
     @Override
@@ -41,15 +42,4 @@ public final class Dofer extends Heroi {
                 um mago negro que realizava experimentos que emanavam longínquas e estranhas luzes verdes, o herói sentiu sua espinha arrepiar,
                 ele sabia o que tinha que fazer.""");
     }
-
-    @Override
-    public void aumentarVida(int quantidadeVida) {
-        if (vida + quantidadeVida <= MAX_VIDA) {
-            vida += quantidadeVida;
-        }
-        else if (vida + quantidadeVida > MAX_VIDA){
-            vida = MAX_VIDA;
-        }
-    }
-
 }
