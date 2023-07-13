@@ -2,12 +2,15 @@ import personagens.herois.Heroi;
 import personagens.viloes.Vilao;
 
 public class Luta {
-    private Heroi heroi;
-    private Vilao vilao;
-    private int contadorRodadas;
+    public Heroi heroi;
+    public Vilao vilao;
+    public int contadorRodadas = 0;
 
     public Luta(Heroi heroi, Vilao vilao){
         this.heroi = heroi;
         this.vilao = vilao;
+
     }
+
+
 }
