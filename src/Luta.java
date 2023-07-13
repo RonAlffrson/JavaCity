@@ -51,43 +51,20 @@ public class Luta {
         return opcaoHeroi;
     }
     public static void batalhar(Heroi heroi, Vilao vilao){
-        Scanner input = new Scanner(System.in);
         System.out.println("Batalha:\n " + heroi.getNome() +" VS " + vilao.getNome());
         boolean validador = false;
         int opcaoJogaodor = 0;
         while(heroi.getVida() != 0 && vilao.getVida() != 0) {
             System.out.println(heroi.getNome() + "Tem " + heroi.getVida() + " / " + heroi.getMax_vida() + " de vida");
+
             System.out.println(vilao.getNome() + "Tem " + vilao.getVida());
-            while(!validador) {
-                try {
-                    validador = true;
-                    System.out.println("Opções do jogador:\n");
-                    System.out.println("(1) Ataques");
-                    System.out.println("(2) Iventario");
-                    System.out.println("Digite a opção desejada: ");
-                    opcaoJogaodor = input.nextInt();
-                    Heroi.verificarOpcaoHeroi(opcaoJogaodor); // esse metodo lanca uma exceçãp
-                } catch (InputMismatchException e) {
-                    input.nextLine();
-                    validador = false;
-                    System.out.println("Erro : Digite 1 ou 2 para escolher a opção desejada\n");
-                } catch (IllegalArgumentException e) {
-                    System.out.println("Erro : Digite 1 ou 2 para escolher a opção desejada\n");
-                    validador = false;
-                } catch (Exception e) {
-                    input.nextLine();
-                    System.out.println("Erro desconhecido: digite um valor valido");
-                    validador = false;
-                }
-            } // fim do while validador
+
+           opcaoJogaodor = opcaoJogador();
+
             if(opcaoJogaodor == 1){
-                System.out.println("Opções de Ataque:");
-                System.out.println("(1)" + heroi.getAtaquePadrao().descricao());
-                System.out.print("(2)");
-                heroi.getPoderEspecial1().printarDescricaoPoder();
-                System.out.print("(3)");
-                heroi.getPoderEspecial2().printarDescricaoPoder();
-                System.out.println("(4) Voltar");
+                // fazer o metodo opcaoAtaque
+
+
             }
             else if(opcaoJogaodor == 2){
                 System.out.println("Item que você deseja usar:");
@@ -95,6 +72,46 @@ public class Luta {
 
 
         } // to pensando em criar o metodo opcoes jogaodr que retornar esse metodo
+    }
+    private static int opcaoJogador(){
+        Scanner input = new Scanner(System.in);
+        int opcaoJogaodor = 0;
+        boolean validador = false;
+        while(!validador) {
+            try {
+                validador = true;
+                System.out.println("Opções do jogador:\n");
+                System.out.println("(1) Ataques");
+                System.out.println("(2) Iventario");
+                System.out.println("Digite a opção desejada: ");
+                opcaoJogaodor = input.nextInt();
+                Heroi.verificarOpcaoHeroi(opcaoJogaodor); // esse metodo lanca uma exceçãp
+            } catch (InputMismatchException e) {
+                input.nextLine();
+                validador = false;
+                System.out.println("Erro : Digite 1 ou 2 para escolher a opção desejada\n");
+            } catch (IllegalArgumentException e) {
+                System.out.println("Erro : Digite 1 ou 2 para escolher a opção desejada\n");
+                validador = false;
+            } catch (Exception e) {
+                input.nextLine();
+                System.out.println("Erro desconhecido: digite um valor valido");
+                validador = false;
+            }
+        } // fim do while validador
+        input.close();
+        return  opcaoJogaodor;
+    }
+    public void opcaoAtaque(){
+        int opcaoAtaque = 0;
+        System.out.println("Opções de Ataque:");
+        System.out.println("(1)" + heroi.getAtaquePadrao().descricao());
+        System.out.print("(2)");
+        heroi.getPoderEspecial1().printarDescricaoPoder();
+        System.out.print("(3)");
+        heroi.getPoderEspecial2().printarDescricaoPoder();
+        System.out.println("(4) Voltar");
+
     }
 
 
