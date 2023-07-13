@@ -1,6 +1,5 @@
 package personagens;
 
-import personagens.viloes.Vilao;
 
 public abstract class Personagem implements AcoesPersonagem {
     protected String nome;
@@ -10,11 +9,11 @@ public abstract class Personagem implements AcoesPersonagem {
     protected AtaquePadrao ataquePadrao;
 
     public Personagem(String nome, Integer vida, Integer mana, AtaquePadrao ataquePadrao, PoderEspecial poderEspecial1) {
-        this.nome = nome;
-        this.vida = vida;
-        this.mana = mana;
-        this.ataquePadrao = ataquePadrao;
-        this.poderEspecial1 = poderEspecial1;
+        setNome(nome);
+        setVida(vida);
+        setMana(mana);
+        setAtaquePadrao(ataquePadrao);
+        setPoderEspecial1(poderEspecial1);
     }
     @Override
     public void poderEspecial1(Personagem personagem) {

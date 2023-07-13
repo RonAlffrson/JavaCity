@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="método 'decidirAtaque'">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="adicionarItem alterado">
+      <change beforePath="$PROJECT_DIR$/src/personagens/Personagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/Personagem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/personagens/herois/Heroi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Heroi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -414,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689264451725</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="adicionarItem alterado">
+      <created>1689265582957</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1689265582957</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -441,7 +448,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Todas as implementações feitas nos heróis" />
     <MESSAGE value="Mudança na implementação da classe 'Dofer'" />
     <MESSAGE value="Criação de classe 'Luta'" />
     <MESSAGE value="História de Rodan adicionada" />
@@ -466,6 +472,7 @@
     <MESSAGE value="adicionarQuantidadeItem é adicionarItem" />
     <MESSAGE value="Erro customizado 'ErroOpcaoHeroiException' criado" />
     <MESSAGE value="método 'decidirAtaque'" />
-    <option name="LAST_COMMIT_MESSAGE" value="método 'decidirAtaque'" />
+    <MESSAGE value="adicionarItem alterado" />
+    <option name="LAST_COMMIT_MESSAGE" value="adicionarItem alterado" />
   </component>
 </project>
