@@ -15,9 +15,11 @@ public abstract class Vilao extends Personagem implements AcoesViloes {
     @Override
     public void decidirAtaque(Personagem personagem) {
         if (mana < poderEspecial1.getCusto()){
+            System.out.println(nome + " usou " + ataquePadrao.getNome() + " em " + personagem.getNome());
             ataquePadrao(personagem);
         }
         else{
+            System.out.println(nome + " usou " + poderEspecial1.getNome() + " em " + personagem.getNome());
             poderEspecial1(personagem);
         }
     }
@@ -28,6 +30,10 @@ public abstract class Vilao extends Personagem implements AcoesViloes {
         int opcao = random.nextInt(2);
         //Retorna um número entre 0-1
         if (getVida() == 0){
+            if (opcao == 0)
+                System.out.println(heroi.getNome() + "recebeu uma poção de mana");
+            else
+                System.out.println(heroi.getNome() + "recebeu uma poção de vida");
             heroi.adicionarItem(opcao);
         }
     }
