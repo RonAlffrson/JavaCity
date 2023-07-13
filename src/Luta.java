@@ -13,6 +13,11 @@ public class Luta {
         this.vilao = vilao;
 
     }
+    public static void lancarExcecaoOpcaoAtaque(int opcaoAtaque) throws IllegalArgumentException{
+        if(opcaoAtaque > 0 && opcaoAtaque < 5){
+            throw new IllegalArgumentException("Erro : digite um valor entre 1 e 4");
+        }
+    }
     public static void mensagemInicio(){
         System.out.println("Bem-vindo a JavaCity");
         System.out.println("=--=-=-=-=-=-=-=-=-=-=-=-=-=-=");
@@ -103,14 +108,52 @@ public class Luta {
         return  opcaoJogaodor;
     }
     public void opcaoAtaque(){
+        Scanner input = new Scanner(System.in);
         int opcaoAtaque = 0;
-        System.out.println("Opções de Ataque:");
-        System.out.println("(1)" + heroi.getAtaquePadrao().descricao());
-        System.out.print("(2)");
-        heroi.getPoderEspecial1().printarDescricaoPoder();
-        System.out.print("(3)");
-        heroi.getPoderEspecial2().printarDescricaoPoder();
-        System.out.println("(4) Voltar");
+        boolean validador = false;
+        while(!validador) {
+            try {
+                validador = true;
+                System.out.println("Opções de Ataque:");
+                System.out.println("(1)" + heroi.getAtaquePadrao().descricao());
+                System.out.print("(2)");
+                heroi.getPoderEspecial1().printarDescricaoPoder();
+                System.out.print("(3)");
+                heroi.getPoderEspecial2().printarDescricaoPoder();
+                System.out.println("(4) Voltar");
+                System.out.print("Digite a opção desejada: ");
+                opcaoAtaque = input.nextInt();
+                lancarExcecaoOpcaoAtaque(opcaoAtaque);
+
+            }catch (InputMismatchException e){
+                validador = false;
+                input.nextLine();
+                System.out.println("Erro: Digite um valor entre 1 e 4");
+            }
+            catch (IllegalArgumentException e){
+                validador = false;
+                input.nextLine();
+                System.out.println(e.getMessage());
+            }
+            catch (Exception e){
+                validador = false;
+                input.nextLine();
+                System.out.println("Erro desconhecido: digite um valor valido");
+            }
+        }
+        input.close();
+        if(opcaoAtaque == 1){ // ataque padrao
+
+        }
+        else if (opcaoAtaque == 2){ // poder especial1
+
+        }
+        else if (opcaoAtaque == 3){ // poder especial2
+
+        }
+        else if(opcaoAtaque == 4){ // voltar
+
+        }
 
     }
 
