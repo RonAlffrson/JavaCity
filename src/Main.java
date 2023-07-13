@@ -21,7 +21,8 @@ public class Main {
         }
         jogador.contarHistoria();
 
-        Luta.batalhar(jogador, new Flegoman()); // primeira luta
+        Luta luta = new Luta(jogador, new Flegoman()); // primeira luta
+        luta.batalhar();
 
 
     }

@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="Fazendo os caminhos que o usuario pode escolher, pensar como fazer na opçao do usuario voltar">
+    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="criei o metodo opcao ataque, tratei as exceçoes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Luta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Luta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Dofer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Dofer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Rodan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Rodan.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -428,7 +430,7 @@
       <option name="project" value="LOCAL" />
       <updated>1689265892066</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -455,8 +457,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Histórias atualizadas" />
-    <MESSAGE value="Atualizações" />
     <MESSAGE value="Atualizações em itens" />
     <MESSAGE value="Atualizações em classe 'Carteira'&#10;alguns métodos dos hérois foram postos na classe mãe 'Heroi'&#10;Atualizações em itens" />
     <MESSAGE value="Mudança em ataque especial de 'Dofer'&#10;Adicionada descrição dos poderes especiais" />
@@ -480,6 +480,8 @@
     <MESSAGE value="construtor alterado" />
     <MESSAGE value="Escrevendo os metodos que serão aplicados na main" />
     <MESSAGE value="Fazendo os caminhos que o usuario pode escolher, pensar como fazer na opçao do usuario voltar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fazendo os caminhos que o usuario pode escolher, pensar como fazer na opçao do usuario voltar" />
+    <MESSAGE value="Fazendo os metodos necessarios para conseguir voltar nas opcões escolhidas" />
+    <MESSAGE value="criei o metodo opcao ataque, tratei as exceçoes" />
+    <option name="LAST_COMMIT_MESSAGE" value="criei o metodo opcao ataque, tratei as exceçoes" />
   </component>
 </project>
