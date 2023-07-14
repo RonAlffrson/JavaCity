@@ -54,14 +54,6 @@ public abstract class Heroi extends Personagem implements AcoesHerois {
         }
     }
 
-    public ArrayList<Item> getInventario() {
-        return inventario;
-    }
-
-    public PoderEspecial getPoderEspecial2() {
-        return poderEspecial2;
-    }
-
     @Override
     public void poderEspecial2(){
         if (mana >= poderEspecial2.getCusto()){
@@ -89,6 +81,13 @@ public abstract class Heroi extends Personagem implements AcoesHerois {
             this.max_vida = max_vida;
         else
             throw new IllegalArgumentException("Vida máxima deve ser um inteiro maior que zero ");
+    }
+    public ArrayList<Item> getInventario() {
+        return inventario;
+    }
+
+    public PoderEspecial getPoderEspecial2() {
+        return poderEspecial2;
     }
 
 }

@@ -80,6 +80,13 @@ public class Luta {
             else if(opcaoJogaodor == 2){
                 opcaoIventario();
             }
+            // apartir daqui acabou as açoes do heroi e começa a do vilão
+            if(!(vilao.getVida() <= 0)){ // se vilão estiver vivo
+                vilao.decidirAtaque(heroi);
+            }
+            else{ // vilao morreu sorteia item
+                vilao.sortearPocao(heroi);
+            }
 
 
         } // to pensando em criar o metodo opcoes jogaodr que retornar esse metodo
@@ -156,6 +163,27 @@ public class Luta {
                 opcaoIventario(); // esse seria o caso que o jogador escolheria  Iventario ainda ns como resolriasve
             }
         }
+        else if(opcaoAtaque == 1){
+            heroi.ataquePadrao(vilao);
+        }
+        else if (opcaoAtaque == 2){
+            if(heroi.getMana() >= heroi.getPoderEspecial1().getCusto()) {
+                heroi.poderEspecial1(vilao);
+            }
+            else{
+                System.out.println("Erro: Mana insuficiente, escolha outra opcao de ataque ");
+                opcaoAtaque();
+            }
+        }
+        else if (opcaoAtaque == 3) {
+            if(heroi.getMana() >= heroi.getPoderEspecial2().getCusto()) {
+                heroi.poderEspecial2();
+            }
+            else{
+                System.out.println("Erro: Mana insuficiente, escolha outra opcao de ataque ");
+                opcaoAtaque();
+            }
+        }
         // fazer as outras possibilidades
         // ideia quando for executar os metodos de poder especial
 
@@ -169,8 +197,8 @@ public class Luta {
             try {
                 validador = true;
                 System.out.println("Opções de Iventario:");
-                System.out.println("(1) " + heroi.inventario.get(0).descricaoItem() + "\n" +
-                        "(2) " + heroi.inventario.get(1).descricaoItem());
+                System.out.println("(1) " + heroi.getInventario().get(0).descricaoItem() + "\n" +
+                        "(2) " + heroi.getInventario().get(1).descricaoItem());
                 System.out.println("(3) voltar ");
                 System.out.print("Digite a opção desejada: ");
                 opcaoIventario = input.nextInt();
@@ -201,7 +229,10 @@ public class Luta {
             }
         }
         else if(opcaoIventario == 1){
-            heroi.aumentarVida(heroi.inventario.get(0).getValorAtributo());
+            // Fazer o metodo para aumentar a vida do boneco
+        }
+        else if (opcaoIventario == 2){
+          // fazer o metodo de aumentar a mana do boneco por pocao
         }
 
     }
