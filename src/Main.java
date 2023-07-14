@@ -23,9 +23,6 @@ public class Main {
 
         Luta luta = new Luta(jogador, new Flegoman()); // primeira luta
         luta.batalhar();
-
-
     }
-
 
 }
