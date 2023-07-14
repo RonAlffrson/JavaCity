@@ -7,7 +7,7 @@ public final class PocaoMana extends Item{
     }
     @Override
     public String descricaoItem(){
-         return  super.descricaoItem() + " mana";
+         return  super.descricaoItem() + " Mana";
     }
 
 

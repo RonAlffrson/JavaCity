@@ -29,7 +29,7 @@ public abstract class Item {
         }
     }
     public String descricaoItem(){
-        return getNome() + "recupera " + getValorAtributo();
+        return getNome() + " recupera " + getValorAtributo();
     }
 
 }

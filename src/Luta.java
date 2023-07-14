@@ -19,7 +19,11 @@ public class Luta {
             throw new IllegalArgumentException("Erro : digite um valor entre 1 e 4");
         }
     }
-    public static void lancarExcecaoOpcaoIventario()
+    public static void lancarExcecaoOpcaoIventario(int opcaoIventario) throws IllegalArgumentException{
+        if(opcaoIventario <= 0 || opcaoIventario > 3){
+            throw new IllegalArgumentException("Erro: Digite valor entre 1 e 3");
+        }
+    }
     public static void mensagemInicio(){
         System.out.println("Bem-vindo a JavaCity");
         System.out.println("=--=-=-=-=-=-=-=-=-=-=-=-=-=-=");
@@ -64,7 +68,8 @@ public class Luta {
             System.out.println(heroi.getNome() + "\nVida: " + heroi.getVida() + " / " + heroi.getMax_vida() +
                     "\nMana:" + heroi.getMana() + " / " + heroi.getMAX_MANA() + "\n");
 
-            System.out.println(vilao.getNome() + "\nVida: " + vilao.getVida() + "\n");
+            System.out.println(vilao.getNome() + "\nVida: " + vilao.getVida() + "\n" +
+                    "Mana: " + vilao.getMana());
 
            opcaoJogaodor = opcaoJogador();
 
@@ -74,7 +79,7 @@ public class Luta {
 
 
             else if(opcaoJogaodor == 2){
-                System.out.println("Item que você deseja usar:");
+                int opcaoIventario = opcaoIventario();
             }
 
 
@@ -144,11 +149,11 @@ public class Luta {
             }
         }
         if(opcaoAtaque == 4){ // voltar
-            int opcaoJogaodor = opcaoJogador();
-            if(opcaoJogaodor == 1){
+            opcaoAtaque = opcaoJogador();
+            if(opcaoAtaque == 1){
                 opcaoAtaque = opcaoAtaque();
             }
-            else if (opcaoJogaodor == 2) {
+            else if (opcaoAtaque == 2) {
                 return -1; // esse seria o caso que o jogador escolheria  Iventario ainda ns como resolriasve
             }
 
@@ -165,11 +170,11 @@ public class Luta {
                 validador = true;
                 System.out.println("Opções de Iventario:");
                 System.out.println("(1) " + heroi.inventario.get(0).descricaoItem() + "\n" +
-                        "(2) " + heroi.inventario.get(1).descricaoItem());// fazer a descrição de pocaoMana e poçao
+                        "(2) " + heroi.inventario.get(1).descricaoItem());
+                System.out.println("(3) voltar ");
                 System.out.print("Digite a opção desejada: ");
                 opcaoIventario = input.nextInt();
-                // lançar a exceção de inventario aqui
-
+                lancarExcecaoOpcaoIventario(opcaoIventario);
             } catch (InputMismatchException e) {
                 validador = false;
                 input.nextLine();
@@ -183,7 +188,10 @@ public class Luta {
                 input.nextLine();
                 System.out.println("Erro desconhecido: digite um valor valido");
             }
+
         }
+        return opcaoIventario; // so para testar na main
+
     }
 
 }
