@@ -65,6 +65,7 @@ public class Luta {
         boolean validador = false;
         int opcaoJogaodor = 0;
         while(heroi.getVida() != 0 && vilao.getVida() != 0) {
+            contarRodada();
             System.out.println(heroi.getNome() + "\nVida: " + heroi.getVida() + " / " + heroi.getMax_vida() +
                     "\nMana:" + heroi.getMana() + " / " + heroi.getMAX_MANA() + "\n");
 
@@ -87,6 +88,10 @@ public class Luta {
             else{ // vilao morreu sorteia item
                 vilao.sortearPocao(heroi);
             }
+            // acabou a rodada
+            heroi.aumentarVidaRodada();
+            heroi.aumentarManaRodada();
+            vilao.aumentarManaRodada();
 
 
         } // to pensando em criar o metodo opcoes jogaodr que retornar esse metodo
@@ -235,6 +240,10 @@ public class Luta {
           // fazer o metodo de aumentar a mana do boneco por pocao
         }
 
+    }
+    public void contarRodada(){
+        contadorRodadas += 1;
+        System.out.println(contadorRodadas + "° Rodada");
     }
 
 }
