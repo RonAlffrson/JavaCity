@@ -45,6 +45,7 @@ public final class Rodan extends Heroi {
                 para sua surpresa, ouve boatos de que, na Floresta Sombria de Sonfejer, foram vistas estranhas luzes verdes no fundo da mata, ele sabia
                 que a salvação de sua amada finalmente estava próxima.\n\n                                                                                                            \s
                 """);
+        System.out.print("\n\n");
     }
 }
 

@@ -1,0 +1,305 @@
+Index: src/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import personagens.MultiplicadorDeAtaque;\r\nimport personagens.herois.Dofer;\r\nimport personagens.herois.Heroi;\r\nimport personagens.herois.Rodan;\r\n\r\nimport java.util.InputMismatchException;\r\nimport java.util.Scanner;\r\npublic class Main {\r\n    public static void main(String[] args) {\r\n        Scanner input = new Scanner(System.in);\r\n        Heroi jogador;\r\n        System.out.println(\"Bem-vindo a JavaCity\");\r\n        System.out.println(\"=--=-=-=-=-=-=-=-=-=-=-=-=-=-=\");\r\n        int opcaoHeroi = 0;\r\n        do {\r\n            try {\r\n                    System.out.println(\"\"\"\r\n                            Escolha seu heroi:\r\n                            (1) Dofer - Cavaleiro\r\n                            (2) Ronan - Mago\"\"\");\r\n                    opcaoHeroi = input.nextInt();\r\n                    Heroi.verificarOpcaoHeroi(opcaoHeroi); // esse metodo lanca uma exceçãp\r\n            }\r\n            catch (InputMismatchException e) {\r\n                    input.nextLine();\r\n                    opcaoHeroi = 0;\r\n                    System.out.println(\"Erro : Digite 1 ou 2 para escoler o heroi\\n\");\r\n            }\r\n            catch (IllegalArgumentException e){\r\n                System.out.println(e.getMessage() + \"\\n\");\r\n                opcaoHeroi = 0;\r\n            }\r\n            catch (Exception e){\r\n                input.nextLine();\r\n                System.out.println(\"Erro desconhecido: digite um valor valido\");\r\n                opcaoHeroi = 0;\r\n            }\r\n\r\n        } while (opcaoHeroi == 0); // testando valores validos pro heroi\r\n        if(opcaoHeroi == 1){\r\n            jogador = new Dofer();\r\n        }\r\n        else{\r\n            jogador = new Rodan();\r\n        }\r\n\r\n\r\n        jogador.contarHistoria();\r\n\r\n\r\n\r\n            // esse vai ser o ultimo while\r\n        //quando passar por ele vai dar a mensagem se o jogador ganhou o jogo...\r\n    }\r\n\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Main.java b/src/Main.java
+--- a/src/Main.java	(revision 7889f2444954e81a1ce88c5f34b5ecef75954da2)
++++ b/src/Main.java	(date 1689276569753)
+@@ -1,16 +1,20 @@
+-import personagens.MultiplicadorDeAtaque;
++import luta.Luta;
+ import personagens.herois.Dofer;
+ import personagens.herois.Heroi;
+ import personagens.herois.Rodan;
++import personagens.viloes.*;
+ 
+ import java.util.InputMismatchException;
+ import java.util.Scanner;
+ public class Main {
+     public static void main(String[] args) {
+         Scanner input = new Scanner(System.in);
++        Flegoman flegoman = new Flegoman();
++        Dataretan dataretan = new Dataretan();
++        Napda napda = new Napda();
+         Heroi jogador;
+         System.out.println("Bem-vindo a JavaCity");
+-        System.out.println("=--=-=-=-=-=-=-=-=-=-=-=-=-=-=");
++        System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+         int opcaoHeroi = 0;
+         do {
+             try {
+@@ -19,7 +23,7 @@
+                             (1) Dofer - Cavaleiro
+                             (2) Ronan - Mago""");
+                     opcaoHeroi = input.nextInt();
+-                    Heroi.verificarOpcaoHeroi(opcaoHeroi); // esse metodo lanca uma exceçãp
++                    Heroi.verificarOpcaoHeroi(opcaoHeroi);
+             }
+             catch (InputMismatchException e) {
+                     input.nextLine();
+@@ -46,6 +50,7 @@
+ 
+ 
+         jogador.contarHistoria();
++        Luta.lutar(jogador, flegoman);
+ 
+ 
+ 
+Index: src/personagens/herois/Heroi.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package personagens.herois;\r\nimport itens.*;\r\nimport java.util.ArrayList;\r\n\r\nimport personagens.AtaquePadrao;\r\nimport personagens.Personagem;\r\nimport personagens.PoderEspecial;\r\n\r\npublic abstract class Heroi extends Personagem implements AcoesHerois {\r\n\r\n    public ArrayList<Item> inventario = new ArrayList<>();\r\n    protected final Integer MAX_MANA = 100, MIN_MANA = 0, MIN_VIDA = 0;\r\n    protected PoderEspecial poderEspecial2;\r\n    protected Integer max_vida;\r\n\r\n    public Heroi(String nome, Integer vida, Integer mana, AtaquePadrao ataquePadrao, PoderEspecial poderEspecial1, PoderEspecial poderEspecial2, Integer max_vida) {\r\n        super(nome, vida, mana, ataquePadrao, poderEspecial1);\r\n        setMax_vida(max_vida);\r\n        this.inventario.add(new PocaoMana());\r\n        this.inventario.add(new PocaoVida());\r\n        this.poderEspecial2 = poderEspecial2;\r\n    }\r\n\r\n    public Integer getMax_vida() {\r\n        return max_vida;\r\n    }\r\n\r\n    public void setMax_vida(Integer max_vida) {\r\n        if (max_vida > 0)\r\n            this.max_vida = max_vida;\r\n        else\r\n            throw new IllegalArgumentException(\"Vida máxima deve ser um inteiro maior que zero \");\r\n    }\r\n\r\n    public static void verificarOpcaoHeroi(int opcaoHeroi) throws ErroOpcaoHeroiException{\r\n        if(opcaoHeroi != 1 && opcaoHeroi != 2){\r\n            throw new ErroOpcaoHeroiException(\"Erro: Digite 1 ou 2 para escolher o heroi\");\r\n        }\r\n    }\r\n\r\n    @Override\r\n    public void aumentarMana(int quantidadeMana){\r\n        if (mana + quantidadeMana <= MAX_MANA) {\r\n            mana += quantidadeMana;\r\n        }\r\n        else if (mana + quantidadeMana > MAX_MANA){\r\n            mana = MAX_MANA;\r\n        }\r\n    }\r\n\r\n    @Override\r\n    public void diminuirMana(int quantidadeMana) {\r\n        if (mana - quantidadeMana >= MIN_MANA) {\r\n            mana -= quantidadeMana;\r\n        }\r\n        else if (mana - quantidadeMana < MIN_MANA){\r\n            mana = MAX_MANA;\r\n        }\r\n    }\r\n\r\n    @Override\r\n    public void aumentarVida(int quantidadeVida) {\r\n        if (vida + quantidadeVida <= max_vida) {\r\n            vida += quantidadeVida;\r\n        }\r\n        else if (vida + quantidadeVida > max_vida){\r\n            vida = max_vida;\r\n        }\r\n    }\r\n\r\n    @Override\r\n    public void diminiurVida(int quantidadeVida) {\r\n        if (vida - quantidadeVida >= MIN_VIDA) {\r\n            vida -= quantidadeVida;\r\n        }\r\n        else if (vida - quantidadeVida < MIN_VIDA){\r\n            vida = MIN_VIDA;\r\n        }\r\n    }\r\n\r\n    @Override\r\n    public void aumentarVidaRodada(){\r\n        aumentarVida(3);\r\n    }\r\n\r\n\r\n    @Override\r\n    public void adicionarItem(int opcao) { // 0 pocao de mana, 1 pocao de vida\r\n        if(opcao == 0){\r\n            this.inventario.get(0).adicionarItem(); // recebe uma pocao de mana\r\n        }\r\n        else if(opcao == 1){\r\n            this.inventario.get(1).adicionarItem(); // recebe uma pocao de vida\r\n        }\r\n    }\r\n\r\n    @Override\r\n    public void poderEspecial2(){\r\n        if (mana >= poderEspecial2.getCusto()){\r\n            diminuirMana(poderEspecial2.getAtributo());\r\n            aumentarVida(poderEspecial2.getAtributo());\r\n        }\r\n        else{\r\n            System.out.println(\"Mana insuficiente\");\r\n        }\r\n    }\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/personagens/herois/Heroi.java b/src/personagens/herois/Heroi.java
+--- a/src/personagens/herois/Heroi.java	(revision 7889f2444954e81a1ce88c5f34b5ecef75954da2)
++++ b/src/personagens/herois/Heroi.java	(date 1689278026733)
+@@ -34,7 +34,7 @@
+ 
+     public static void verificarOpcaoHeroi(int opcaoHeroi) throws ErroOpcaoHeroiException{
+         if(opcaoHeroi != 1 && opcaoHeroi != 2){
+-            throw new ErroOpcaoHeroiException("Erro: Digite 1 ou 2 para escolher o heroi");
++            throw new ErroOpcaoHeroiException("Digite 1 ou 2 para escolher o heroi");
+         }
+     }
+ 
+Index: src/Luta.java
+===================================================================
+diff --git a/src/Luta.java b/src/Luta.java
+deleted file mode 100644
+--- a/src/Luta.java	(revision 7889f2444954e81a1ce88c5f34b5ecef75954da2)
++++ /dev/null	(revision 7889f2444954e81a1ce88c5f34b5ecef75954da2)
+@@ -1,16 +0,0 @@
+-import personagens.herois.Heroi;
+-import personagens.viloes.Vilao;
+-
+-public class Luta {
+-    public Heroi heroi;
+-    public Vilao vilao;
+-    public int contadorRodadas = 0;
+-
+-    public Luta(Heroi heroi, Vilao vilao){
+-        this.heroi = heroi;
+-        this.vilao = vilao;
+-
+-    }
+-
+-
+-}
+Index: src/personagens/herois/Dofer.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package personagens.herois;\r\n\r\nimport itens.Item;\r\nimport personagens.AtaquePadrao;\r\nimport personagens.MultiplicadorDeAtaque;\r\nimport personagens.PoderEspecial;\r\nimport personagens.viloes.Vilao;\r\n\r\nimport java.util.ArrayList;\r\n\r\npublic final class Dofer extends Heroi {\r\n\r\n    public Dofer() {\r\n        super(\"Dofer\", 100, 0, new AtaquePadrao(\"Ataque de Espada\", 10),\r\n                new PoderEspecial(\"Espada Flamejante\",30,65, 1),\r\n                new PoderEspecial(\"Transmutação de mana\", 25, 80, 2),\r\n                100);\r\n\r\n    }\r\n\r\n    @Override\r\n    public void contarHistoria() {\r\n        System.out.print(\"\"\"\r\n                Respeitado coronel da Guarda Real de Java City e estrategista do rei, Dofer, estava mais um dia na guarda das muralhas\r\n                fazendo sua patrulha diária quando, com um som ensurdecedor, uma luz verde em forma de garra, rapidamente se materializando,\r\n                emana das sombras e mata seu irmão e parceiro de armas Mikelos. Ao vê-lo Dofer utiliza seu famoso ataque espada flamejante e\r\n                parte para cima da garra que, para sua surpresa, superou sua extrema velocidade e ataca-o antes que pudesse sequer arranhá-la,\r\n                o cavaleiro foi ao chão e, fechando os olhos, viu por alguns instantes a garra voltando para as sombras e espairecer lentamente.\r\n                Semanas após o ocorrido, Dofer encontra-se no hospital e, ao abrir seus olhos, começa a sentir uma dor latente em seu peito, ele\r\n                olha para baixo e vê um buraco onde seu coração deveria estar. Dofer gritou e gritou até que o médico de plantão chega tentando\r\n                acalmá-lo e explicá-lo um pouco mais sobre o seu estado ao chegar no hospital. O médico contou que em seu peito havia um buraco de\r\n                aproximadamente um palmo de largura, sob intensas hemorragias, seu coração estava batendo exposto, quase como se quisesse desprender-se\r\n                do corpo do cavaleiro. Além disso, em seu coração havia uma substância verde, acídica, corroendo sua carne, que o doutor nunca\r\n                vira antes, mas que suspeitava ser algum tipo de magia negra. Infelizmente, a única solução para salvá-lo foi retirar seu coração\r\n                infectado e realizar um tratamento intensivo de materialização de mana — energia mágica que todos os seres humanos compartilham,\r\n                ainda que em níveis diferentes, e que pode ser transferida para outro corpo —, com os magos renomados da cidade tentando um procedimento\r\n                arriscado de criar um proto-coração com sua já existente mana e com a energia doada pelos humildes habitantes de Javacity, mas apesar\r\n                do êxito no tratamento, o médico o avisou que ele nunca mais teria o mesmo vigor, as mesmas forças e a mesma mana em seu corpo que antes.\r\n                Desde esse dia, Dofer treinou ininterruptamente por dois anos, em dias quentes e noites chuvosas, ultrapassando a fadiga de cada\r\n                músculo em seu corpo para partir em busca do assassino de seu irmão. Após cinco anos de uma jornada incansável por respostas,\r\n                o cavaleiro, ao retornar para Java City ouviu boatos de que ao Sul da cidade, nos subterrâneos da Floresta Sombria de Sonfejer habitava\r\n                um mago negro que realizava experimentos que emanavam longínquas e estranhas luzes verdes, o herói sentiu sua espinha arrepiar,\r\n                ele sabia o que tinha que fazer.\"\"\");\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/personagens/herois/Dofer.java b/src/personagens/herois/Dofer.java
+--- a/src/personagens/herois/Dofer.java	(revision 7889f2444954e81a1ce88c5f34b5ecef75954da2)
++++ b/src/personagens/herois/Dofer.java	(date 1689276035143)
+@@ -41,5 +41,6 @@
+                 o cavaleiro, ao retornar para Java City ouviu boatos de que ao Sul da cidade, nos subterrâneos da Floresta Sombria de Sonfejer habitava
+                 um mago negro que realizava experimentos que emanavam longínquas e estranhas luzes verdes, o herói sentiu sua espinha arrepiar,
+                 ele sabia o que tinha que fazer.""");
++        System.out.print("\n\n");
+     }
+ }
+Index: src/personagens/viloes/Dataretan.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package personagens.viloes;\r\n\r\nimport personagens.AtaquePadrao;\r\nimport personagens.PoderEspecial;\r\nimport personagens.herois.Heroi;\r\n\r\npublic final class Dataretan extends Vilao {\r\n\r\n    public Dataretan(String nome, Integer vida, Integer mana, AtaquePadrao ataquePadrao, PoderEspecial poderEspecial1) {\r\n        super(\"Dataretan\", 90, 0,\r\n                new AtaquePadrao(\"Confusão mental\", 6),\r\n                new PoderEspecial(\"Travamento de neurônios\",20,50, 1));\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/personagens/viloes/Dataretan.java b/src/personagens/viloes/Dataretan.java
+--- a/src/personagens/viloes/Dataretan.java	(revision 7889f2444954e81a1ce88c5f34b5ecef75954da2)
++++ b/src/personagens/viloes/Dataretan.java	(date 1689275759347)
+@@ -6,7 +6,7 @@
+ 
+ public final class Dataretan extends Vilao {
+ 
+-    public Dataretan(String nome, Integer vida, Integer mana, AtaquePadrao ataquePadrao, PoderEspecial poderEspecial1) {
++    public Dataretan() {
+         super("Dataretan", 90, 0,
+                 new AtaquePadrao("Confusão mental", 6),
+                 new PoderEspecial("Travamento de neurônios",20,50, 1));
+Index: src/luta/Luta.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/luta/Luta.java b/src/luta/Luta.java
+new file mode 100644
+--- /dev/null	(date 1689278026887)
++++ b/src/luta/Luta.java	(date 1689278026887)
+@@ -0,0 +1,57 @@
++package luta;
++
++import personagens.herois.Heroi;
++import personagens.viloes.Vilao;
++
++import java.util.InputMismatchException;
++import java.util.Objects;
++import java.util.Scanner;
++
++public class Luta {
++    public int contadorRodadas = 0;
++
++    public static void lutar(Heroi heroi, Vilao vilao){
++        Scanner input = new Scanner(System.in);
++        int opcao = 0;
++        boolean erro = false;
++        do{
++            System.out.println(heroi.getNome() + " encontrou " + vilao.getNome());
++            do{
++                try{
++                    erro = false;
++                    System.out.println("""
++                    O que você deseja fazer?
++                    (1) Atacar
++                    (2) Acessar inventário""");
++                    opcao = input.nextInt();
++                    Luta.verificarOpcao1(opcao);
++
++                    switch (opcao){
++                        //todo
++                        case 1 -> {} //exibir lista de ataques
++                    }
++
++                }catch (InputMismatchException e){
++                    erro = true;
++                    input.nextLine();
++                    System.out.println("Erro de entrada: " + e.getMessage());
++
++                }catch (Exception e){
++                    erro = true;
++                    input.nextLine();
++                    System.out.println("Erro: " + e.getMessage());
++                }
++            }while (erro);
++
++
++
++        }while ((Objects.equals(heroi.getVida(), heroi.getMIN_VIDA())) ||
++                (Objects.equals(vilao.getVida(), vilao.getMIN_VIDA())));
++    }
++
++    public static void verificarOpcao1(int opcao) throws InputMismatchException{
++        if (opcao != 1 && opcao != 2) throw new InputMismatchException("Escolha deve ser 1 ou 2");
++    }
++
++
++}
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"7880a674-6f45-4e7b-ac76-c54f7ffef466\" name=\"Changes\" comment=\"lógica de aumentarVida mudada\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Main.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Main.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/personagens/viloes/Vilao.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/personagens/viloes/Vilao.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Interface\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n    <option name=\"ROOT_SYNC\" value=\"DONT_SYNC\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">\r\n    <option name=\"selectedUrlAndAccountId\">\r\n      <UrlAndAccount>\r\n        <option name=\"accountId\" value=\"37d30cd3-2df4-4f4e-805a-1745d5691001\" />\r\n        <option name=\"url\" value=\"https://github.com/RonAlffrson/JavaCity.git\" />\r\n      </UrlAndAccount>\r\n    </option>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2Ra0Pi6zpX4JQvVjREHjQbKr0CZ\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"1\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/renan/IdeaProjects/JavaCity&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\renan\\IdeaProjects\\JavaCity\\src\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Main\" />\r\n      <module name=\"JavaCity\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.Main\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"7880a674-6f45-4e7b-ac76-c54f7ffef466\" name=\"Changes\" comment=\"\" />\r\n      <created>1687472864518</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1687472864518</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"classe abstrata personagem\">\r\n      <created>1687520824742</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1687520824742</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Classe 'Item' e interface 'Personagem' criados.\">\r\n      <created>1687894561764</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1687894561764</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Nome da classe 'Personagem' trocado para 'PersonagemGenerico' para não conflitar com a interface 'Personagem'\">\r\n      <created>1687894660098</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1687894660098</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Arquivo de roteiro do jogo adicionado para fácil manutenção\">\r\n      <created>1687970089508</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1687970089508</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Classe abstrata 'Personagem' mudada para 'Heroi'\">\r\n      <created>1687989180760</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1687989180760</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Interface 'AcoesPersonagem' mudada para 'Personagem'\">\r\n      <created>1687989676928</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1687989676928</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Interface 'AcoesPersonagem' mudada para 'Personagem'\">\r\n      <created>1687989700442</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1687989700442</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Classe 'Obstaculo' criada\">\r\n      <created>1687989744061</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1687989744061</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"Classes filhas da classe 'Heroi', 'Rodan' e 'Dofer' criadas\">\r\n      <created>1687991011115</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1687991011115</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"coloquei o texto do dofer no contar hstoria&#10;criei um construtor para cada heroi&#10;adicionei os metodos alterarVida e aumentarMana&#10;adicionei os atributos MAX_VIDA e MAX_MANA\">\r\n      <created>1687995982439</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1687995982439</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"Trocado método 'alterarVida' pelos métodos (já implementados) 'diminuirVida' e 'aumentarVida' &#10;Também criado atributo 'MIN_VIDA' com valor '0' na classe 'Heroi'\">\r\n      <created>1688052608506</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1688052608506</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"Tirado método adicionar item da Interface 'Personagem' - não acho que adicionar item deva ser algo que  seja obrigatóriamente implementado em cada herói, até porque o método só adiciona um item no inventário (coisa que já está implementada na classe mãe)\">\r\n      <created>1688053230661</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1688053230661</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00014\" summary=\"Criada classe 'Vilao'\">\r\n      <created>1688054733353</created>\r\n      <option name=\"number\" value=\"00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1688054733353</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00015\" summary=\"Criado método 'aumentarVidaRodada' que usa o método 'aumentarVida' para aumentar a vida em 3% a cada rodada\">\r\n      <created>1688054810993</created>\r\n      <option name=\"number\" value=\"00015\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1688054810993</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00016\" summary=\"Criados métodos 'ataquePadrao' e 'diminiurVida'\">\r\n      <created>1688054864111</created>\r\n      <option name=\"number\" value=\"00016\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1688054864111</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00017\" summary=\"Implementados métodos 'poderEspecial' 1 e 2 de Rodan\">\r\n      <created>1688054941179</created>\r\n      <option name=\"number\" value=\"00017\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1688054941179</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00018\" summary=\"Criadas classes específicas dos vilões\">\r\n      <created>1688055574986</created>\r\n      <option name=\"number\" value=\"00018\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00018\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1688055574986</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00019\" summary=\"Mudança na implementação dos poderes especiais e na interface 'Obstaculo'\">\r\n      <created>1688055630664</created>\r\n      <option name=\"number\" value=\"00019\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00019\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1688055630664</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00020\" summary=\"Mudança na interface 'Obstaculo'\">\r\n      <created>1688055672968</created>\r\n      <option name=\"number\" value=\"00020\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00020\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1688055672968</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00021\" summary=\"Todas as implementações feitas nos heróis\">\r\n      <created>1688058699846</created>\r\n      <option name=\"number\" value=\"00021\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00021\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1688058699846</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00022\" summary=\"Mudança na implementação da classe 'Dofer'\">\r\n      <created>1688073474701</created>\r\n      <option name=\"number\" value=\"00022\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00022\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1688073474701</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00023\" summary=\"Criação de classe 'Luta'\">\r\n      <created>1688073497877</created>\r\n      <option name=\"number\" value=\"00023\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00023\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1688073497877</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00024\" summary=\"História de Rodan adicionada\">\r\n      <created>1688079975116</created>\r\n      <option name=\"number\" value=\"00024\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00024\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1688079975116</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00025\" summary=\"Histórias atualizadas\">\r\n      <created>1688081292726</created>\r\n      <option name=\"number\" value=\"00025\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00025\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1688081292726</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00026\" summary=\"Atualizações\">\r\n      <created>1688082628021</created>\r\n      <option name=\"number\" value=\"00026\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00026\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1688082628021</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00027\" summary=\"Atualizações em itens\">\r\n      <created>1688095017854</created>\r\n      <option name=\"number\" value=\"00027\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00027\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1688095017854</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00028\" summary=\"Atualizações em classe 'Carteira'&#10;alguns métodos dos hérois foram postos na classe mãe 'Heroi'&#10;Atualizações em itens\">\r\n      <created>1688265066769</created>\r\n      <option name=\"number\" value=\"00028\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00028\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1688265066769</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00029\" summary=\"Mudança em ataque especial de 'Dofer'&#10;Adicionada descrição dos poderes especiais\">\r\n      <created>1688265276712</created>\r\n      <option name=\"number\" value=\"00029\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00029\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1688265276712</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00030\" summary=\"Descrição adicionada nos poderes especiais\">\r\n      <created>1688499600656</created>\r\n      <option name=\"number\" value=\"00030\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00030\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1688499600656</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00031\" summary=\"vilões atualizados e retirado os 'this.&lt;nome do atributo&gt;' no construtor dos personanagens\">\r\n      <created>1688501685784</created>\r\n      <option name=\"number\" value=\"00031\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00031\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1688501685784</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00032\" summary=\"objeto 'heroi' -&gt; 'jogador' na Main\">\r\n      <created>1688511561630</created>\r\n      <option name=\"number\" value=\"00032\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00032\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1688511561630</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00033\" summary=\"update\">\r\n      <created>1688511918710</created>\r\n      <option name=\"number\" value=\"00033\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00033\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1688511918710</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00034\" summary=\"update\">\r\n      <created>1688512292646</created>\r\n      <option name=\"number\" value=\"00034\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00034\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1688512292646</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00035\" summary=\"ataques padroes dos viloes adicionados\">\r\n      <created>1688682879864</created>\r\n      <option name=\"number\" value=\"00035\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00035\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1688682879864</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00036\" summary=\"Setters e Getters de PoderEspecial criados e criado atributo categoria para printar a descrição de acordo com se é um poder de ataque ou de vida\">\r\n      <created>1689097389934</created>\r\n      <option name=\"number\" value=\"00036\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00036\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1689097389934</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00037\" summary=\"Tratamento de exceção nos setters e getters de AtaquePadrao\">\r\n      <created>1689097842758</created>\r\n      <option name=\"number\" value=\"00037\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00037\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1689097842758</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00038\" summary=\"Tratamento de exceção nos setters e getters de PoderEspecial\">\r\n      <created>1689098178851</created>\r\n      <option name=\"number\" value=\"00038\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00038\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1689098178851</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00039\" summary=\"adicionada categoria dos poderes especiais nos heróis\">\r\n      <created>1689098432026</created>\r\n      <option name=\"number\" value=\"00039\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00039\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1689098432026</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00040\" summary=\"Poderes especiais de vilões adicionados\">\r\n      <created>1689099068978</created>\r\n      <option name=\"number\" value=\"00040\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00040\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1689099068978</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00041\" summary=\"Implementei o método sortearPocao na interface 'AcoesViloes' e sobrescrevi o método na classe Vilao\">\r\n      <created>1689100682542</created>\r\n      <option name=\"number\" value=\"00041\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00041\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1689100682542</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00042\" summary=\"modificador de 'inventario' public\">\r\n      <created>1689263830220</created>\r\n      <option name=\"number\" value=\"00042\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00042\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1689263830220</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00043\" summary=\"atributos da classe Luta public\">\r\n      <created>1689263857509</created>\r\n      <option name=\"number\" value=\"00043\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00043\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1689263857509</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00044\" summary=\"adicionarQuantidadeItem é adicionarItem\">\r\n      <created>1689263889301</created>\r\n      <option name=\"number\" value=\"00044\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00044\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1689263889301</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00045\" summary=\"Erro customizado 'ErroOpcaoHeroiException' criado\">\r\n      <created>1689264241562</created>\r\n      <option name=\"number\" value=\"00045\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00045\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1689264241562</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00046\" summary=\"Erro customizado 'ErroOpcaoHeroiException' criado\">\r\n      <created>1689264252523</created>\r\n      <option name=\"number\" value=\"00046\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00046\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1689264252523</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00047\" summary=\"método 'decidirAtaque'\">\r\n      <created>1689264451725</created>\r\n      <option name=\"number\" value=\"00047\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00047\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1689264451725</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00048\" summary=\"adicionarItem alterado\">\r\n      <created>1689265582957</created>\r\n      <option name=\"number\" value=\"00048\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00048\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1689265582957</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00049\" summary=\"construtor alterado\">\r\n      <created>1689265892066</created>\r\n      <option name=\"number\" value=\"00049\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00049\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1689265892066</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00050\" summary=\"lógica de aumentarVida mudada\">\r\n      <created>1689266919988</created>\r\n      <option name=\"number\" value=\"00050\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00050\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1689266919989</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"51\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"master\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"História de Rodan adicionada\" />\r\n    <MESSAGE value=\"Histórias atualizadas\" />\r\n    <MESSAGE value=\"Atualizações\" />\r\n    <MESSAGE value=\"Atualizações em itens\" />\r\n    <MESSAGE value=\"Atualizações em classe 'Carteira'&#10;alguns métodos dos hérois foram postos na classe mãe 'Heroi'&#10;Atualizações em itens\" />\r\n    <MESSAGE value=\"Mudança em ataque especial de 'Dofer'&#10;Adicionada descrição dos poderes especiais\" />\r\n    <MESSAGE value=\"Descrição adicionada nos poderes especiais\" />\r\n    <MESSAGE value=\"vilões atualizados e retirado os 'this.&lt;nome do atributo&gt;' no construtor dos personanagens\" />\r\n    <MESSAGE value=\"objeto 'heroi' -&gt; 'jogador' na Main\" />\r\n    <MESSAGE value=\"update\" />\r\n    <MESSAGE value=\"ataques padroes dos viloes adicionados\" />\r\n    <MESSAGE value=\"Setters e Getters de PoderEspecial criados e criado atributo categoria para printar a descrição de acordo com se é um poder de ataque ou de vida\" />\r\n    <MESSAGE value=\"Tratamento de exceção nos setters e getters de AtaquePadrao\" />\r\n    <MESSAGE value=\"Tratamento de exceção nos setters e getters de PoderEspecial\" />\r\n    <MESSAGE value=\"adicionada categoria dos poderes especiais nos heróis\" />\r\n    <MESSAGE value=\"Poderes especiais de vilões adicionados\" />\r\n    <MESSAGE value=\"Implementei o método sortearPocao na interface 'AcoesViloes' e sobrescrevi o método na classe Vilao\" />\r\n    <MESSAGE value=\"modificador de 'inventario' public\" />\r\n    <MESSAGE value=\"atributos da classe Luta public\" />\r\n    <MESSAGE value=\"adicionarQuantidadeItem é adicionarItem\" />\r\n    <MESSAGE value=\"Erro customizado 'ErroOpcaoHeroiException' criado\" />\r\n    <MESSAGE value=\"método 'decidirAtaque'\" />\r\n    <MESSAGE value=\"adicionarItem alterado\" />\r\n    <MESSAGE value=\"construtor alterado\" />\r\n    <MESSAGE value=\"lógica de aumentarVida mudada\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"lógica de aumentarVida mudada\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 7889f2444954e81a1ce88c5f34b5ecef75954da2)
++++ b/.idea/workspace.xml	(date 1689278027419)
+@@ -4,10 +4,15 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="lógica de aumentarVida mudada">
++    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="vida alterada">
++      <change afterPath="$PROJECT_DIR$/src/luta/Luta.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Luta.java" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/personagens/viloes/Vilao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Vilao.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Dofer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Dofer.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Heroi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Heroi.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Rodan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Rodan.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/personagens/viloes/Dataretan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Dataretan.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -85,20 +90,6 @@
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+       <updated>1687472864518</updated>
+-    </task>
+-    <task id="LOCAL-00002" summary="classe abstrata personagem">
+-      <created>1687520824742</created>
+-      <option name="number" value="00002" />
+-      <option name="presentableId" value="LOCAL-00002" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1687520824742</updated>
+-    </task>
+-    <task id="LOCAL-00003" summary="Classe 'Item' e interface 'Personagem' criados.">
+-      <created>1687894561764</created>
+-      <option name="number" value="00003" />
+-      <option name="presentableId" value="LOCAL-00003" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1687894561764</updated>
+     </task>
+     <task id="LOCAL-00004" summary="Nome da classe 'Personagem' trocado para 'PersonagemGenerico' para não conflitar com a interface 'Personagem'">
+       <created>1687894660098</created>
+@@ -429,7 +420,21 @@
+       <option name="project" value="LOCAL" />
+       <updated>1689266919989</updated>
+     </task>
+-    <option name="localTasksCounter" value="51" />
++    <task id="LOCAL-00051" summary="descrição dos métodos adicionada">
++      <created>1689273975411</created>
++      <option name="number" value="00051" />
++      <option name="presentableId" value="LOCAL-00051" />
++      <option name="project" value="LOCAL" />
++      <updated>1689273975411</updated>
++    </task>
++    <task id="LOCAL-00052" summary="vida alterada">
++      <created>1689274135305</created>
++      <option name="number" value="00052" />
++      <option name="presentableId" value="LOCAL-00052" />
++      <option name="project" value="LOCAL" />
++      <updated>1689274135305</updated>
++    </task>
++    <option name="localTasksCounter" value="53" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -456,8 +461,6 @@
+     </option>
+   </component>
+   <component name="VcsManagerConfiguration">
+-    <MESSAGE value="História de Rodan adicionada" />
+-    <MESSAGE value="Histórias atualizadas" />
+     <MESSAGE value="Atualizações" />
+     <MESSAGE value="Atualizações em itens" />
+     <MESSAGE value="Atualizações em classe 'Carteira'&#10;alguns métodos dos hérois foram postos na classe mãe 'Heroi'&#10;Atualizações em itens" />
+@@ -481,6 +484,8 @@
+     <MESSAGE value="adicionarItem alterado" />
+     <MESSAGE value="construtor alterado" />
+     <MESSAGE value="lógica de aumentarVida mudada" />
+-    <option name="LAST_COMMIT_MESSAGE" value="lógica de aumentarVida mudada" />
++    <MESSAGE value="descrição dos métodos adicionada" />
++    <MESSAGE value="vida alterada" />
++    <option name="LAST_COMMIT_MESSAGE" value="vida alterada" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: src/personagens/herois/Rodan.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package personagens.herois;\r\n\r\nimport itens.Item;\r\nimport personagens.AtaquePadrao;\r\nimport personagens.MultiplicadorDeAtaque;\r\nimport personagens.PoderEspecial;\r\nimport personagens.viloes.Vilao;\r\n\r\nimport java.util.ArrayList;\r\n\r\npublic final class Rodan extends Heroi {\r\n    private Integer MAX_VIDA = 70;\r\n    public Rodan() {\r\n        super(\"Rodan\", 70, 0,\r\n                new AtaquePadrao(\"Bola de energia\",5),\r\n                new PoderEspecial(\"Tempestade de flechas\", 15, 30, 1),\r\n                new PoderEspecial(\"Regeneração completa\", 40, 50, 2),\r\n                70);\r\n    }\r\n\r\n    @Override\r\n    public void contarHistoria() {\r\n        System.out.print(\"\"\"\r\n                Nascido em Java City, Rodan abandonou uma infância comum para treinar as artes mágicas em Arquinnus,\r\n                famosa cidade dos magos à Leste de Java City, após ser encontrado pelo renomado mago-mestre Alighieri criando pequenas\r\n                bolas de energia próximo aos limites da cidade. Mostrando talento e sabedoria, o jovem começava a se tornar tão\r\n                famoso quanto seu mestre e, assim, ganha de Alighieri a permissão para desvencilhar-se de seus caminhos de aprendiz.\\s\r\n                Quinze anos depois, lutando na famosa Batalha de Latibrurves, o mago recebeu, no lugar do príncipe, uma flecha envenenada\r\n                com uma substância verde em seu abdômen. Quase aceitando seu destino, ele foi salvo graças a uma jovem médica chamada Júliper que,\r\n                vendo distante o ocorrido, fora rápida o suficiente para retirar a flecha antes que o veneno se alastrasse pelo corpo.\r\n                Rodan apaixona-se por sua salvadora e casa-se com a moça após ganhar seu coração. Após o acontecimento chegar nos ouvidos do rei\r\n                de Java City, Rodan tornou-se o mago-mestre conselheiro do rei.\\s\r\n                No ano seguinte, arrumando sua biblioteca, o mago encontra um bilhete em sua mesa que, instantes atrás,\r\n                não estava ali. Em uma língua antiga, que quase não pôde decifrar, estava escrito: “A flecha não foi atirada em vão”,\r\n                imediatamente correu para sua casa e encontrou Júliper petrificada, felizmente, com vida. Rodan entendera tudo,\r\n                o emissário da flecha sabia que se atirasse nele ele conseguiria desviar, mas mudando o alvo para o príncipe o mago colocaria-se na frente\r\n                da flecha, era ele quem deveria estar paralisado. Não sabendo o que fazer, ele foi de encontro ao seu antigo mestre Alighieri\r\n                em busca de respostas. Alighieri o disse que antes de Rodan, ele tivera outro pupilo, seu nome era Napda. Por anos,\r\n                Napda fora seu único aprendiz. Num dia, entretanto, quando viu que seu mestre decidiu ensinar outro jovem, seu coração nublou-se de inveja.\r\n                Napda nunca mais fora o mesmo. Alighieri dormia tranquilo uma noite quando, acordado por uma estranha luz verde que saía do quarto de seu\r\n                novo aprendiz, encontrou o jovem paralisado. Napda, depois disso, nunca mais fora visto e Alighieri deixou o outro rapaz aos cuidados do\r\n                hospital de Arquinnus e, depois de dez meses tentando curá-lo, seu coração súbitamente parou. Rodan sabia que era Napda quem ele deveria\r\n                encontrar, o primeiro aprendiz de seu antigo mestre, agora, um mago negro.\\s\r\n                Por nove meses Rodan procurou por Napda, havia pouco tempo. Ele volta para Java City para tentar reunir informações e ver o estado de Júliper e,\r\n                para sua surpresa, ouve boatos de que, na Floresta Sombria de Sonfejer, foram vistas estranhas luzes verdes no fundo da mata, ele sabia\r\n                que a salvação de sua amada finalmente estava próxima.                                                                                                            \\s\r\n                \"\"\");\r\n    }\r\n}\r\n\r\n\r\n\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/personagens/herois/Rodan.java b/src/personagens/herois/Rodan.java
+--- a/src/personagens/herois/Rodan.java	(revision 7889f2444954e81a1ce88c5f34b5ecef75954da2)
++++ b/src/personagens/herois/Rodan.java	(date 1689276035182)
+@@ -45,6 +45,7 @@
+                 para sua surpresa, ouve boatos de que, na Floresta Sombria de Sonfejer, foram vistas estranhas luzes verdes no fundo da mata, ele sabia
+                 que a salvação de sua amada finalmente estava próxima.                                                                                                            \s
+                 """);
++        System.out.print("\n\n");
+     }
+ }
+ 

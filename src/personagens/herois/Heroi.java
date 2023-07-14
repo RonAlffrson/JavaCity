@@ -24,7 +24,7 @@ public abstract class Heroi extends Personagem implements AcoesHerois {
 
     public static void verificarOpcaoHeroi(int opcaoHeroi) throws ErroOpcaoHeroiException{
         if(opcaoHeroi != 1 && opcaoHeroi != 2){
-            throw new ErroOpcaoHeroiException("Erro: Digite 1 ou 2 para escolher o heroi");
+            throw new ErroOpcaoHeroiException("Digite 1 ou 2 para escolher o heroi");
         }
     }
 
