@@ -5,4 +5,9 @@ public final class PocaoVida extends Item {
         this.nome = "Poção de vida";
         this.valorAtributo = 25;
     }
+    @Override
+    public String descricaoItem(){
+        return  super.descricaoItem() + " Vida";
+    }
+
 }
