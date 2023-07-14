@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="criei o metodo opcao ataque, tratei as exceçoes">
+    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="Ainda estou fazendo os metodos necessarios para luta, o grande problema é pensar como o usuario vai poder voltar quando digitar um valor indesejado">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Luta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Luta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Dofer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Dofer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Rodan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Rodan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/itens/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/itens/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/itens/PocaoMana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/itens/PocaoMana.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/itens/PocaoVida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/itens/PocaoVida.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -430,7 +432,7 @@
       <option name="project" value="LOCAL" />
       <updated>1689265892066</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -457,9 +459,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Atualizações em itens" />
-    <MESSAGE value="Atualizações em classe 'Carteira'&#10;alguns métodos dos hérois foram postos na classe mãe 'Heroi'&#10;Atualizações em itens" />
-    <MESSAGE value="Mudança em ataque especial de 'Dofer'&#10;Adicionada descrição dos poderes especiais" />
     <MESSAGE value="Descrição adicionada nos poderes especiais" />
     <MESSAGE value="vilões atualizados e retirado os 'this.&lt;nome do atributo&gt;' no construtor dos personanagens" />
     <MESSAGE value="objeto 'heroi' -&gt; 'jogador' na Main" />
@@ -482,6 +481,9 @@
     <MESSAGE value="Fazendo os caminhos que o usuario pode escolher, pensar como fazer na opçao do usuario voltar" />
     <MESSAGE value="Fazendo os metodos necessarios para conseguir voltar nas opcões escolhidas" />
     <MESSAGE value="criei o metodo opcao ataque, tratei as exceçoes" />
-    <option name="LAST_COMMIT_MESSAGE" value="criei o metodo opcao ataque, tratei as exceçoes" />
+    <MESSAGE value="O metodo batalha deixou de ser statico" />
+    <MESSAGE value="Coloquei /n no final do metodo contarHistoria" />
+    <MESSAGE value="Ainda estou fazendo os metodos necessarios para luta, o grande problema é pensar como o usuario vai poder voltar quando digitar um valor indesejado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ainda estou fazendo os metodos necessarios para luta, o grande problema é pensar como o usuario vai poder voltar quando digitar um valor indesejado" />
   </component>
 </project>

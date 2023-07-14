@@ -1,3 +1,4 @@
+import itens.PocaoMana;
 import personagens.herois.Heroi;
 import personagens.viloes.Vilao;
 import java.util.*;
@@ -14,10 +15,11 @@ public class Luta {
 
     }
     public static void lancarExcecaoOpcaoAtaque(int opcaoAtaque) throws IllegalArgumentException{
-        if(opcaoAtaque > 0 && opcaoAtaque < 5){
+        if(!(opcaoAtaque > 0 && opcaoAtaque < 5)){
             throw new IllegalArgumentException("Erro : digite um valor entre 1 e 4");
         }
     }
+    public static void lancarExcecaoOpcaoIventario()
     public static void mensagemInicio(){
         System.out.println("Bem-vindo a JavaCity");
         System.out.println("=--=-=-=-=-=-=-=-=-=-=-=-=-=-=");
@@ -147,13 +149,41 @@ public class Luta {
                 opcaoAtaque = opcaoAtaque();
             }
             else if (opcaoJogaodor == 2) {
-                return -1; // esse seria o caso que o jogador escolheria  Iventario
+                return -1; // esse seria o caso que o jogador escolheria  Iventario ainda ns como resolriasve
             }
 
         }
         return opcaoAtaque;
 
     }
+    public int opcaoIventario(){
+        Scanner input = new Scanner(System.in);
+        int opcaoIventario = 0;
+        boolean validador = false;
+        while(!validador) {
+            try {
+                validador = true;
+                System.out.println("Opções de Iventario:");
+                System.out.println("(1) " + heroi.inventario.get(0).descricaoItem() + "\n" +
+                        "(2) " + heroi.inventario.get(1).descricaoItem());// fazer a descrição de pocaoMana e poçao
+                System.out.print("Digite a opção desejada: ");
+                opcaoIventario = input.nextInt();
+                // lançar a exceção de inventario aqui
 
+            } catch (InputMismatchException e) {
+                validador = false;
+                input.nextLine();
+                System.out.println("Erro: Digite um valor entre 1 e 4");
+            } catch (IllegalArgumentException e) {
+                validador = false;
+                input.nextLine();
+                System.out.println(e.getMessage());
+            } catch (Exception e) {
+                validador = false;
+                input.nextLine();
+                System.out.println("Erro desconhecido: digite um valor valido");
+            }
+        }
+    }
 
 }
