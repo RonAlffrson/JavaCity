@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="Ainda estou fazendo os metodos necessarios para luta, o grande problema é pensar como o usuario vai poder voltar quando digitar um valor indesejado">
+    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="criei o metodo opcao ataque, tratei as exceçoes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Luta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Luta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Dofer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Dofer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Rodan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Rodan.java" afterDir="false" />
+
+    <list default="true" id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="lógica de aumentarVida mudada">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/itens/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/itens/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/itens/PocaoMana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/itens/PocaoMana.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/itens/PocaoVida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/itens/PocaoVida.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/viloes/Vilao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Vilao.java" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,13 +92,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1687472864518</updated>
-    </task>
-    <task id="LOCAL-00001" summary="first commit">
-      <created>1687473222070</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1687473222070</updated>
     </task>
     <task id="LOCAL-00002" summary="classe abstrata personagem">
       <created>1687520824742</created>
@@ -432,7 +429,18 @@
       <option name="project" value="LOCAL" />
       <updated>1689265892066</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+
+    <option name="localTasksCounter" value="54" />
+
+    <task id="LOCAL-00050" summary="lógica de aumentarVida mudada">
+      <created>1689266919988</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1689266919989</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
+
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -459,6 +467,14 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+
+
+    <MESSAGE value="História de Rodan adicionada" />
+    <MESSAGE value="Histórias atualizadas" />
+    <MESSAGE value="Atualizações" />
+    <MESSAGE value="Atualizações em itens" />
+    <MESSAGE value="Atualizações em classe 'Carteira'&#10;alguns métodos dos hérois foram postos na classe mãe 'Heroi'&#10;Atualizações em itens" />
+    <MESSAGE value="Mudança em ataque especial de 'Dofer'&#10;Adicionada descrição dos poderes especiais" />
     <MESSAGE value="Descrição adicionada nos poderes especiais" />
     <MESSAGE value="vilões atualizados e retirado os 'this.&lt;nome do atributo&gt;' no construtor dos personanagens" />
     <MESSAGE value="objeto 'heroi' -&gt; 'jogador' na Main" />
@@ -477,13 +493,14 @@
     <MESSAGE value="método 'decidirAtaque'" />
     <MESSAGE value="adicionarItem alterado" />
     <MESSAGE value="construtor alterado" />
+
     <MESSAGE value="Escrevendo os metodos que serão aplicados na main" />
     <MESSAGE value="Fazendo os caminhos que o usuario pode escolher, pensar como fazer na opçao do usuario voltar" />
     <MESSAGE value="Fazendo os metodos necessarios para conseguir voltar nas opcões escolhidas" />
     <MESSAGE value="criei o metodo opcao ataque, tratei as exceçoes" />
-    <MESSAGE value="O metodo batalha deixou de ser statico" />
-    <MESSAGE value="Coloquei /n no final do metodo contarHistoria" />
-    <MESSAGE value="Ainda estou fazendo os metodos necessarios para luta, o grande problema é pensar como o usuario vai poder voltar quando digitar um valor indesejado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ainda estou fazendo os metodos necessarios para luta, o grande problema é pensar como o usuario vai poder voltar quando digitar um valor indesejado" />
+    <option name="LAST_COMMIT_MESSAGE" value="criei o metodo opcao ataque, tratei as exceçoes" />
+
+    <MESSAGE value="lógica de aumentarVida mudada" />
+    <option name="LAST_COMMIT_MESSAGE" value="lógica de aumentarVida mudada" />
   </component>
 </project>
