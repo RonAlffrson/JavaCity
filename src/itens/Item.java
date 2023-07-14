@@ -28,6 +28,19 @@ public abstract class Item {
             System.out.println("Você não tem " + getNome() +" no iventario");
         }
     }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setValorAtributo(double valorAtributo) {
+        this.valorAtributo = valorAtributo;
+    }
+
+    public void setQuantidadeItem(Integer quantidadeItem) {
+        this.quantidadeItem = quantidadeItem;
+    }
+
     public String descricaoItem(){
         return getNome() + " recupera " + getValorAtributo();
     }
