@@ -71,12 +71,11 @@ public class Luta {
             System.out.println(vilao.getNome() + "\nVida: " + vilao.getVida() + "\n" +
                     "Mana: " + vilao.getMana());
 
-           opcaoJogaodor = opcaoJogador();
+           opcaoJogaodor = opcaoJogador(); // chama o metodo opcao jogador
 
             if(opcaoJogaodor == 1) {
                 int opcaoAtaque = opcaoAtaque();
             }
-
 
             else if(opcaoJogaodor == 2){
                 int opcaoIventario = opcaoIventario();
@@ -154,7 +153,7 @@ public class Luta {
                 opcaoAtaque = opcaoAtaque();
             }
             else if (opcaoAtaque == 2) {
-                return -1; // esse seria o caso que o jogador escolheria  Iventario ainda ns como resolriasve
+                opcaoIventario(); // esse seria o caso que o jogador escolheria  Iventario ainda ns como resolriasve
             }
 
         }
