@@ -74,11 +74,11 @@ public class Luta {
            opcaoJogaodor = opcaoJogador(); // chama o metodo opcao jogador
 
             if(opcaoJogaodor == 1) {
-                int opcaoAtaque = opcaoAtaque();
+                opcaoAtaque();
             }
 
             else if(opcaoJogaodor == 2){
-                int opcaoIventario = opcaoIventario();
+                opcaoIventario();
             }
 
 
@@ -113,7 +113,7 @@ public class Luta {
 
         return  opcaoJogaodor;
     }
-    public int opcaoAtaque(){
+    public void opcaoAtaque(){
         Scanner input = new Scanner(System.in);
         int opcaoAtaque = 0;
         boolean validador = false;
@@ -148,19 +148,20 @@ public class Luta {
             }
         }
         if(opcaoAtaque == 4){ // voltar
-            opcaoAtaque = opcaoJogador();
-            if(opcaoAtaque == 1){
-                opcaoAtaque = opcaoAtaque();
+            int opcaoJogador = opcaoJogador();
+            if(opcaoJogador == 1){
+                opcaoAtaque();
             }
-            else if (opcaoAtaque == 2) {
+            else if (opcaoJogador == 2) {
                 opcaoIventario(); // esse seria o caso que o jogador escolheria  Iventario ainda ns como resolriasve
             }
-
         }
-        return opcaoAtaque;
+        // fazer as outras possibilidades
+        // ideia quando for executar os metodos de poder especial
+
 
     }
-    public int opcaoIventario(){
+    public void opcaoIventario(){
         Scanner input = new Scanner(System.in);
         int opcaoIventario = 0;
         boolean validador = false;
@@ -189,7 +190,19 @@ public class Luta {
             }
 
         }
-        return opcaoIventario; // so para testar na main
+        // executar as opcoes escolhidas e voltar caso de erro
+        if(opcaoIventario == 3){
+            int opcaoJogador = opcaoJogador();
+            if(opcaoJogador == 1){
+                opcaoAtaque();
+            }
+            else if (opcaoJogador == 2) {
+                opcaoIventario();
+            }
+        }
+        else if(opcaoIventario == 1){
+            heroi.aumentarVida(heroi.inventario.get(0).getValorAtributo());
+        }
 
     }
 
