@@ -1,3 +1,4 @@
+import itens.PocaoMana;
 import personagens.herois.Heroi;
 import personagens.viloes.Vilao;
 import java.util.*;
@@ -14,8 +15,13 @@ public class Luta {
 
     }
     public static void lancarExcecaoOpcaoAtaque(int opcaoAtaque) throws IllegalArgumentException{
-        if(opcaoAtaque > 0 && opcaoAtaque < 5){
+        if(!(opcaoAtaque > 0 && opcaoAtaque < 5)){
             throw new IllegalArgumentException("Erro : digite um valor entre 1 e 4");
+        }
+    }
+    public static void lancarExcecaoOpcaoIventario(int opcaoIventario) throws IllegalArgumentException{
+        if(opcaoIventario <= 0 || opcaoIventario > 3){
+            throw new IllegalArgumentException("Erro: Digite valor entre 1 e 3");
         }
     }
     public static void mensagemInicio(){
@@ -62,17 +68,17 @@ public class Luta {
             System.out.println(heroi.getNome() + "\nVida: " + heroi.getVida() + " / " + heroi.getMax_vida() +
                     "\nMana:" + heroi.getMana() + " / " + heroi.getMAX_MANA() + "\n");
 
-            System.out.println(vilao.getNome() + "\nVida: " + vilao.getVida() + "\n");
+            System.out.println(vilao.getNome() + "\nVida: " + vilao.getVida() + "\n" +
+                    "Mana: " + vilao.getMana());
 
-           opcaoJogaodor = opcaoJogador();
+           opcaoJogaodor = opcaoJogador(); // chama o metodo opcao jogador
 
             if(opcaoJogaodor == 1) {
                 int opcaoAtaque = opcaoAtaque();
             }
 
-
             else if(opcaoJogaodor == 2){
-                System.out.println("Item que você deseja usar:");
+                int opcaoIventario = opcaoIventario();
             }
 
 
@@ -142,18 +148,49 @@ public class Luta {
             }
         }
         if(opcaoAtaque == 4){ // voltar
-            int opcaoJogaodor = opcaoJogador();
-            if(opcaoJogaodor == 1){
+            opcaoAtaque = opcaoJogador();
+            if(opcaoAtaque == 1){
                 opcaoAtaque = opcaoAtaque();
             }
-            else if (opcaoJogaodor == 2) {
-                return -1; // esse seria o caso que o jogador escolheria  Iventario
+            else if (opcaoAtaque == 2) {
+                opcaoIventario(); // esse seria o caso que o jogador escolheria  Iventario ainda ns como resolriasve
             }
 
         }
         return opcaoAtaque;
 
     }
+    public int opcaoIventario(){
+        Scanner input = new Scanner(System.in);
+        int opcaoIventario = 0;
+        boolean validador = false;
+        while(!validador) {
+            try {
+                validador = true;
+                System.out.println("Opções de Iventario:");
+                System.out.println("(1) " + heroi.inventario.get(0).descricaoItem() + "\n" +
+                        "(2) " + heroi.inventario.get(1).descricaoItem());
+                System.out.println("(3) voltar ");
+                System.out.print("Digite a opção desejada: ");
+                opcaoIventario = input.nextInt();
+                lancarExcecaoOpcaoIventario(opcaoIventario);
+            } catch (InputMismatchException e) {
+                validador = false;
+                input.nextLine();
+                System.out.println("Erro: Digite um valor entre 1 e 4");
+            } catch (IllegalArgumentException e) {
+                validador = false;
+                input.nextLine();
+                System.out.println(e.getMessage());
+            } catch (Exception e) {
+                validador = false;
+                input.nextLine();
+                System.out.println("Erro desconhecido: digite um valor valido");
+            }
 
+        }
+        return opcaoIventario; // so para testar na main
+
+    }
 
 }

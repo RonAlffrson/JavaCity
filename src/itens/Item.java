@@ -28,5 +28,8 @@ public abstract class Item {
             System.out.println("Você não tem " + getNome() +" no iventario");
         }
     }
+    public String descricaoItem(){
+        return getNome() + " recupera " + getValorAtributo();
+    }
 
 }

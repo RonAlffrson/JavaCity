@@ -31,7 +31,7 @@ public class AtaquePadrao {
             throw new IllegalArgumentException("Força de Ataque deve ser maior um inteiro que zero");
     }
     public  String  descricao(){
-         return getNome() +" tem " + getForcaAtaque() + "de força de ataque";
+         return getNome() +" - causa " + getForcaAtaque() + " de dano";
     }
 
 }
