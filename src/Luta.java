@@ -234,10 +234,22 @@ public class Luta {
             }
         }
         else if(opcaoIventario == 1){
-            // Fazer o metodo para aumentar a vida do boneco
+            if(heroi.getInventario().get(0).getQuantidadeItem() > 0) {
+                heroi.getInventario().get(0).diminuirItem();
+            }
+            else{
+                System.out.println("Erro: você não tem esse item no iventario");
+                opcaoIventario();
+            }
         }
         else if (opcaoIventario == 2){
-          // fazer o metodo de aumentar a mana do boneco por pocao
+            if(heroi.getInventario().get(1).getQuantidadeItem() > 0) {
+                heroi.getInventario().get(1).diminuirItem();
+            }
+            else{
+                System.out.println("Erro: você não tem esse item no iventario");
+                opcaoIventario();
+            }
         }
 
     }

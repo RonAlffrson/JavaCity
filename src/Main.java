@@ -2,7 +2,9 @@ import personagens.MultiplicadorDeAtaque;
 import personagens.herois.Dofer;
 import personagens.herois.Heroi;
 import personagens.herois.Rodan;
+import personagens.viloes.Dataretan;
 import personagens.viloes.Flegoman;
+import personagens.viloes.Napda;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -23,6 +25,11 @@ public class Main {
 
         Luta luta = new Luta(jogador, new Flegoman()); // primeira luta
         luta.batalhar();
+
+        luta = new Luta(jogador, new Dataretan());
+        luta.batalhar();
+
+        luta = new Luta(jogador, new Napda());
     }
 
 }
