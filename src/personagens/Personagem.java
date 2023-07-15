@@ -25,10 +25,7 @@ public abstract class Personagem implements AcoesPersonagem {
             System.out.println("Mana insuficiente");
         }
     }
-    @Override
-    public void ataquePadrao(Personagem personagem){
-        personagem.diminiurVida(ataquePadrao.getForcaAtaque() * MultiplicadorDeAtaque.multiplicadorDeAtaque());
-    }
+
     @Override
     public void diminuirMana(int quantidadeMana) {
         if (mana - quantidadeMana >= MIN_MANA) {
