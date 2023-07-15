@@ -29,9 +29,9 @@ public abstract class Vilao extends Personagem implements AcoesViloes {
         //Retorna um número entre 0-1
         if (getVida() == 0){
             if (opcao == 0)
-                System.out.println(heroi.getNome() + "recebeu uma poção de mana");
+                System.out.println("\n" + heroi.getNome() + " recebeu uma poção de mana");
             else
-                System.out.println(heroi.getNome() + "recebeu uma poção de vida");
+                System.out.println("\n" + heroi.getNome() + " recebeu uma poção de vida");
             heroi.adicionarItem(opcao);
         }
     }
