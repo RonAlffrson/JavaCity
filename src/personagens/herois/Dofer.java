@@ -11,10 +11,9 @@ import java.util.ArrayList;
 public final class Dofer extends Heroi {
 
     public Dofer() {
-        super("Dofer", 100, 0, new AtaquePadrao("Ataque de Espada", 10),
+        super("Dofer", 100, 100,0, new AtaquePadrao("Ataque de Espada", 10),
                 new PoderEspecial("Espada Flamejante",30,65, 1),
-                new PoderEspecial("Transmutação de mana", 25, 80, 2),
-                100);
+                new PoderEspecial("Transmutação de mana", 25, 80, 2));
 
     }
 

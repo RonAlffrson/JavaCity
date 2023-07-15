@@ -4,11 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55712400-a6b3-4307-a9b3-db7ff791150b" name="Changes" comment="Tirei ataquePadrao da classe Personagem (vilão não usa ataquePadrao)">
+    <list default="true" id="55712400-a6b3-4307-a9b3-db7ff791150b" name="Changes" comment="método batalhar implementado&#10;validador de opcaoJogador mudado">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Luta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Luta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/AtaquePadrao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/AtaquePadrao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/personagens/Personagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/Personagem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/PoderEspecial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/PoderEspecial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Dofer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Dofer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/personagens/herois/Heroi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Heroi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Rodan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Rodan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/viloes/Dataretan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Dataretan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/viloes/Flegoman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Flegoman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/viloes/Napda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Napda.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/personagens/viloes/Vilao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Vilao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,27 +98,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1687472864518</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Arquivo de roteiro do jogo adicionado para fácil manutenção">
-      <created>1687970089508</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1687970089508</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Classe abstrata 'Personagem' mudada para 'Heroi'">
-      <created>1687989180760</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1687989180760</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Interface 'AcoesPersonagem' mudada para 'Personagem'">
-      <created>1687989676928</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1687989676928</updated>
     </task>
     <task id="LOCAL-00008" summary="Interface 'AcoesPersonagem' mudada para 'Personagem'">
       <created>1687989700442</created>
@@ -435,7 +421,28 @@
       <option name="project" value="LOCAL" />
       <updated>1689380838021</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Descrição dos métodos ataquePadrao e poderEspecial">
+      <created>1689381177627</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1689381177627</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Retirada descrição dos métodos ataquePadrao e poderEspecial">
+      <created>1689381214104</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1689381214104</updated>
+    </task>
+    <task id="LOCAL-00062" summary="método batalhar implementado&#10;validador de opcaoJogador mudado">
+      <created>1689381447704</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1689381447704</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -462,10 +469,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Tratamento de exceção nos setters e getters de PoderEspecial" />
-    <MESSAGE value="adicionada categoria dos poderes especiais nos heróis" />
-    <MESSAGE value="Poderes especiais de vilões adicionados" />
-    <MESSAGE value="Implementei o método sortearPocao na interface 'AcoesViloes' e sobrescrevi o método na classe Vilao" />
     <MESSAGE value="modificador de 'inventario' public" />
     <MESSAGE value="atributos da classe Luta public" />
     <MESSAGE value="adicionarQuantidadeItem é adicionarItem" />
@@ -488,6 +491,20 @@
     <MESSAGE value="Exceção customizada criada" />
     <MESSAGE value="erro na exceção de opacaoAtaque corrigido" />
     <MESSAGE value="Tirei ataquePadrao da classe Personagem (vilão não usa ataquePadrao)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tirei ataquePadrao da classe Personagem (vilão não usa ataquePadrao)" />
+    <MESSAGE value="Descrição dos métodos ataquePadrao e poderEspecial" />
+    <MESSAGE value="Retirada descrição dos métodos ataquePadrao e poderEspecial" />
+    <MESSAGE value="método batalhar implementado&#10;validador de opcaoJogador mudado" />
+    <option name="LAST_COMMIT_MESSAGE" value="método batalhar implementado&#10;validador de opcaoJogador mudado" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Luta.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

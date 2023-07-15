@@ -8,8 +8,8 @@ import personagens.herois.Heroi;
 import java.util.Random;
 
 public abstract class Vilao extends Personagem implements AcoesViloes {
-    public Vilao(String nome, Integer vida, Integer mana, AtaquePadrao ataquePadrao, PoderEspecial poderEspecial1) {
-        super(nome, vida, mana, ataquePadrao, poderEspecial1);
+    public Vilao(String nome, Integer vida, Integer max_vida, Integer mana, AtaquePadrao ataquePadrao, PoderEspecial poderEspecial1) {
+        super(nome, vida, max_vida, mana, ataquePadrao, poderEspecial1);
     }
 
     @Override

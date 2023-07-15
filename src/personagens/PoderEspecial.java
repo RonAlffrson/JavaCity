@@ -53,9 +53,9 @@ public final class PoderEspecial {
 
     public void printarDescricaoPoder(){
         switch (categoria){
-            case 1 -> System.out.println(getNome() + " - causa: " + getAtributo() + " de dano e custa: " +
+            case 1 -> System.out.println(getNome() + " - inflinge: " + getAtributo() + " de dano no inimigo - custa: " +
                     getAtributo() + " de mana");
-            case 2 -> System.out.println(getNome() + " - gera: " + getAtributo() + " de vida e custa: " +
+            case 2 -> System.out.println(getNome() + " - gera: " + getAtributo() + " de vida - custa: " +
                     getAtributo() + " de mana");
         }
     }

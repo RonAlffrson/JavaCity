@@ -10,11 +10,9 @@ public abstract class Heroi extends Personagem implements AcoesHerois {
 
     protected ArrayList<Item> inventario = new ArrayList<>();
     protected PoderEspecial poderEspecial2;
-    protected Integer max_vida;
 
-    public Heroi(String nome, Integer vida, Integer mana, AtaquePadrao ataquePadrao, PoderEspecial poderEspecial1, PoderEspecial poderEspecial2, Integer max_vida) {
-        super(nome, vida, mana, ataquePadrao, poderEspecial1);
-        setMax_vida(max_vida);
+    public Heroi(String nome, Integer vida, Integer max_vida, Integer mana, AtaquePadrao ataquePadrao, PoderEspecial poderEspecial1, PoderEspecial poderEspecial2) {
+        super(nome, vida, max_vida, mana, ataquePadrao, poderEspecial1);
         this.inventario.add(new PocaoMana());
         this.inventario.add(new PocaoVida());
         this.poderEspecial2 = poderEspecial2;
@@ -72,16 +70,7 @@ public abstract class Heroi extends Personagem implements AcoesHerois {
     public void setPoderEspecial2(PoderEspecial poderEspecial2) {
         this.poderEspecial2 = poderEspecial2;
     }
-    public Integer getMax_vida() {
-        return max_vida;
-    }
 
-    public void setMax_vida(Integer max_vida) {
-        if (max_vida > 0)
-            this.max_vida = max_vida;
-        else
-            throw new IllegalArgumentException("Vida máxima deve ser um inteiro maior que zero ");
-    }
     public ArrayList<Item> getInventario() {
         return inventario;
     }

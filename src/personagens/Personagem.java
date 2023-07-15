@@ -3,14 +3,15 @@ package personagens;
 
 public abstract class Personagem implements AcoesPersonagem {
     protected String nome;
-    protected Integer vida, mana = 0;
+    protected Integer vida, max_vida, mana = 0;
     protected final Integer MAX_MANA = 100, MIN_MANA = 0, MIN_VIDA = 0;
     protected PoderEspecial poderEspecial1;
     protected AtaquePadrao ataquePadrao;
 
-    public Personagem(String nome, Integer vida, Integer mana, AtaquePadrao ataquePadrao, PoderEspecial poderEspecial1) {
+    public Personagem(String nome, Integer vida, Integer max_vida, Integer mana, AtaquePadrao ataquePadrao, PoderEspecial poderEspecial1) {
         setNome(nome);
         setVida(vida);
+        setMax_vida(max_vida);
         setMana(mana);
         setAtaquePadrao(ataquePadrao);
         setPoderEspecial1(poderEspecial1);
@@ -87,6 +88,15 @@ public abstract class Personagem implements AcoesPersonagem {
             throw new IllegalArgumentException("Vida deve ser um número inteiro positivo");
     }
 
+    public int getMax_vida(){return max_vida;}
+
+    public void setMax_vida(Integer max_vida){
+        if (max_vida > 0)
+            this.max_vida = max_vida;
+        else
+            throw new IllegalArgumentException("Vida máxima deve ser um inteiro maior que 0");
+    }
+
     public Integer getMana() {
         return mana;
     }
@@ -125,4 +135,5 @@ public abstract class Personagem implements AcoesPersonagem {
     public void setAtaquePadrao(AtaquePadrao ataquePadrao) {
         this.ataquePadrao = ataquePadrao;
     }
+
 }
