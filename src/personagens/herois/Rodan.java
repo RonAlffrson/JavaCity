@@ -1,12 +1,7 @@
 package personagens.herois;
 
-import itens.Item;
 import personagens.AtaquePadrao;
-import personagens.MultiplicadorDeAtaque;
 import personagens.PoderEspecial;
-import personagens.viloes.Vilao;
-
-import java.util.ArrayList;
 
 public final class Rodan extends Heroi {
     public Rodan() {
@@ -46,7 +41,8 @@ public final class Rodan extends Heroi {
         System.out.print("\n\n");
     }
 
-    public void contarHistoriaFim(){
+    @Override
+    public void contarHistoriaFim() {
         System.out.println("""
                 Parabéns!! Você derrotou o mago negro Napda, libertou Júliper do feitiço e salvou os habitantes de JavaCity das garras do mau. Você é um herói!!!
                 """);

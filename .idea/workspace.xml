@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55712400-a6b3-4307-a9b3-db7ff791150b" name="Changes" comment="Valores de ataques alterados">
+    <list default="true" id="55712400-a6b3-4307-a9b3-db7ff791150b" name="Changes" comment="mensagem de fim dejogo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/interacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/herois/AcoesHerois.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/AcoesHerois.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Dofer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Dofer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Rodan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Rodan.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,13 +92,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1687472864518</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Mudança na implementação da classe 'Dofer'">
-      <created>1688073474701</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1688073474701</updated>
     </task>
     <task id="LOCAL-00023" summary="Criação de classe 'Luta'">
       <created>1688073497877</created>
@@ -432,7 +429,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689438352092</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="mensagem de fim dejogo">
+      <created>1689438387241</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1689438387241</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -459,7 +463,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ideia, eu estou fazendo os metodos retornando inteiros, e se eu colocar eles void e executar as ações neles" />
     <MESSAGE value="Adicinando get e set na classe item" />
     <MESSAGE value="Tirando os metodos iguais da classe mae, para evitar redundância" />
     <MESSAGE value="Fiz as possibilidades de ataque do metodo opcaoAtaque e fiz a parte de tomada de decisao do vilao no metodo batalha, falta fazer as ações do metodo opcaoIventario" />
@@ -484,6 +487,7 @@
     <MESSAGE value="Método contarHistoriaFim()" />
     <MESSAGE value="mensagem de derrota do vilão" />
     <MESSAGE value="Valores de ataques alterados" />
-    <option name="LAST_COMMIT_MESSAGE" value="Valores de ataques alterados" />
+    <MESSAGE value="mensagem de fim dejogo" />
+    <option name="LAST_COMMIT_MESSAGE" value="mensagem de fim dejogo" />
   </component>
 </project>

@@ -41,6 +41,7 @@ public final class Dofer extends Heroi {
                 um mago negro que realizava experimentos que emanavam longínquas e estranhas luzes verdes, o herói sentiu sua espinha arrepiar,
                 ele sabia o que tinha que fazer.\n\n""");
     }
+    @Override
     public void contarHistoriaFim(){
         System.out.println("""
                 Parabéns!! Você derrotou o mago negro Napda, vingou seu irmão e salvou os habitantes de JavaCity das garras do mau. Você é um herói!!!

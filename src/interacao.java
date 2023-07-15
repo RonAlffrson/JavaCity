@@ -76,7 +76,7 @@ public class interacao {
                 case 2 -> opcaoIventario();
             }
 
-            // apartir daqui acabou as açoes do heroi e começa a do vilão
+            // a partir daqui acabou as açoes do heroi e começa a do vilão
 
             vilao.decidirAtaque(heroi); //não precisa de um if pra saber se o vilão está vivo, se tá nesse while ele tá vivo
             vilao.sortearPocao(heroi); //já tem um if-else em sortearPocao() pra saber se o vilão tá vivo
