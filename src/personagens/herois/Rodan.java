@@ -9,7 +9,6 @@ import personagens.viloes.Vilao;
 import java.util.ArrayList;
 
 public final class Rodan extends Heroi {
-    private Integer MAX_VIDA = 70;
     public Rodan() {
         super("Rodan", 70, 70, 0,
                 new AtaquePadrao("Bola de energia",5),
@@ -45,6 +44,11 @@ public final class Rodan extends Heroi {
                 que a salvação de sua amada finalmente estava próxima.\n\n                                                                                                            \s
                 """);
         System.out.print("\n\n");
+    }
+
+    @Override
+    public void aumentarManaRodada() {
+        aumentarMana(10);
     }
 }
 
