@@ -20,12 +20,17 @@ public abstract class Personagem implements AcoesPersonagem {
         if (mana >= poderEspecial1.getAtributo()){
             diminuirMana(poderEspecial1.getAtributo());
             personagem.diminiurVida(poderEspecial1.getAtributo() * MultiplicadorDeAtaque.multiplicadorDeAtaque());
+            System.out.println(nome + " usou " + poderEspecial1.getNome() + " em " + personagem.getNome());
         }
         else{
             System.out.println("Mana insuficiente");
         }
     }
-
+    @Override
+    public void ataquePadrao(Personagem personagem){
+        personagem.diminiurVida(ataquePadrao.getForcaAtaque() * MultiplicadorDeAtaque.multiplicadorDeAtaque());
+        System.out.println(nome + " usou " + ataquePadrao.getNome() + " em " + personagem.getNome());
+    }
     @Override
     public void diminuirMana(int quantidadeMana) {
         if (mana - quantidadeMana >= MIN_MANA) {
