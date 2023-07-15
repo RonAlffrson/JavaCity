@@ -1,15 +1,14 @@
-import itens.*;
 import personagens.herois.Heroi;
 import personagens.viloes.Vilao;
 import java.util.*;
 
 
-public class Luta {
+public class interacao {
     public  Heroi heroi;
     public Vilao vilao;
     public int contadorRodadas = 0;
 
-    public Luta(Heroi heroi, Vilao vilao){
+    public interacao(Heroi heroi, Vilao vilao){
         this.heroi = heroi;
         this.vilao = vilao;
 
@@ -24,12 +23,9 @@ public class Luta {
             throw new IllegalArgumentException("Erro: Digite valor entre 1 e 3");
         }
     }
-    public static void mensagemInicio(){
-        System.out.println("Bem-vindo a JavaCity");
-        System.out.println("=--=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-    }
+
     public static int EscolhadoHeroi(){
-        boolean validador = false;
+        boolean validador;
         int opcaoHeroi = 0;
         Scanner input = new Scanner(System.in);
         do {

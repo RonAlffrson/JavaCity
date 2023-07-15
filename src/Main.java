@@ -1,4 +1,3 @@
-import personagens.MultiplicadorDeAtaque;
 import personagens.herois.Dofer;
 import personagens.herois.Heroi;
 import personagens.herois.Rodan;
@@ -6,14 +5,14 @@ import personagens.viloes.Dataretan;
 import personagens.viloes.Flegoman;
 import personagens.viloes.Napda;
 
-import java.util.InputMismatchException;
-import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Heroi jogador;
 
-        Luta.mensagemInicio();
-        int opcaoHeroi = Luta.EscolhadoHeroi();
+        System.out.println("Bem-vindo a JavaCity");
+        System.out.println("=--=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+
+        int opcaoHeroi = interacao.EscolhadoHeroi();
         if(opcaoHeroi == 1){
             jogador = new Dofer();
         }
@@ -22,13 +21,13 @@ public class Main {
         }
         jogador.contarHistoria();
 
-        Luta luta = new Luta(jogador, new Flegoman()); // primeira luta
+        interacao luta = new interacao(jogador, new Flegoman());
         luta.batalhar();
 
-        luta = new Luta(jogador, new Dataretan());
+        luta = new interacao(jogador, new Dataretan());
         luta.batalhar();
 
-        luta = new Luta(jogador, new Napda());
+        luta = new interacao(jogador, new Napda());
         luta.batalhar();
     }
 
