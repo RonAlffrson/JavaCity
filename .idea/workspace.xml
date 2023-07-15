@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55712400-a6b3-4307-a9b3-db7ff791150b" name="Changes" comment="Exceção customizada criada">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_07_2023_20_39__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_07_2023_20_39__Changes_.xml" afterDir="false" />
+    <list default="true" id="55712400-a6b3-4307-a9b3-db7ff791150b" name="Changes" comment="Tirei ataquePadrao da classe Personagem (vilão não usa ataquePadrao)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Luta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Luta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/Personagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/Personagem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Heroi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Heroi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/viloes/Vilao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Vilao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,18 +52,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/renan/IdeaProjects/tp2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/renan/IdeaProjects/tp2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": [
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\renan\IdeaProjects\JavaCity\src" />
@@ -84,25 +86,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7880a674-6f45-4e7b-ac76-c54f7ffef466" name="Changes" comment="" />
+      <changelist id="55712400-a6b3-4307-a9b3-db7ff791150b" name="Changes" comment="Exceção customizada criada" />
       <created>1687472864518</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1687472864518</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Classe 'Item' e interface 'Personagem' criados.">
-      <created>1687894561764</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1687894561764</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Nome da classe 'Personagem' trocado para 'PersonagemGenerico' para não conflitar com a interface 'Personagem'">
-      <created>1687894660098</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1687894660098</updated>
     </task>
     <task id="LOCAL-00005" summary="Arquivo de roteiro do jogo adicionado para fácil manutenção">
       <created>1687970089508</created>
@@ -433,7 +421,21 @@
       <option name="project" value="LOCAL" />
       <updated>1689357224249</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="erro na exceção de opacaoAtaque corrigido">
+      <created>1689362218687</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1689362218687</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Tirei ataquePadrao da classe Personagem (vilão não usa ataquePadrao)">
+      <created>1689380838021</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1689380838021</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -460,10 +462,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update" />
-    <MESSAGE value="ataques padroes dos viloes adicionados" />
-    <MESSAGE value="Setters e Getters de PoderEspecial criados e criado atributo categoria para printar a descrição de acordo com se é um poder de ataque ou de vida" />
-    <MESSAGE value="Tratamento de exceção nos setters e getters de AtaquePadrao" />
     <MESSAGE value="Tratamento de exceção nos setters e getters de PoderEspecial" />
     <MESSAGE value="adicionada categoria dos poderes especiais nos heróis" />
     <MESSAGE value="Poderes especiais de vilões adicionados" />
@@ -488,21 +486,8 @@
     <MESSAGE value="Fiz as possibilidades de ataque do metodo opcaoAtaque e fiz a parte de tomada de decisao do vilao no metodo batalha, falta fazer as ações do metodo opcaoIventario" />
     <MESSAGE value="Criando o metodo contar rodada, e adicionando o metodo de aumentar mana na classe batalha" />
     <MESSAGE value="Exceção customizada criada" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exceção customizada criada" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Luta.java</url>
-          <line>106</line>
-          <properties class="Luta" method="opcaoAtaque">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="erro na exceção de opacaoAtaque corrigido" />
+    <MESSAGE value="Tirei ataquePadrao da classe Personagem (vilão não usa ataquePadrao)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tirei ataquePadrao da classe Personagem (vilão não usa ataquePadrao)" />
   </component>
 </project>
