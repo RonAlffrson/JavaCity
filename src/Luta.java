@@ -159,13 +159,13 @@ public class Luta {
                 System.out.println("Erro desconhecido: digite um valor valido");
             }
         }
-        if(opcaoAtaque == 4){ // voltar
+        if(opcaoAtaque == 4){ // nesse casp vai perguntar para o usuario se ele vai para opcao ataque ou opcao jogador
             int opcaoJogador = opcaoJogador();
             if(opcaoJogador == 1){
                 opcaoAtaque();
             }
             else if (opcaoJogador == 2) {
-                opcaoIventario(); // esse seria o caso que o jogador escolheria  Iventario ainda ns como resolriasve
+                opcaoIventario(); // chama opcaoIventario
             }
         }
         else if(opcaoAtaque == 1){
