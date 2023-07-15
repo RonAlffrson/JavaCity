@@ -15,12 +15,9 @@ public abstract class Vilao extends Personagem implements AcoesViloes {
     @Override
     public void decidirAtaque(Heroi heroi) {
         if (mana < poderEspecial1.getCusto()){
-
-            System.out.println(nome + " usou " + ataquePadrao.getNome() + " em " + heroi.getNome());
             ataquePadrao(heroi);
         }
         else{
-            System.out.println(nome + " usou " + poderEspecial1.getNome() + " em " + heroi.getNome());
             poderEspecial1(heroi);
         }
     }
