@@ -4,8 +4,8 @@ import personagens.herois.Heroi;
 
 public final class PocaoVida extends Item {
     public PocaoVida(){
-        this.nome = "Poção de vida";
-        this.valorAtributo = 25;
+        setNome("Poção de vida");
+        setValorAtributo(25);
     }
     @Override
     public String descricaoItem(){
