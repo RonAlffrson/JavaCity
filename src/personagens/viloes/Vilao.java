@@ -28,6 +28,7 @@ public abstract class Vilao extends Personagem implements AcoesViloes {
         int opcao = random.nextInt(2);
         //Retorna um número entre 0-1
         if (getVida() == 0){
+            System.out.println("\n" + heroi.getNome() + " derrotou " + nome);
             if (opcao == 0)
                 System.out.println("\n" + heroi.getNome() + " recebeu uma poção de mana");
             else
