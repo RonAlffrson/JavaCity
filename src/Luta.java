@@ -19,10 +19,16 @@ public class Luta {
             throw new ErroOpcaoAtaqueException("Erro : digite um valor entre 1 e 4");
         }
     }
+    public static void lancarExcecaoOpcaoInventario(int opcaoAtaque) throws ErroOpcaoAtaqueException{
+        if(opcaoAtaque != 1 && opcaoAtaque != 4){
+            throw new ErroOpcaoAtaqueException("Erro : digite 1 ou 2");
+        }
+    }
+
     //todo - não faz sentido deixar o método mensagemInicio() nessa classe
     public static void mensagemInicio(){
         System.out.println("Bem-vindo a JavaCity");
-        System.out.println("=--=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+        System.out.println("=--=-=-=-=-=-=-=-=-=-=");
     }
     public static int EscolhadoHeroi(){
         boolean validador = false;
@@ -80,7 +86,23 @@ public class Luta {
                 }
             }
             else if(opcaoJogaodor == 2){
-                System.out.println("Item que você deseja usar:");
+
+                int opcaoInventario = opcaoInventario();//todo - pensar em outra implementação do método opcaoInventario()
+
+                switch (opcaoInventario){
+                    case 1 -> {
+                        heroi.aumentarMana((int) heroi.getInventario().get(0).getValorAtributo());
+                        System.out.println(heroi.getNome() + " usou " + heroi.getInventario().get(0).getNome());
+                        heroi.getInventario().get(0).diminuirItem();
+                    }
+                    case 2 -> {
+                        heroi.aumentarVida((int) heroi.getInventario().get(1).getValorAtributo());
+                        System.out.println(heroi.getNome() + " usou " + heroi.getInventario().get(1).getNome());
+                        heroi.getInventario().get(1).diminuirItem();
+                    }
+
+                }
+
             }
 
             vilao.decidirAtaque(heroi);
@@ -155,6 +177,7 @@ public class Luta {
         }while (validador);
 
         if(opcaoAtaque == 4){ // voltar
+            //todo - não entendi essa parte do código
             int opcaoJogaodor = opcaoJogador();
 
             if(opcaoJogaodor == 1){
@@ -166,8 +189,48 @@ public class Luta {
 
         }
         return opcaoAtaque;
-
     }
+
+    public int opcaoInventario(){
+        Scanner input = new Scanner(System.in);
+        int opcaoInventario = 0;
+        boolean validador;
+            do {
+            try {
+                validador = false;
+                System.out.println("(1) " + heroi.getInventario().get(0).descricaoItem() + " qnt: " + heroi.getInventario().get(0).getQuantidadeItem());
+                System.out.println("(2) " + heroi.getInventario().get(1).descricaoItem() + " qnt: " + heroi.getInventario().get(1).getQuantidadeItem());
+                System.out.println("(3) Voltar");
+                System.out.print("\nDigite a opção desejada: ");
+                opcaoInventario = input.nextInt();
+                System.out.println(" ");
+                lancarExcecaoOpcaoInventario(opcaoInventario);
+
+            }catch (InputMismatchException e){
+                validador = true;
+                input.nextLine();
+                System.out.println("Erro: Digite 1 ou 2");
+            }
+            catch (Exception e){
+                validador = true;
+                input.nextLine();
+                System.out.println("Erro desconhecido: digite um valor valido");
+            }
+        }while (validador);
+
+            if(opcaoInventario == 4){ // voltar
+            int opcaoJogaodor = opcaoJogador();
+
+            if(opcaoJogaodor == 1){
+                opcaoInventario = opcaoInventario();
+            }
+            else if (opcaoJogaodor == 2) {
+                return -1; // esse seria o caso que o jogador escolheria  Inventario
+            }
+        }
+            return opcaoInventario;
+}
+
 
 
 

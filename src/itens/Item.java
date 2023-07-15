@@ -2,8 +2,8 @@ package itens;
 
 public abstract class Item {
     protected String nome;
-    protected double valorAtributo;
-    protected Integer quantidadeItem = 0;
+    protected Integer valorAtributo;
+    protected Integer quantidadeItem = 1;
 
     public String getNome() {
         return nome;
@@ -33,7 +33,7 @@ public abstract class Item {
         this.nome = nome;
     }
 
-    public void setValorAtributo(double valorAtributo) {
+    public void setValorAtributo(Integer valorAtributo) {
         this.valorAtributo = valorAtributo;
     }
 
