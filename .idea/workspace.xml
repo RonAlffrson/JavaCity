@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55712400-a6b3-4307-a9b3-db7ff791150b" name="Changes" comment="aumentarManaRodada pros vilões">
+    <list default="true" id="55712400-a6b3-4307-a9b3-db7ff791150b" name="Changes" comment="método opcaoInventario criado e implementado dentro de batalhar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Luta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Luta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/itens/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/itens/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/Personagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/Personagem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/viloes/Vilao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Vilao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,13 +92,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1687472864518</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Classes filhas da classe 'Heroi', 'Rodan' e 'Dofer' criadas">
-      <created>1687991011115</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1687991011115</updated>
     </task>
     <task id="LOCAL-00011" summary="coloquei o texto do dofer no contar hstoria&#10;criei um construtor para cada heroi&#10;adicionei os metodos alterarVida e aumentarMana&#10;adicionei os atributos MAX_VIDA e MAX_MANA">
       <created>1687995982439</created>
@@ -433,7 +429,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689385321704</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="método opcaoInventario criado e implementado dentro de batalhar">
+      <created>1689388355133</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1689388355149</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -460,7 +463,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="adicionarQuantidadeItem é adicionarItem" />
     <MESSAGE value="Erro customizado 'ErroOpcaoHeroiException' criado" />
     <MESSAGE value="método 'decidirAtaque'" />
     <MESSAGE value="adicionarItem alterado" />
@@ -485,6 +487,7 @@
     <MESSAGE value="método batalhar implementado&#10;validador de opcaoJogador mudado" />
     <MESSAGE value="vida máxima em todos os personagens" />
     <MESSAGE value="aumentarManaRodada pros vilões" />
-    <option name="LAST_COMMIT_MESSAGE" value="aumentarManaRodada pros vilões" />
+    <MESSAGE value="método opcaoInventario criado e implementado dentro de batalhar" />
+    <option name="LAST_COMMIT_MESSAGE" value="método opcaoInventario criado e implementado dentro de batalhar" />
   </component>
 </project>

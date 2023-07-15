@@ -11,7 +11,7 @@ public abstract class Item {
         return nome;
     }
 
-    public double getValorAtributo() {
+    public Integer getValorAtributo() {
         return valorAtributo;
     }
 
