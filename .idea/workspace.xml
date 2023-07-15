@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55712400-a6b3-4307-a9b3-db7ff791150b" name="Changes" comment="método opcaoInventario criado e implementado dentro de batalhar">
+    <list default="true" id="55712400-a6b3-4307-a9b3-db7ff791150b" name="Changes" comment="Valores de ataques alterados">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Luta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Luta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/itens/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/itens/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/Personagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/Personagem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/viloes/Vilao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Vilao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interacao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,83 +88,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1687472864518</updated>
-    </task>
-    <task id="LOCAL-00011" summary="coloquei o texto do dofer no contar hstoria&#10;criei um construtor para cada heroi&#10;adicionei os metodos alterarVida e aumentarMana&#10;adicionei os atributos MAX_VIDA e MAX_MANA">
-      <created>1687995982439</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1687995982439</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Trocado método 'alterarVida' pelos métodos (já implementados) 'diminuirVida' e 'aumentarVida' &#10;Também criado atributo 'MIN_VIDA' com valor '0' na classe 'Heroi'">
-      <created>1688052608506</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1688052608506</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Tirado método adicionar item da Interface 'Personagem' - não acho que adicionar item deva ser algo que  seja obrigatóriamente implementado em cada herói, até porque o método só adiciona um item no inventário (coisa que já está implementada na classe mãe)">
-      <created>1688053230661</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1688053230661</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Criada classe 'Vilao'">
-      <created>1688054733353</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1688054733353</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Criado método 'aumentarVidaRodada' que usa o método 'aumentarVida' para aumentar a vida em 3% a cada rodada">
-      <created>1688054810993</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1688054810993</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Criados métodos 'ataquePadrao' e 'diminiurVida'">
-      <created>1688054864111</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1688054864111</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Implementados métodos 'poderEspecial' 1 e 2 de Rodan">
-      <created>1688054941179</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1688054941179</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Criadas classes específicas dos vilões">
-      <created>1688055574986</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1688055574986</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Mudança na implementação dos poderes especiais e na interface 'Obstaculo'">
-      <created>1688055630664</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1688055630664</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Mudança na interface 'Obstaculo'">
-      <created>1688055672968</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1688055672968</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Todas as implementações feitas nos heróis">
-      <created>1688058699846</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1688058699846</updated>
     </task>
     <task id="LOCAL-00022" summary="Mudança na implementação da classe 'Dofer'">
       <created>1688073474701</created>
@@ -436,7 +355,84 @@
       <option name="project" value="LOCAL" />
       <updated>1689388355149</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="getValorAtributo() deve ser Integer não double">
+      <created>1689428844987</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1689428844987</updated>
+    </task>
+    <task id="LOCAL-00067" summary="Setters usados">
+      <created>1689428933369</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1689428933369</updated>
+    </task>
+    <task id="LOCAL-00068" summary="poderEspecial1 agora indica se ataque foi erro ou crítico">
+      <created>1689428980805</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1689428980805</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Formatação de print">
+      <created>1689429009745</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1689429009745</updated>
+    </task>
+    <task id="LOCAL-00070" summary="Formatação de prints&#10;Usuário usava poções e não faziam efeito (resolvido)&#10;Herói agora pode zerar sua vida">
+      <created>1689429120701</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1689429120701</updated>
+    </task>
+    <task id="LOCAL-00071" summary="retirado Scanner, não está sendo usado">
+      <created>1689429254154</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1689429254154</updated>
+    </task>
+    <task id="LOCAL-00072" summary="Classe Luta -&gt; Classe Interacao&#10;Mensagem de início retirada da Interacao">
+      <created>1689429709292</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1689429709292</updated>
+    </task>
+    <task id="LOCAL-00073" summary="Rodan aumenta mais mana por rodada">
+      <created>1689437711690</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1689437711690</updated>
+    </task>
+    <task id="LOCAL-00074" summary="Método contarHistoriaFim()">
+      <created>1689438276195</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1689438276195</updated>
+    </task>
+    <task id="LOCAL-00075" summary="mensagem de derrota do vilão">
+      <created>1689438318945</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1689438318945</updated>
+    </task>
+    <task id="LOCAL-00076" summary="Valores de ataques alterados">
+      <created>1689438352092</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1689438352092</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -463,17 +459,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Erro customizado 'ErroOpcaoHeroiException' criado" />
-    <MESSAGE value="método 'decidirAtaque'" />
-    <MESSAGE value="adicionarItem alterado" />
-    <MESSAGE value="construtor alterado" />
-    <MESSAGE value="Escrevendo os metodos que serão aplicados na main" />
-    <MESSAGE value="Fazendo os caminhos que o usuario pode escolher, pensar como fazer na opçao do usuario voltar" />
-    <MESSAGE value="Fazendo os metodos necessarios para conseguir voltar nas opcões escolhidas" />
-    <MESSAGE value="criei o metodo opcao ataque, tratei as exceçoes" />
-    <MESSAGE value="lógica de aumentarVida mudada" />
-    <MESSAGE value="Mudando a descrição do ataque padrao" />
-    <MESSAGE value="Fiz a classe opcaoIventario, falta pensar como fazer quando o poder nn tiver mana suficiente para usar" />
     <MESSAGE value="ideia, eu estou fazendo os metodos retornando inteiros, e se eu colocar eles void e executar as ações neles" />
     <MESSAGE value="Adicinando get e set na classe item" />
     <MESSAGE value="Tirando os metodos iguais da classe mae, para evitar redundância" />
@@ -488,6 +473,17 @@
     <MESSAGE value="vida máxima em todos os personagens" />
     <MESSAGE value="aumentarManaRodada pros vilões" />
     <MESSAGE value="método opcaoInventario criado e implementado dentro de batalhar" />
-    <option name="LAST_COMMIT_MESSAGE" value="método opcaoInventario criado e implementado dentro de batalhar" />
+    <MESSAGE value="getValorAtributo() deve ser Integer não double" />
+    <MESSAGE value="Setters usados" />
+    <MESSAGE value="poderEspecial1 agora indica se ataque foi erro ou crítico" />
+    <MESSAGE value="Formatação de print" />
+    <MESSAGE value="Formatação de prints&#10;Usuário usava poções e não faziam efeito (resolvido)&#10;Herói agora pode zerar sua vida" />
+    <MESSAGE value="retirado Scanner, não está sendo usado" />
+    <MESSAGE value="Classe Luta -&gt; Classe Interacao&#10;Mensagem de início retirada da Interacao" />
+    <MESSAGE value="Rodan aumenta mais mana por rodada" />
+    <MESSAGE value="Método contarHistoriaFim()" />
+    <MESSAGE value="mensagem de derrota do vilão" />
+    <MESSAGE value="Valores de ataques alterados" />
+    <option name="LAST_COMMIT_MESSAGE" value="Valores de ataques alterados" />
   </component>
 </project>

@@ -84,6 +84,11 @@ public class interacao {
             if(!(heroi.getVida().equals(heroi.getMIN_MANA()))){
                 heroi.aumentarVidaRodada();
             }
+            else{
+                System.out.println(heroi.getNome() + " morreu - FIM DE JOGO");
+            }
+
+            //todo - contexto
 
             // acabou a rodada
             heroi.aumentarManaRodada();
