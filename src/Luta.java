@@ -6,7 +6,7 @@ import java.util.*;
 public class Luta {
     public  Heroi heroi;
     public Vilao vilao;
-    public int contadorRodadas = 0;
+    public int contadorRodadas = 1;
 
     public Luta(Heroi heroi, Vilao vilao){
         this.heroi = heroi;
@@ -60,13 +60,13 @@ public class Luta {
         boolean validador = false;
         int opcaoJogaodor;
 
-        System.out.println("Batalha:\n" + heroi.getNome() +" VS " + vilao.getNome());
+        System.out.println("    Batalha:\n" + heroi.getNome() +" VS " + vilao.getNome());
 
         while(heroi.getVida() != 0 && vilao.getVida() != 0) {
-            System.out.println("\n" + heroi.getNome() + "\n-Vida: " + heroi.getVida() + " / " + heroi.getMax_vida() +
+            System.out.println("\n" + vilao.getNome() + "\n-Vida: " + vilao.getVida() + " / " + vilao.getMax_vida()+ "\n");
+            System.out.println(heroi.getNome() + "\n-Vida: " + heroi.getVida() + " / " + heroi.getMax_vida() +
                     "\n-Mana: " + heroi.getMana() + " / " + heroi.getMAX_MANA() + "\n");
 
-            System.out.println(vilao.getNome() + "\n-Vida: " + vilao.getVida() + "\n");
 
            opcaoJogaodor = opcaoJogador();
 
@@ -87,10 +87,11 @@ public class Luta {
             //ultima coisa a fazer dentro desse while:
             heroi.aumentarVidaRodada();
             heroi.aumentarManaRodada();
+            vilao.aumentarManaRodada();
             vilao.sortearPocao(heroi);
             contadorRodadas++;
 
-        } // to pensando em criar o metodo opcoes jogaodr que retorna esse metodo
+        } // to pensando em criar o metodo opcoes jogaodor que retorna esse metodo
 
     }
     private static int opcaoJogador(){
@@ -101,12 +102,13 @@ public class Luta {
             try {
                 validador = true;
 
-                System.out.println("Opções do jogador:\n");
+                System.out.println("Opções do jogador:");
                 System.out.println("(1) Ataques");
-                System.out.println("(2) Iventario");
+                System.out.println("(2) Inventario");
                 System.out.println("Digite a opção desejada: ");
 
                 opcaoJogaodor = input.nextInt();
+                System.out.println(" ");
                 Heroi.verificarOpcaoHeroi(opcaoJogaodor); // esse metodo lanca uma exceçãp
             } catch (InputMismatchException e) {
                 input.nextLine();
@@ -135,8 +137,9 @@ public class Luta {
                 System.out.print("(3) ");
                 heroi.getPoderEspecial2().printarDescricaoPoder();
                 System.out.println("(4) Voltar");
-                System.out.print("Digite a opção desejada: ");
+                System.out.print("\nDigite a opção desejada: ");
                 opcaoAtaque = input.nextInt();
+                System.out.println(" ");
                 lancarExcecaoOpcaoAtaque(opcaoAtaque);
 
             }catch (InputMismatchException e){
