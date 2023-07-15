@@ -30,6 +30,7 @@ public class Main {
         luta.batalhar();
 
         luta = new Luta(jogador, new Napda());
+        luta.batalhar();
     }
 
 }
