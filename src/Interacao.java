@@ -13,18 +13,18 @@ public class Interacao {
         this.vilao = vilao;
 
     }
-    public static void lancarExcecaoOpcaoAtaque(int opcaoAtaque) throws IllegalArgumentException{
+    public static void lancarExcecaoOpcaoAtaque(int opcaoAtaque) throws ErroOpcaoException{
         if(!(opcaoAtaque > 0 && opcaoAtaque < 5)){
-            throw new IllegalArgumentException("Erro : digite um valor entre 1 e 4");
+            throw new ErroOpcaoException("Erro : digite um valor entre 1 e 4");
         }
     }
-    public static void lancarExcecaoOpcaoIventario(int opcaoIventario) throws IllegalArgumentException{
+    public static void lancarExcecaoOpcaoIventario(int opcaoIventario) throws ErroOpcaoException{
         if(opcaoIventario <= 0 || opcaoIventario > 3){
-            throw new IllegalArgumentException("Erro: Digite valor entre 1 e 3");
+            throw new ErroOpcaoException("Erro: Digite valor entre 1 e 3");
         }
     }
 
-    public static int EscolhadoHeroi(){
+    public static int EscolhaDoHeroi(){
         boolean validador;
         int opcaoHeroi = 0;
         Scanner input = new Scanner(System.in);
@@ -32,11 +32,11 @@ public class Interacao {
             try {
                 validador = true;
                 System.out.println("""
-                            Escolha seu heroi:
-                            (1) Dofer - Cavaleiro
-                            (2) Ronan - Mago""");
+                            Escolha seu herói:
+                            (1) Dofer - Cavaleiro - 100 de vida total, +5 de mana a cada rodada
+                            (2) Ronan - Mago - 70 de vida total, +10 de mana a cada rodada""");
                 opcaoHeroi = input.nextInt();
-                Heroi.verificarOpcaoHeroi(opcaoHeroi); // esse metodo lanca uma exceçãp
+                Heroi.verificarOpcaoHeroi(opcaoHeroi); // esse método lança uma exceção
             }
             catch (InputMismatchException e) {
                 input.nextLine();
@@ -52,11 +52,12 @@ public class Interacao {
                 System.out.println("Erro: digite um valor valido");
                 validador = false;
             }
-
         } while (!validador);
         return opcaoHeroi;
     }
+
     public  void batalhar(){
+        System.out.println("=-=-=-=-=-=-=-=-=-=-=-=");
         System.out.println("    Batalha:\n" + heroi.getNome() +" VS " + vilao.getNome() + "\n");
         int opcaoJogaodor;
         contadorRodadas = 0;
@@ -78,8 +79,8 @@ public class Interacao {
 
             // a partir daqui acabou as açoes do heroi e começa a do vilão
 
-            vilao.decidirAtaque(heroi); //não precisa de um if pra saber se o vilão está vivo, se tá nesse while ele tá vivo
-            vilao.sortearPocao(heroi); //já tem um if-else em sortearPocao() pra saber se o vilão tá vivo
+            vilao.decidirAtaque(heroi);
+            vilao.sortearPocao(heroi);
 
             if(!(heroi.getVida().equals(heroi.getMIN_MANA()))){
                 heroi.aumentarVidaRodada();
