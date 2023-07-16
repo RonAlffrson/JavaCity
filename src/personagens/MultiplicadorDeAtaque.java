@@ -7,10 +7,10 @@ public final class MultiplicadorDeAtaque {
         if(sorteador < 1){ // 0
             return 0;
         }
-        else if(sorteador < 8){ // 1 a 7
+        else if(sorteador < 7){ // 1 a 6
             return 1;
         }
-        else { // 8 a 10
+        else { // 7 a 10
             return 2;
         }
     }
