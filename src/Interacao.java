@@ -15,12 +15,12 @@ public class Interacao {
     }
     public static void lancarExcecaoOpcaoAtaque(int opcaoAtaque) throws ErroOpcaoException{
         if(opcaoAtaque < 1 || opcaoAtaque > 5){
-            throw new ErroOpcaoException("Erro : digite um valor entre 1 e 4");
+            throw new ErroOpcaoException("\nErro : digite um valor entre 1 e 4\n");
         }
     }
     public static void lancarExcecaoOpcaoIventario(int opcaoIventario) throws ErroOpcaoException{
         if(opcaoIventario < 1 || opcaoIventario > 3){
-            throw new ErroOpcaoException("Erro: Digite valor entre 1 e 3");
+            throw new ErroOpcaoException("\nErro: Digite valor entre 1 e 3\n");
         }
     }
 
@@ -33,15 +33,15 @@ public class Interacao {
                 validador = true;
                 System.out.println("""
                             Escolha seu herói:
-                            (1) Dofer - Cavaleiro - 100 de vida total, +5 de mana a cada rodada
-                            (2) Ronan - Mago - 70 de vida total, +10 de mana a cada rodada""");
+                            (1) Dofer - Cavaleiro - 100 de vida total, +5 de mana a cada rodada, 10 de dano de ataque padrão
+                            (2) Ronan - Mago - 70 de vida total, +10 de mana a cada rodada, 5 de dano de ataque padrão""");
                 opcaoHeroi = input.nextInt();
                 Heroi.verificarOpcaoHeroi(opcaoHeroi); // esse método lança uma exceção
             }
             catch (InputMismatchException e) {
                 input.nextLine();
                 validador = false;
-                System.out.println("Erro: Digite 1 ou 2 para escolher o heroi\n");
+                System.out.println("\nErro: Digite 1 ou 2 para escolher o heroi\n");
             }
             catch (IllegalArgumentException e){
                 System.out.println(e.getMessage() + "\n");
@@ -49,14 +49,14 @@ public class Interacao {
             }
             catch (Exception e){
                 input.nextLine();
-                System.out.println("Erro: digite um valor valido");
+                System.out.println("\nErro: digite um valor valido\n");
                 validador = false;
             }
         } while (!validador);
         return opcaoHeroi;
     }
 
-    public  void batalhar(){
+    public void batalhar(){
         System.out.println("=-=-=-=-=-=-=-=-=-=-=-=");
         System.out.println("    Batalha:\n" + heroi.getNome() +" VS " + vilao.getNome() + "\n");
         int opcaoJogaodor;
@@ -89,8 +89,6 @@ public class Interacao {
                 System.out.println(heroi.getNome() + " morreu - FIM DE JOGO");
             }
 
-            //todo - contexto
-
             // acabou a rodada
             heroi.aumentarManaRodada();
             vilao.aumentarManaRodada();
@@ -101,25 +99,26 @@ public class Interacao {
         Scanner input = new Scanner(System.in);
         int opcaoJogaodor = 0;
         boolean validador = false;
+
         while(!validador) {
             try {
                 validador = true;
                 System.out.println("\nOpções do jogador:");
                 System.out.println("(1) Ataques");
-                System.out.println("(2) Iventario");
+                System.out.println("(2) Iventário");
                 System.out.println("Digite a opção desejada: ");
                 opcaoJogaodor = input.nextInt();
                 Heroi.verificarOpcaoHeroi(opcaoJogaodor); // esse metodo lanca uma exceçãp
             } catch (InputMismatchException e) {
                 input.nextLine();
                 validador = false;
-                System.out.println("\nErro : Digite 1 ou 2 para escolher a opção desejada\n");
+                System.out.println("\nErro: Digite 1 ou 2 para escolher a opção desejada\n");
             } catch (IllegalArgumentException e) {
-                System.out.println("\nErro : Digite 1 ou 2 para escolher a opção desejada\n");
+                System.out.println("\nErro: Digite 1 ou 2 para escolher a opção desejada\n");
                 validador = false;
             } catch (Exception e) {
                 input.nextLine();
-                System.out.println("\nErro desconhecido: digite um valor valido");
+                System.out.println("\nErro desconhecido: digite um valor valido\n");
                 validador = false;
             }
         } // fim do while validador
@@ -130,10 +129,11 @@ public class Interacao {
         Scanner input = new Scanner(System.in);
         int opcaoAtaque = 0;
         boolean validador = false;
+
         while(!validador) {
             try {
                 validador = true;
-                System.out.println("\nOpções de Ataque:");
+                System.out.println("\nOpções de ataque:");
                 System.out.println("(1) " + heroi.getAtaquePadrao().descricao());
                 System.out.print("(2) ");
                 heroi.getPoderEspecial1().printarDescricaoPoder();
@@ -147,7 +147,7 @@ public class Interacao {
             }catch (InputMismatchException e){
                 validador = false;
                 input.nextLine();
-                System.out.println("\nErro: Digite um valor entre 1 e 4");
+                System.out.println("\nErro: Digite um valor entre 1 e 4\n");
             }
             catch (IllegalArgumentException e){
                 validador = false;
@@ -157,16 +157,16 @@ public class Interacao {
             catch (Exception e){
                 validador = false;
                 input.nextLine();
-                System.out.println("\nErro desconhecido: digite um valor valido");
+                System.out.println("\nErro desconhecido: digite um valor valido\n");
             }
         }
-        if(opcaoAtaque == 4){ // nesse casp vai perguntar para o usuario se ele vai para opcao ataque ou opcao jogador
+        if(opcaoAtaque == 4){ // nesse caso vai perguntar para o usuário se ele vai para opção ataque ou opção jogador
             int opcaoJogador = opcaoJogador();
             if(opcaoJogador == 1){
                 opcaoAtaque();
             }
             else if (opcaoJogador == 2) {
-                opcaoIventario(); // chama opcaoIventario
+                opcaoIventario();
             }
         }
         else if(opcaoAtaque == 1){
@@ -177,7 +177,7 @@ public class Interacao {
                 heroi.poderEspecial1(vilao);
             }
             else{
-                System.out.println("\nErro: Mana insuficiente, escolha outra opcao de ataque");
+                System.out.println("\nErro: Mana insuficiente, escolha outra opção de ataque");
                 opcaoAtaque();
             }
         }
@@ -186,7 +186,7 @@ public class Interacao {
                 heroi.poderEspecial2();
             }
             else{
-                System.out.println("Erro: Mana insuficiente, escolha outra opcao de ataque ");
+                System.out.println("Erro: Mana insuficiente, escolha outra opção de ataque");
                 opcaoAtaque();
             }
         }
@@ -198,7 +198,7 @@ public class Interacao {
         while(!validador) {
             try {
                 validador = true;
-                System.out.println("\nOpções de Iventario:");
+                System.out.println("\nOpções do Iventario:");
                 System.out.println("(1) " + heroi.getInventario().get(0).descricaoItem() + " - qnt:" + heroi.getInventario().get(0).getQuantidadeItem());
                 System.out.println("(2) " + heroi.getInventario().get(1).descricaoItem() + " - qnt:" + heroi.getInventario().get(1).getQuantidadeItem());
                 System.out.println("(3) Voltar");
@@ -210,7 +210,7 @@ public class Interacao {
             } catch (InputMismatchException e) {
                 validador = false;
                 input.nextLine();
-                System.out.println("\nErro: Digite 1 ou 2");
+                System.out.println("\nErro: Digite 1 ou 2\n");
             } catch (IllegalArgumentException e) {
                 validador = false;
                 input.nextLine();
@@ -218,10 +218,10 @@ public class Interacao {
             } catch (Exception e) {
                 validador = false;
                 input.nextLine();
-                System.out.println("\nErro desconhecido: digite um valor valido");
+                System.out.println("\nErro desconhecido: digite um valor válido\n");
             }
-
         }
+
         // executar as opcoes escolhidas e voltar caso de erro
         if(opcaoIventario == 3){
             int opcaoJogador = opcaoJogador();
@@ -239,7 +239,7 @@ public class Interacao {
                 heroi.getInventario().get(0).diminuirItem(heroi);
             }
             else{
-                System.out.println("Erro: você não tem esse item no iventario");
+                System.out.println("\nErro: Você não tem esse item no iventário\n");
                 opcaoIventario();
             }
         }
@@ -250,7 +250,7 @@ public class Interacao {
                 heroi.getInventario().get(1).diminuirItem(heroi);
             }
             else{
-                System.out.println("Erro: você não tem esse item no iventario");
+                System.out.println("\nErro: Você não tem esse item no iventário\n");
                 opcaoIventario();
             }
         }
@@ -258,7 +258,7 @@ public class Interacao {
     }
     public void contarRodada(){
         contadorRodadas += 1;
-        System.out.println(contadorRodadas + "° Rodada");
+        System.out.println("\n" + contadorRodadas + "° Rodada\n");
     }
 
 }
