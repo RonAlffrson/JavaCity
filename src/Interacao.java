@@ -82,6 +82,9 @@ public class Interacao {
                 vilao.decidirAtaque(heroi);
                 vilao.sortearPocao(heroi);
             }
+            else{ // vilao morre
+                vilao.sortearPocao(heroi);
+            }
 
             if(!(heroi.getVida().equals(heroi.getMIN_MANA()))){
                 heroi.aumentarVidaRodada();
