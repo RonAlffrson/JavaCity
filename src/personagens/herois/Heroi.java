@@ -19,7 +19,6 @@ public abstract class Heroi extends Personagem implements AcoesHerois {
     }
 
 
-
     public static void verificarOpcaoHeroi(int opcaoHeroi) throws ErroOpcaoHeroiException{
         if(opcaoHeroi != 1 && opcaoHeroi != 2){
             throw new ErroOpcaoHeroiException("Digite 1 ou 2 para escolher o heroi");
@@ -40,7 +39,6 @@ public abstract class Heroi extends Personagem implements AcoesHerois {
     public void aumentarVidaRodada(){
         aumentarVida(3);
     }
-
 
     @Override
     public void adicionarItem(int opcao) { // 0 pocao de mana, 1 pocao de vida
@@ -78,5 +76,4 @@ public abstract class Heroi extends Personagem implements AcoesHerois {
     public PoderEspecial getPoderEspecial2() {
         return poderEspecial2;
     }
-
 }

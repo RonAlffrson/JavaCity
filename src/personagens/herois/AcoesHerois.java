@@ -1,8 +1,5 @@
 package personagens.herois;
 
-import itens.Item;
-import personagens.viloes.Vilao;
-
 public interface AcoesHerois {
     void contarHistoria();
     void contarHistoriaFim();
