@@ -37,7 +37,7 @@ public abstract class Heroi extends Personagem implements AcoesHerois {
 
     @Override
     public void aumentarVidaRodada(){
-        aumentarVida(3);
+        aumentarVida(1);
     }
 
     @Override
