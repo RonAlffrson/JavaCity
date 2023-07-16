@@ -39,13 +39,12 @@ public final class Rodan extends Heroi {
                 que a salvação de sua amada finalmente estava próxima.
                 
                 """);
-        System.out.print("\n\n");
     }
 
     @Override
     public void contarHistoriaFim() {
         System.out.println("""
-                Parabéns!! Você derrotou o mago negro Napda, libertou Júliper do feitiço e salvou os habitantes de JavaCity das garras do mau. Você é um herói!!!
+                Parabéns!! Você derrotou o mago negro Napda, libertou Júliper do feitiço que a paralisava e salvou os habitantes de JavaCity das garras do mau. Você é um herói!!!
                 """);
     }
 
