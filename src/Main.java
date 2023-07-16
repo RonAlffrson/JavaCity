@@ -54,5 +54,4 @@ public class Main {
         luta.batalhar();
         if (napda.getVida().equals(napda.getMIN_VIDA())) jogador.contarHistoriaFim();
     }
-
 }

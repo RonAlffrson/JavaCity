@@ -38,8 +38,15 @@ public abstract class Personagem implements AcoesPersonagem {
     }
     @Override
     public void ataquePadrao(Personagem personagem){
-        personagem.diminiurVida(ataquePadrao.getForcaAtaque() * MultiplicadorDeAtaque.multiplicadorDeAtaque());
+        int multiplicadorDeAtaque = MultiplicadorDeAtaque.multiplicadorDeAtaque();
+        personagem.diminiurVida(ataquePadrao.getForcaAtaque() * multiplicadorDeAtaque );
         System.out.println(nome + " usou " + ataquePadrao.getNome() + " em " + personagem.getNome());
+        if(multiplicadorDeAtaque == 0){
+            System.out.println("Errou");
+        }
+        else if(multiplicadorDeAtaque == 2){
+            System.out.println("Ataque crítico");
+        }
     }
     @Override
     public void diminuirMana(int quantidadeMana) {
