@@ -14,12 +14,12 @@ public class Interacao {
 
     }
     public static void lancarExcecaoOpcaoAtaque(int opcaoAtaque) throws ErroOpcaoException{
-        if(!(opcaoAtaque > 0 && opcaoAtaque < 5)){
+        if(opcaoAtaque < 1 || opcaoAtaque > 5){
             throw new ErroOpcaoException("Erro : digite um valor entre 1 e 4");
         }
     }
     public static void lancarExcecaoOpcaoIventario(int opcaoIventario) throws ErroOpcaoException{
-        if(opcaoIventario <= 0 || opcaoIventario > 3){
+        if(opcaoIventario < 1 || opcaoIventario > 3){
             throw new ErroOpcaoException("Erro: Digite valor entre 1 e 3");
         }
     }

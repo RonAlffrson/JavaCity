@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55712400-a6b3-4307-a9b3-db7ff791150b" name="Changes" comment="modificador final">
-      <change afterPath="$PROJECT_DIR$/src/ErroOpcaoException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ErroOpcaoAtaqueException.java" beforeDir="false" />
+    <list default="true" id="55712400-a6b3-4307-a9b3-db7ff791150b" name="Changes" comment="métodos de lançar exceções melhorados &#10;prints melhorados&#10;retirados comentários inúteis">
       <change beforePath="$PROJECT_DIR$/src/Interacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Dofer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Dofer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Rodan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Rodan.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,34 +87,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1687472864518</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Histórias atualizadas">
-      <created>1688081292726</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1688081292726</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Atualizações">
-      <created>1688082628021</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1688082628021</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Atualizações em itens">
-      <created>1688095017854</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1688095017854</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Atualizações em classe 'Carteira'&#10;alguns métodos dos hérois foram postos na classe mãe 'Heroi'&#10;Atualizações em itens">
-      <created>1688265066769</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1688265066769</updated>
     </task>
     <task id="LOCAL-00029" summary="Mudança em ataque especial de 'Dofer'&#10;Adicionada descrição dos poderes especiais">
       <created>1688265276712</created>
@@ -437,7 +403,35 @@
       <option name="project" value="LOCAL" />
       <updated>1689476693010</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="ErroOpcaoException mudado">
+      <created>1689477719391</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1689477719391</updated>
+    </task>
+    <task id="LOCAL-00081" summary="Avisos do print corrigidos">
+      <created>1689477765124</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1689477765124</updated>
+    </task>
+    <task id="LOCAL-00082" summary="prints melhorados">
+      <created>1689477790525</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1689477790525</updated>
+    </task>
+    <task id="LOCAL-00083" summary="métodos de lançar exceções melhorados &#10;prints melhorados&#10;retirados comentários inúteis">
+      <created>1689477871721</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1689477871722</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -464,10 +458,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fiz as possibilidades de ataque do metodo opcaoAtaque e fiz a parte de tomada de decisao do vilao no metodo batalha, falta fazer as ações do metodo opcaoIventario" />
-    <MESSAGE value="Criando o metodo contar rodada, e adicionando o metodo de aumentar mana na classe batalha" />
-    <MESSAGE value="Exceção customizada criada" />
-    <MESSAGE value="erro na exceção de opacaoAtaque corrigido" />
     <MESSAGE value="Tirei ataquePadrao da classe Personagem (vilão não usa ataquePadrao)" />
     <MESSAGE value="Descrição dos métodos ataquePadrao e poderEspecial" />
     <MESSAGE value="Retirada descrição dos métodos ataquePadrao e poderEspecial" />
@@ -489,6 +479,10 @@
     <MESSAGE value="mensagem de fim dejogo" />
     <MESSAGE value="contarHistoriaFim() atualizado&#10;contextos antes das lutas" />
     <MESSAGE value="modificador final" />
-    <option name="LAST_COMMIT_MESSAGE" value="modificador final" />
+    <MESSAGE value="ErroOpcaoException mudado" />
+    <MESSAGE value="Avisos do print corrigidos" />
+    <MESSAGE value="prints melhorados" />
+    <MESSAGE value="métodos de lançar exceções melhorados &#10;prints melhorados&#10;retirados comentários inúteis" />
+    <option name="LAST_COMMIT_MESSAGE" value="métodos de lançar exceções melhorados &#10;prints melhorados&#10;retirados comentários inúteis" />
   </component>
 </project>
