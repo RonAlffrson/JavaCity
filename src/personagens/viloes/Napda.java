@@ -2,7 +2,6 @@ package personagens.viloes;
 
 import personagens.AtaquePadrao;
 import personagens.PoderEspecial;
-import personagens.herois.Heroi;
 
 public final class Napda extends Vilao {
     public Napda() {

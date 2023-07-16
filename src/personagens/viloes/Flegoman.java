@@ -2,7 +2,6 @@ package personagens.viloes;
 
 import personagens.AtaquePadrao;
 import personagens.PoderEspecial;
-import personagens.herois.Heroi;
 
 public final class Flegoman extends Vilao{
     public Flegoman() {

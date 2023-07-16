@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55712400-a6b3-4307-a9b3-db7ff791150b" name="Changes" comment="mensagem de fim dejogo">
+    <list default="true" id="55712400-a6b3-4307-a9b3-db7ff791150b" name="Changes" comment="contarHistoriaFim() atualizado&#10;contextos antes das lutas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/herois/AcoesHerois.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/AcoesHerois.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Dofer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Dofer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Rodan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Rodan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/viloes/Dataretan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Dataretan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/viloes/Flegoman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Flegoman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/viloes/Napda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/viloes/Napda.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,13 +91,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1687472864518</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Criação de classe 'Luta'">
-      <created>1688073497877</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1688073497877</updated>
     </task>
     <task id="LOCAL-00024" summary="História de Rodan adicionada">
       <created>1688079975116</created>
@@ -436,7 +428,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689438387241</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="contarHistoriaFim() atualizado&#10;contextos antes das lutas">
+      <created>1689453837294</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1689453837294</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -463,7 +462,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adicinando get e set na classe item" />
     <MESSAGE value="Tirando os metodos iguais da classe mae, para evitar redundância" />
     <MESSAGE value="Fiz as possibilidades de ataque do metodo opcaoAtaque e fiz a parte de tomada de decisao do vilao no metodo batalha, falta fazer as ações do metodo opcaoIventario" />
     <MESSAGE value="Criando o metodo contar rodada, e adicionando o metodo de aumentar mana na classe batalha" />
@@ -488,6 +486,7 @@
     <MESSAGE value="mensagem de derrota do vilão" />
     <MESSAGE value="Valores de ataques alterados" />
     <MESSAGE value="mensagem de fim dejogo" />
-    <option name="LAST_COMMIT_MESSAGE" value="mensagem de fim dejogo" />
+    <MESSAGE value="contarHistoriaFim() atualizado&#10;contextos antes das lutas" />
+    <option name="LAST_COMMIT_MESSAGE" value="contarHistoriaFim() atualizado&#10;contextos antes das lutas" />
   </component>
 </project>

@@ -3,12 +3,12 @@ import personagens.viloes.Vilao;
 import java.util.*;
 
 
-public class interacao {
+public class Interacao {
     public  Heroi heroi;
     public Vilao vilao;
     public int contadorRodadas = 0;
 
-    public interacao(Heroi heroi, Vilao vilao){
+    public Interacao(Heroi heroi, Vilao vilao){
         this.heroi = heroi;
         this.vilao = vilao;
 

@@ -1,6 +1,6 @@
 package personagens;
 
-public class AtaquePadrao {
+public final class AtaquePadrao {
     private String nome;
     private Integer forcaAtaque;
 
