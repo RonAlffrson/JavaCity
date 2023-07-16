@@ -41,15 +41,14 @@ public class Main {
         luta = new Interacao(jogador, new Dataretan());
         luta.batalhar();
 
-        System.out.println("Dentro da caverna, " + jogador.getNome() + ", já cansado de suas prévias batalhas, enxerga de longe duas poções de vida,\n" +
-                "ele as toma e, rapidamente, regenera suas forças.\n" +
+        System.out.println("Dentro da caverna, " + jogador.getNome() + ", já cansado de suas prévias batalhas, enxerga de longe uma poção de vida,\n" +
+                "ele a toma e, rapidamente, regenera suas forças.\n" +
                 jogador.getNome() + " já estava sentindo o ar pesado, sabia que estava próximo de finalmente encontrar o mago negro Napda.\n" +
                 "Ele corre bravamente com tal determinação que o chão aos seus pés tremia. A névoa verde foi tomando conta do ar em seus pés e, finalmente, encontra Napda.\n" +
                 "'Ora ora ora, mal sabes que já estava lhe esperando, ó tão conhecido " + jogador.getNome() + ".\nVocê acha que vai conseguir frustrar meus planos de finalmente conquistar JavaCity?'\n" +
                 jogador.getNome() + " ouviu aquelas palavras proferidas pelo mago negro e sem pestanejar partiu para o ataque.\n" );
 
         jogador.aumentarVida(25); //herói toma duas poções
-        jogador.aumentarVida(25);
         Napda napda = new Napda();
         luta = new Interacao(jogador, napda);
         luta.batalhar();

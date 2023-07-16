@@ -1,4 +1,5 @@
 import personagens.herois.Heroi;
+import personagens.viloes.Napda;
 import personagens.viloes.Vilao;
 import java.util.*;
 
@@ -83,7 +84,9 @@ public class Interacao {
                 vilao.sortearPocao(heroi);
             }
             else{ // vilao morre
-                vilao.sortearPocao(heroi);
+                if(!(vilao instanceof Napda)) { // Não precisa sortear quando for o napda
+                    vilao.sortearPocao(heroi);
+                }
             }
 
             if(!(heroi.getVida().equals(heroi.getMIN_MANA()))){
