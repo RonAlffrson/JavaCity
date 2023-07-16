@@ -10,10 +10,10 @@ public class Main {
     public static void main(String[] args) {
         Heroi jogador;
 
-        System.out.println("Bem-vindo a JavaCity");
-        System.out.println("=--=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+        System.out.println("Bem-vindo a JavaCity!");
+        System.out.println("=-=-=-=-=-=-=-=-=-=-=");
 
-        int opcaoHeroi = Interacao.EscolhadoHeroi();
+        int opcaoHeroi = Interacao.EscolhaDoHeroi();
         if(opcaoHeroi == 1){
             jogador = new Dofer();
         }
@@ -22,16 +22,16 @@ public class Main {
         }
         jogador.contarHistoria();
 
-
+        //batalhas
         System.out.println("\n" + jogador.getNome() + " encontrou  Flegoman, capanga de Napda e famoso dominador de pássaros negros\n");
         Interacao luta = new Interacao(jogador, new Flegoman());
         luta.batalhar();
 
-        System.out.println(jogador.getNome() + " encontrou Dataretan, capanga de Napda e famoso mestre hipnotizador\n");
+        System.out.println("\n" + jogador.getNome() + " encontrou Dataretan, capanga de Napda e famoso mestre hipnotizador\n");
         luta = new Interacao(jogador, new Dataretan());
         luta.batalhar();
 
-        System.out.println(jogador.getNome() + " encontrou o mago negro Napda\n");
+        System.out.println("\n" + jogador.getNome() + " encontrou o mago negro Napda\n");
         Napda napda = new Napda();
         luta = new Interacao(jogador, napda);
         luta.batalhar();
