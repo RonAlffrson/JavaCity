@@ -78,9 +78,10 @@ public class Interacao {
             }
 
             // a partir daqui acabou as açoes do heroi e começa a do vilão
-
-            vilao.decidirAtaque(heroi);
-            vilao.sortearPocao(heroi);
+            if(!(vilao.getVida() == 0)) {
+                vilao.decidirAtaque(heroi);
+                vilao.sortearPocao(heroi);
+            }
 
             if(!(heroi.getVida().equals(heroi.getMIN_MANA()))){
                 heroi.aumentarVidaRodada();
