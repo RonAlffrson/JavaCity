@@ -35,7 +35,7 @@ public class Interacao {
                 System.out.println("""
                             Escolha seu herói:
                             (1) Dofer - Cavaleiro - 100 de vida total, +5 de mana a cada rodada, 10 de dano de ataque padrão
-                            (2) Ronan - Mago - 70 de vida total, +10 de mana a cada rodada, 5 de dano de ataque padrão""");
+                            (2) Ronan - Mago - 80 de vida total, +10 de mana a cada rodada, 5 de dano de ataque padrão""");
                 opcaoHeroi = input.nextInt();
                 Heroi.verificarOpcaoHeroi(opcaoHeroi); // esse método lança uma exceção
             }
