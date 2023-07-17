@@ -6,7 +6,6 @@ import personagens.viloes.Flegoman;
 import personagens.viloes.Napda;
 
 public class Main {
-    //todo - modificadores final
     public static void main(String[] args) {
         Heroi jogador;
 

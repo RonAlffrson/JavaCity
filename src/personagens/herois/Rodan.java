@@ -5,7 +5,7 @@ import personagens.PoderEspecial;
 
 public final class Rodan extends Heroi {
     public Rodan() {
-        super("Rodan", 70, 70, 0,
+        super("Rodan", 80, 80, 0,
                 new AtaquePadrao("Bola de energia",5),
                 new PoderEspecial("Tempestade de flechas", 15, 15, 1),
                 new PoderEspecial("Regeneração completa", 40, 40, 2));
