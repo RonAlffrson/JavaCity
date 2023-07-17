@@ -12,8 +12,8 @@ public class Interacao {
     public Interacao(Heroi heroi, Vilao vilao){
         this.heroi = heroi;
         this.vilao = vilao;
-
     }
+
     public static void lancarExcecaoOpcaoAtaque(int opcaoAtaque) throws ErroOpcaoException{
         if(opcaoAtaque < 1 || opcaoAtaque > 5){
             throw new ErroOpcaoException("\nErro : digite um valor entre 1 e 4\n");
@@ -25,7 +25,7 @@ public class Interacao {
         }
     }
 
-    public static int EscolhaDoHeroi(){
+    public static int escolhaDoHeroi(){
         boolean validador;
         int opcaoHeroi = 0;
         Scanner input = new Scanner(System.in);
@@ -102,7 +102,7 @@ public class Interacao {
         }
     }
 
-    private static int opcaoJogador(){
+    public static int opcaoJogador(){
         Scanner input = new Scanner(System.in);
         int opcaoJogaodor = 0;
         boolean validador = false;

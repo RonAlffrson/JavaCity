@@ -22,7 +22,7 @@ public abstract class Item {
     public void adicionarItem(){
         quantidadeItem++;
     }
-    public void diminuirItem(Heroi heroi){ // falta fazer esse metodo corretamente
+    public void diminuirItem(Heroi heroi){
         if(quantidadeItem > 0 ) {
             quantidadeItem--; //
         }

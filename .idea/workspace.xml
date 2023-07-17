@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55712400-a6b3-4307-a9b3-db7ff791150b" name="Changes" comment="menor chance de errar&#10;maior chance de ataque duplo">
+    <list default="true" id="55712400-a6b3-4307-a9b3-db7ff791150b" name="Changes" comment="limpeza de código">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Heroi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Heroi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/itens/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/itens/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/AtaquePadrao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/AtaquePadrao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/Personagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/Personagem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagens/herois/Dofer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagens/herois/Dofer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,13 +93,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1687472864518</updated>
-    </task>
-    <task id="LOCAL-00034" summary="update">
-      <created>1688512292646</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1688512292646</updated>
     </task>
     <task id="LOCAL-00035" summary="ataques padroes dos viloes adicionados">
       <created>1688682879864</created>
@@ -432,7 +430,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689483786822</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="limpeza de código">
+      <created>1689484766600</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1689484766600</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -459,7 +464,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="aumentarManaRodada pros vilões" />
     <MESSAGE value="método opcaoInventario criado e implementado dentro de batalhar" />
     <MESSAGE value="getValorAtributo() deve ser Integer não double" />
     <MESSAGE value="Setters usados" />
@@ -484,6 +488,7 @@
     <MESSAGE value="Contextos feitos&#10;herói toma duas poções após a segunda batalha" />
     <MESSAGE value="Erros atualizados &#10;prints atualizados" />
     <MESSAGE value="menor chance de errar&#10;maior chance de ataque duplo" />
-    <option name="LAST_COMMIT_MESSAGE" value="menor chance de errar&#10;maior chance de ataque duplo" />
+    <MESSAGE value="limpeza de código" />
+    <option name="LAST_COMMIT_MESSAGE" value="limpeza de código" />
   </component>
 </project>

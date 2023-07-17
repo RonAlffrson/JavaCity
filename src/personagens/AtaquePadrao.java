@@ -30,7 +30,7 @@ public final class AtaquePadrao {
         else
             throw new IllegalArgumentException("Força de Ataque deve ser maior um inteiro que zero");
     }
-    public  String  descricao(){
+    public String descricao(){
          return getNome() +" - inflinge " + getForcaAtaque() + " de dano";
     }
 

@@ -1,12 +1,7 @@
 package personagens.herois;
 
-import itens.Item;
 import personagens.AtaquePadrao;
-import personagens.MultiplicadorDeAtaque;
 import personagens.PoderEspecial;
-import personagens.viloes.Vilao;
-
-import java.util.ArrayList;
 
 public final class Dofer extends Heroi {
 

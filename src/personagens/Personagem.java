@@ -16,19 +16,20 @@ public abstract class Personagem implements AcoesPersonagem {
         setAtaquePadrao(ataquePadrao);
         setPoderEspecial1(poderEspecial1);
     }
+
     @Override
     public void poderEspecial1(Personagem personagem) {
-        int multplicador = MultiplicadorDeAtaque.multiplicadorDeAtaque();
+        int multiplicador = MultiplicadorDeAtaque.multiplicadorDeAtaque();
 
         if (mana >= poderEspecial1.getAtributo()) {
             diminuirMana(poderEspecial1.getAtributo());
-            personagem.diminiurVida(poderEspecial1.getAtributo() * multplicador);
-            if (multplicador == 1)
+            personagem.diminiurVida(poderEspecial1.getAtributo() * multiplicador);
+            if (multiplicador == 1)
                 System.out.println(nome + " usou " + poderEspecial1.getNome() + " em " + personagem.getNome());
-            else if (multplicador == 2) {
+            else if (multiplicador == 2) {
                 System.out.println(nome + " usou " + poderEspecial1.getNome() + " em " + personagem.getNome());
                 System.out.println("Ataque crítico");
-            } else if (multplicador == 0) {
+            } else if (multiplicador == 0) {
                 System.out.println(nome + " usou " + poderEspecial1.getNome() + " em " + personagem.getNome());
                 System.out.println("Errou");
             } else {

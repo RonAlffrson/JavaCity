@@ -12,7 +12,7 @@ public class Main {
         System.out.println("Bem-vindo a JavaCity!");
         System.out.println("=-=-=-=-=-=-=-=-=-=-=");
 
-        int opcaoHeroi = Interacao.EscolhaDoHeroi();
+        int opcaoHeroi = Interacao.escolhaDoHeroi();
         if(opcaoHeroi == 1){
             jogador = new Dofer();
         }
